@@ -1,0 +1,6 @@
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?r2ml\.co
+RewriteRule ^(.*)$ https://www.r2ml.co/$1 [R,L]
+AuthName "tn"
+AuthUserFile "/home4/yllagimi/.htpasswds/public_html/passwd"

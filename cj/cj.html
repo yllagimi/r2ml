@@ -1,0 +1,668 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CookieJar &mdash; An AI based ChatBot by R2 Media Labs </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+	<!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/cj_style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+        
+
+          <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <!-- ## Setup -->
+  <!--
+    Import all AMP video components.
+  -->
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+  <script async custom-element="amp-vine" src="https://cdn.ampproject.org/v0/amp-vine-0.1.js"></script>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <script async custom-element="amp-vimeo" src="https://cdn.ampproject.org/v0/amp-vimeo-0.1.js"></script>
+  <script async custom-element="amp-dailymotion" src="https://cdn.ampproject.org/v0/amp-dailymotion-0.1.js"></script>
+  <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
+  <script async custom-element="amp-facebook" src="https://cdn.ampproject.org/v0/amp-facebook-0.1.js"></script>
+  <script async custom-element="amp-brightcove" src="https://cdn.ampproject.org/v0/amp-brightcove-0.1.js"></script>
+  <script async custom-element="amp-brid-player" src="https://cdn.ampproject.org/v0/amp-brid-player-0.1.js"></script>
+  <script async custom-element="amp-reach-player" src="https://cdn.ampproject.org/v0/amp-reach-player-0.1.js"></script>
+  <script async custom-element="amp-springboard-player" src="https://cdn.ampproject.org/v0/amp-springboard-player-0.1.js"></script>
+  <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+  <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <link rel="canonical" href="https://ampbyexample.com/advanced/video_carousels_with_amp-carousel/">
+  
+<style amp-custom>
+  amp-carousel {
+    background: rgba(0, 0, 0, 0.05);
+      height: 710px;
+      width: 350px;
+      padding-left: none;
+      padding-right: none;
+      padding-top: none;
+  }
+  .amp-video-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 650px;
+  }
+  .amp-video {
+    width: 250px;
+    height: 700px;
+  }  
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+    height: 200px;
+    width: 150%;
+     }   
+h.cj {
+    font-family: "Coming Soon", Coming Soon, serif;
+    font-size: 180%;
+    color: black;
+}
+            h.cjp {
+    font-family: "Coming Soon", Coming Soon, serif;
+    font-size: 150%;
+    color: #FC5185;
+}
+    
+h1.cj {
+    font-family: "Coming Soon", Coming Soon, serif;
+    font-size: 180%;
+    color: black;
+}
+                    h.cj {
+    font-family: "Coming Soon", Coming Soon, serif;
+    font-size: 180%;
+    color: black;
+}
+            h.cjp {
+    font-family: "Coming Soon", Coming Soon, serif;
+    font-size: 150%;
+    color: #FC5185;
+}
+           h.cjp2 {
+    font-family: "Andale Mono", Andale Mono, serif;
+    font-size: 150%;
+    color: dimgrey;
+}
+    poetry p{
+        line-height: 30%;
+    }
+
+     
+</style>
+	</head>
+	<body>
+	<div class="fh5co-loader"></div>
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 text-right">
+						<p class="num"><a href="mailto:hello@r2ml.co">Email us at: hello@r2ml.co</a></p>
+						<ul class="fh5co-social">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<li><a href="#"><i class="icon-github"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-menu">
+			<div class="container"> 
+				<div class="row"> 
+                    <div class="col-sm-3">
+                        <a href="../index.html"><img src="../images/cj5_LogoMakr_4HKMb1.png"  alt="logo" height="120" ></a>
+                            
+					</div>
+					<div class="col-xs-14 text-right menu-1">
+						<ul>
+							<!-- <li class="active"><a href="index.html">Home</a></li> -->
+				            <li><a class="about" href="../index.html#work">Work</a></li>
+							<li><a class="about" href="../about.html">About</a></li>
+							<li class="has-dropdown">
+								<a class="about" href="../services.html">Services</a>
+								<ul class="dropdown">
+									<li><a href="../services.html#ds">Data Science</a></li>
+									<li><a href="../services.html#wd">Web Development</a></li>
+<!--									<li><a href="#">Full stack</a></li>-->
+									<li><a href="../services.html#api">API</a></li>
+                                    <li><a href="../services.html#ha">Health Care Analytics</a></li>
+								</ul>
+							</li>
+							<li><a class="about" href="../contact.html">Contact</a></li>
+							<li class="btn-cta"><a href="cj/cj.html"><span>Login</span></a></li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</nav>
+
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/cj_banner.png);" data-stellar-background-ratio="0.7">
+		<div class="overlay"></div>
+		</header>
+
+              	<div >
+         <div id="fh5co-testimonial" class="fh5co-bg-section" style="background: #FFFF">
+		<div class="container">
+			<div class="row">
+               
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row animate-box">
+						<div class="owl-carousel owl-carousel-fullwidth">
+							<div class="item">
+								<div class="active text-center">
+									
+                                    	<h class="cj"> we make <a style="color:coral;"> 200 </a>food &amp; bev choices daily</h><br>
+                                    <h class="cj" style="color:coral;"> </h> <h class="cj"> we have <a style="color:coral;">double</a> the needed food available to us</h>
+                                    
+								</div>
+							</div>
+                            <div class="item">
+								<div class="active text-center">
+									
+                                    	<h class="cj" style="color:coral;">7 in10</h> <h class="cj">  adults are overweight/obese</h><br>
+                                    <h class="cj" style="color:coral;">3 in10 </h><h class="cj">kids are overweight/obese</h>
+                                    
+								</div>
+							</div>
+							<div class="item">
+								<div class="active text-center">
+									<h class="cj">we're <a style="color:coral;">18% </a>havier than in the 1970s</h><br>	
+                                    	<h class="cj" style="color:coral;">and it's not baby fat</h>
+										
+                        </div>
+                        </div>
+							<div class="item">
+								<div class="active text-center">
+									
+                                     <h class="cj">we spend $52B on soft-drinks, $6.6B on ice-cream, $109B on beer</h><br>	
+                                    	<h class="cj" style="color:coral;">pricey guilty pleasures</h>   
+								</div>
+							</div>
+                           
+                             <div class="item">
+								<div class="active text-center">
+									
+                                     <h class="cj">we spend $66B on weight mgmt, $31B on gyms and $3B on Weight loss products</h><br>	
+                                    
+                                    	<h class="cj" style="color:coral;"> comfort food anyone? </h>   
+								</div>
+							</div>
+                             <div class="item">
+								<div class="active text-center">
+									
+                                     <h class="cj">there are 97 million Americans actively on a diet</h><br>	
+                                    	<h class="cj" style="color:coral;">no love for love  handles </h>   
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        </div>
+        
+        
+	<div id="fh5co-services" class="fh5co-bg-section">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+<!--					<h2 class="about">CookieJar </h2>-->
+                    <img src="images/logo_cj.png" style="vertical-align:center" width="480" height="88">
+                    <br>
+                    <p>Meet our ML based ChatBot. </p>
+<!--                    <h class="cj"> Helping people <strong> loose it </strong> since, well,  <strong> soon....</strong></h>-->
+				</div>
+			</div>
+            
+ 
+            
+            
+            
+            
+         	<div class="row"> 
+                				<div class="col-md-6">
+            					<div class="iphone">
+
+                          
+                                       <amp-carousel width="350px"   height="700px"  layout="responsive" type="slides">
+        <div>
+            <video  width="350" height="700" autoplay="autoplay"  controls>
+            <source src="video/CookieJar_Demo2.m4v" type="video/mp4">
+                </video>
+        </div>
+         <div>
+          <video  width="350" height="700" autoplay="autoplay"  controls>
+            <source src="video/CookieJar_Demo3_480p.mov" type="video/mp4">
+             </video>
+        </div>
+  </amp-carousel>                  
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="row services-inner">
+						<div class="col-md-12 col-sm-12">
+							<div class="feature-center animate-box" data-animate-effect="fadeIn">
+								<span class="icon">
+									<i class="icon-image"></i>
+								</span>
+								<h3> Call me CJ</h3>
+								<p>Use keywords when you're being tempted (mayday, IceCream ahead, craving alert etc.) and  CookieJar uses ML/AI based dialog to walk you back from the brink of the endugence cliff. A recipe based on counseling Psychology, with a dash of predictive analytics, makes for a delicious side. </p>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="feature-center animate-box" data-animate-effect="fadeIn">
+								<span class="icon">
+									<i class="icon-laptop"></i>
+								</span>
+								<h3>Simple UX</h3>
+								<p>Simple user interface, chat-based, location-based, it learns preferences, restrictions, allergies. It's non-intrusive, no calorie counting, can log preferences through chat.</p>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12">
+							<div class="feature-center animate-box" data-animate-effect="fadeIn">
+								<span class="icon">
+									<i class="icon-air-play"></i>
+								</span>
+								<h3>Across devices</h3>
+								<p>Use it at work, home or out. Coaching and food suggestions when asked. Location based user-specific recommendation. Across multiple platforms (App/web, FB Messenger, Alexa, Google Assistant).</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+  
+        
+        
+        <div >
+         <div id="fh5co-testimonial" class="fh5co-bg-section" style="background: rgba(0, 0, 0, 0.05)">
+		<div class="container">
+			<div class="row">
+                <div><h3 align="left" style="color:#FC5185"> <a style="font-size: 40px"><strong>β </strong></a> - Predictable behaviors</h3></div>
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row animate-box">
+						<div class="owl-carousel owl-carousel-fullwidth">
+							<div class="item">
+								<div class="active text-center">
+									
+                                    
+                                    <h> We're likely to overeat when with friends</h><br>
+                                    <h> We overeat at dinner or evenings, especially fat calories</h><br>
+                                    <h> We eat more when dinning out than when eating at home</h>
+                                </div>
+                            </div>
+                                <div class="item">
+								<div class="active text-center">
+                                    <h> We know the time gap between meals is a  predictor of dinner meal size</h><br>
+                                    <h> Skipping breakfast increases likelihood of consuming more calories by the end of the day</h><br>
+                                    <h> We're challenged most on Weekdays between 6pm to 1AM</h><br>
+                                    <h> We eat more when stressed or sad</h>
+                                    </div>
+                            </div>
+                            <div class="item">
+								<div class="active text-center">
+                                    <h> <a style="font-size: 29px color:#FC5185"><strong>CJ </strong></a> learns user's preferences, goals, barriers and food trigers</h><br>	
+                                
+                                    <h > Accompanies user through eating decisions, inside and out of home</h><br>
+                                        	 <h> It suggest eating/buying decisions
+</h><br>
+                                    
+								</div>
+							</div>
+							<div class="item">
+								<div class="active text-center">
+									<h> <a style="font-size: 29px color:#FC5185"><strong>CJ </strong></a>  periodically seeks input (Yay/Nay) from user to create profile (taste, allergies, preferences) </h><br>	
+                                    <h>Nudges users towards goal-based foods at home, store or restaurant
+</h>
+										
+                        </div>
+                        </div>
+							<div class="item">
+								<div class="active text-center">
+									
+                                     <h> <a style="font-size: 29px color:#FC5185"><strong>CJ </strong></a>  matches user's dietary needs/goals to restaurant menu information and grocery products
+</h><br>	
+                                    	<h><a style="font-size: 29px color:#FC5185"><strong>CJ </strong></a> uses data on food texture, mouthfeel, fullness for healthy food suggestions. </h><br>	
+</h>   
+								</div>
+							</div>
+                           
+                             <div class="item">
+								<div class="active text-center">
+									
+                                     <h>Expand customer taste profiles
+</h><br>	
+                                    
+                                    	<h> <a style="font-size: 29px color:#FC5185"><strong>CJ </strong></a> integrates other user data (exercise, sleep, mood)
+ </h>   
+								</div>
+							</div>
+                             
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        </div>
+        
+        
+        
+	<div >
+         <div id="fh5co-testimonial" class="fh5co-bg-section" style="background: #FFFF">
+		<div class="container">
+			<div class="row">
+                <div><a align="left" href="https://www.nytimes.com/2018/05/12/opinion/sunday/reasons-i-may-be-eating-right-now.html?action=click&pgtype=Homepage&clickSource=story-heading&module=opinion-c-col-right-region&region=opinion-c-col-right-region&WT.nav=opinion-c-col-right-region">Reasons I May Be Eating Right Now by <strong>Julia Shiplett.</strong></a></div>
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row animate-box">
+						<div class="owl-carousel owl-carousel-fullwidth">
+							<div class="item">
+								<div class="active text-center poetry">
+                                    
+                                    <figure>
+								<img class="displayed" src="../images/13loose1-superJumbo.jpg">
+									</figure>
+                                    <p style="line-height: 40%";>&ldquo;I’m hungry.
+
+                                        <p style="line-height: 40%";>I’m bored.</p>
+
+<p style="line-height: 40%";>I’m stressed.</p>
+<p  style="line-height: 40%";>This food is delicious.</p>
+<p style="line-height: 40%";>This food is fine.</p>
+<p style="line-height: 40%";I was craving this food.</p>
+<p style="line-height: 40%";>I’ve never tried this food before.</p>
+<p style="line-height: 40%";>I can’t remember if I’ve ever tried this food before.</p>
+<p style="line-height: 40%";>This food is not very good, but it’s here..&rdquo;</p>
+								
+                                   
+                                </div>
+							</div>
+							<div class="item">
+								<div class="active text-center">
+									<figure>
+										<img class="displayed"  src="../images/13loose9-superJumbo.jpg">
+									</figure>
+									
+										<p style="line-height: 40%";>&ldquo;Someone took the time to make this food, and it would be rude not to have some. </p>
+<p>
+    Someone spent money to buy this food, and it would be rude not to have some.</p>
+
+                                        <p style="line-height: 40%";>Everyone around me is eating. </p>
+
+                                        <p style="line-height: 40%";> Everyone around me is done eating, but there is still food left.</p>
+
+                                     <p style="line-height: 40%";> My blood sugar feels a little low.</p>
+
+<p>I drank too much coffee.&rdquo;</p>
+                        </div>
+                        </div>
+							<div class="item">
+								<div class="active text-center">
+									<figure>
+										<img class="displayed" src="../images/13loose8-superJumbo.jpg">
+									</figure>
+                                        <p style="line-height: 40%";>&ldquo;I’m happy. </p>
+
+<p style="line-height: 40%";> I’m depressed. </p>
+<p style="line-height: 40%";> My friend is happy, and I don’t want to make her eat alone.</p>
+<p style="line-height: 40%";> My friend is depressed, and I don’t want to make him eat alone..&rdquo;</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        </div>
+	<div id="fh5co-testimonial" class="fh5co-bg-section">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h class="cj">first take</h>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row animate-box">
+						<div class="owl-carousel owl-carousel-fullwidth">
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/lila_person1.jpg" alt="user">
+									</figure>
+									<span>Lila,<a href="#" class="twitter"> Washington DC</a></span>
+									<blockquote>
+										<p>&ldquo;I'd use CookieJar every day. I'm good all day, I behave, but then there's that one moment, when it all goes down the drain. <a style="color:#FC5185">Thanks for nothing brownies</a>.&rdquo;</p>
+									</blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="images/derek_person2.png" alt="user">
+									</figure>
+									<span>Derek <a href="#" class="twitter">Washington, DC</a></span>
+									<blockquote>
+										<p>&ldquo;By the end of the day, I'm exhausted to care what I'm eating. A little nudge could help me stop adding on pounds.&rdquo;</p>
+									</blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="../images/xats.jpg" alt="user">
+									</figure>
+									<span>Rrez <a href="#" class="twitter">Boston, MA</a></span>
+									<blockquote>
+                                        <p>&ldquo;I'm always amazed when eating out, how quickly calories add up. I'd love something that helps me to  <a style="color:#FC5185"> "Just say NO" </a> .&rdquo;</p>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+        	<div id="fh5co-project">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h class="cj">our Fun Projects</h>
+					<p>QuickQuestion, think Microsoft's Pulse meets HQ Trivia, was a fun little project. H2H Voting Comparator C-1000  and HealthCare Cost Comparison projects were our submissions to the US Congressional Library and HHS Data Challenges, respectively.</p>
+				</div>
+			</div>
+		</div>
+		<div class="project-content">
+			<div class="col-forth">
+				<div class="project animate-box" style="background-image:url(images/quickquestion.jpg);">
+					<a href="https://www.kickstarter.com/projects/2126562649/quickquestion-curiosity-exists-for-a-reason" class="desc">
+						<span>Application/Web Service</span>
+						<h3>QuickQestion</h3>
+					</a>
+				</div>
+			</div>
+			
+            <div class="col-forth">
+				<div class="project animate-box" style="background-image:url(images/h2h.png);">
+					<a href="https://datasystems-group.com/congress/" class="desc">
+						<span>Web Service/API</span>
+						<h3>H2H Voting Comparator C-1000</h3>
+					</a>
+				</div>
+			</div>
+			<div class="col-forth">
+				<div class="project animate-box" style="background-image:url(images/risk.png);">
+					<a href="http://www.hemanthpnair.com/vizrisk/contest/" class="desc">
+						<span>Web Service/Analytics</span>
+						<h3>Chronic Disease and Healthcare Cost Predictor</h3>
+					</a>
+				</div>
+			</div>
+			<div class="col-forth">
+				<div class="project animate-box" style="background-image:url(images/project-3.jpg);">
+					<a href="#" class="desc">
+						<span>Device (in development) </span>
+						<h3>TeleNovela</h3>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+        
+        
+	<div id="fh5co-started">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+				<h1 class="cj">Let's Get Started</h1>
+					<p>Yes we're in development, but do reach out. We'd love a word of encouragement or a partner to work with. Either one is a win/win.</p>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<p><a href="mailto:hello@r2ml.co" class="btn btn-default btn-lg">Get in Touch</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h3>A Little About R2 Media Labs.</h3>
+					<p>We're a bunch of guys and gals with some idas, a few skills and an unquenching curiosity. We're engineers, data scientists, counselors, behavioral health scientists, behavioral economisits, nutritionists and a few other 'ists. </p>
+					<p><a class="btn btn-primary btn-outline with-arrow" href="#">Learn More <i class="icon-arrow-right"></i></a></p>
+				</div>
+							<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="../contact.html">Contact</a></li>
+						<li><a href="#">Testimonials</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="../about.html">Team</a></li>
+						<li><a href="../about_yll/index.html">Team Lead</a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+				
+			</div>
+
+            <div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block"><img src="../images/logor2ml.png" height="50">&copy; 2018 R2ML with <img src="../images/heart.gif" height="15"> . All Rights Reserved.</small> 
+						
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/yllagimi/"><i class="icon-linkedin"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+						</ul>
+                    </p>
+            
+		
+            <small class="block">Thanks to the folks at FH5.co for their nice designs <a href="http://freehtml5.co/" target="_blank"></a>  <a href="http://unsplash.co/" target="_blank"></a>
+<a> and LogoMakers @ <a href="http://logomakr.com" title="Logo Makr">LogoMakr.com</a> </a> </small>
+			</div>
+		</div>
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

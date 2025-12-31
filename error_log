@@ -1,0 +1,6 @@
+[28-May-2018 11:59:24 America/Chicago] PHP Parse error:  syntax error, unexpected '$subject' (T_VARIABLE) in /home4/yllagimi/public_html/form_process.php on line 9
+[28-May-2018 12:02:22 America/Chicago] PHP Parse error:  syntax error, unexpected '$subject' (T_VARIABLE) in /home4/yllagimi/public_html/form_process.php on line 9
+[28-May-2018 12:04:15 America/Chicago] PHP Parse error:  syntax error, unexpected 'mail' (T_STRING) in /home4/yllagimi/public_html/form_process.php on line 10
+[28-May-2018 12:10:18 America/Chicago] PHP Warning:  mail() expects at most 5 parameters, 7 given in /home4/yllagimi/public_html/form_process.php on line 10
+[28-May-2018 12:38:27 America/Chicago] PHP Parse error:  syntax error, unexpected ''X-Mailer'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home4/yllagimi/public_html/form_process.php on line 6
+[28-May-2018 12:41:58 America/Chicago] PHP Parse error:  syntax error, unexpected ''X-Mailer'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home4/yllagimi/public_html/form_process.php on line 6

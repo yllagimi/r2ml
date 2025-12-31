@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://127.0.0.1:54927/tn2.html -->
+<html data-brackets-id="2598" style="" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths wf-monoton-n4-active wf-active"><head data-brackets-id="2599"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta data-brackets-id="2601" http-equiv="X-UA-Compatible" content="IE=edge">
+	<title data-brackets-id="2602">TeleNovela </title>
+	<meta data-brackets-id="2603" name="viewport" content="width=device-width, initial-scale=1">
+	<meta data-brackets-id="2604" name="description" content="r2ml.co">
+	<meta data-brackets-id="2605" name="keywords" content="developer, machine learning, predictive behavioral analytics, regression, NLP">
+	<meta data-brackets-id="2606" name="r2ml.co" content="r2ml.co">
+	<link data-brackets-id="2607" href="./TeleNovela_files/css" rel="stylesheet">
+
+	<!-- Theme style  -->
+	<link data-brackets-id="2608" rel="stylesheet" type="text/css" href="./TeleNovela_files/tn_style.css">
+
+	<!-- Modernizr JS -->
+	<script data-brackets-id="2609" src="./TeleNovela_files/modernizr-2.6.2.min.js"></script>
+	<link rel="stylesheet" href="./TeleNovela_files/l" media="all"><script data-brackets-id="2610" src="./TeleNovela_files/monoton_n4_all.js"></script>
+
+</head>
+
+<body data-brackets-id="2611">
+
+	<!--?php
+// define variables and set to empty values
+$username = $email = $gender = $comment = $website = "";
+?-->
+		<div data-brackets-id="2612" id="logo">
+			<a data-brackets-id="2613" href="http://127.0.0.1:54927/index.html">
+				<h data-brackets-id="2614">TeleNovela</h>
+			</a>
+		</div><br data-brackets-id="2615">
+		<div data-brackets-id="2616" id="div1">
+			<h data-brackets-id="2617" class="tn1">The Customer</h>
+		</div><br data-brackets-id="2618">
+
+		<div data-brackets-id="2619" class="body">
+			<form data-brackets-id="2620" id="form1" name="form1" action="http://127.0.0.1:54927/data.php" method="post" target="formresponse1">
+				<div data-brackets-id="2621" class="container">
+					<fieldset data-brackets-id="2622" id="input1-wrapper">
+						<input data-brackets-id="2623" placeholder="Your ID" type="number" name="PersonID" value="&lt;?php echo $personID;?&gt;" autofocus=""> 
+						<input data-brackets-id="2624" placeholder="TeleNovela Username" type="text" name="username" size="40" value="&lt;?php echo $username;?&gt;"> <br data-brackets-id="2625">
+						<input data-brackets-id="2626" placeholder="Your First Name" type="text" name="fname" size="40" value="&lt;?php echo $fname;?&gt;">
+						<input data-brackets-id="2627" placeholder="Your Last Name" type="text" name="lname" size="40" value="&lt;?php echo $lname;?&gt;"> <br data-brackets-id="2628">
+						<a data-brackets-id="2629" href="http://127.0.0.1:54927/register.php"> New User</a><br data-brackets-id="2630">
+					</fieldset>
+				</div>
+				<br data-brackets-id="2631">
+				<div data-brackets-id="2632" id="div1">
+			<h data-brackets-id="2633" class="tn1">The Audience</h>
+		</div><br data-brackets-id="2634">
+				<div data-brackets-id="2635" class="container">
+					<fieldset data-brackets-id="2636" id="input1-wrapper">
+						<p data-brackets-id="2637"> Tell us a few things about your audience, for best advert placement.</p>
+						<a data-brackets-id="2638"> Audience Gender:</a>
+						<select data-brackets-id="2639" name="aud_gender">
+                <option data-brackets-id="2640" value="Male">Male</option>
+                <option data-brackets-id="2641" value="Female">Female</option>
+                <option data-brackets-id="2642" value="Any">Any Gender</option>
+            </select>
+						<a data-brackets-id="2643"> Audience Age</a>
+						<select data-brackets-id="2644" name="aud_age">
+                <option data-brackets-id="2645" value="12-16">12-16</option>
+                <option data-brackets-id="2646" value="17-18">17-18</option>
+                <option data-brackets-id="2647" value="19-22">19-22</option>
+                <option data-brackets-id="2648" value="24-29">24-29</option>
+                <option data-brackets-id="2649" value="30-39">30-39</option>
+                <option data-brackets-id="2650" value="40-49">40-49</option>
+                <option data-brackets-id="2651" value="50-59">50-59</option>
+                <option data-brackets-id="2652" value="60+">60+</option>
+            </select>
+					</fieldset>
+				</div>
+				<br data-brackets-id="2653">
+				<div data-brackets-id="2654" id="div1">
+			<h data-brackets-id="2655" class="tn1">The Location</h>
+		</div><br data-brackets-id="2656">
+					<div data-brackets-id="2657" class="container">
+						<fieldset data-brackets-id="2658" id="input2-wrapper">
+						<a data-brackets-id="2659"> Type of Advert:</a>
+						<select data-brackets-id="2660" name="mediatype">
+                        <option data-brackets-id="2661" value="poster">Poster</option>
+                        <option data-brackets-id="2662" value="short_v">Short Video (Under 2 minutes)</option>
+                        <option data-brackets-id="2663" value="long_v">Long Video (Over 2 minutes)</option>
+                        <option data-brackets-id="2664" value="other">Other</option>
+                    </select><br data-brackets-id="2665">
+						<a data-brackets-id="2666"> Location to display advert:</a>
+						<select data-brackets-id="2667" name="locationtodisp">
+                        <option data-brackets-id="2668" value="mallplaza1">MallPlaza, Las Condes</option>
+                        <option data-brackets-id="2669" value="UAI_Ed_A">UAI Edificio A</option>
+                        <option data-brackets-id="2670" value="UAI_Ed_B">UAI Edificio B</option>
+                        <option data-brackets-id="2671" value="m_bella_artes">Metro - Bella Artes</option>
+                        <option data-brackets-id="2672" value="m_armas">Metro - Plaza de Armas</option>
+                    </select>
+						<br data-brackets-id="2673">
+						<p data-brackets-id="2674"> Select below the Start and End time for your advert.</p>
+
+						<a data-brackets-id="2675">Advert Start Date:</a>
+						<input data-brackets-id="2676" type="datetime-local" placeholder="Advert Start Date:(mmddyyyy)" size="40" name="tstartdate"><br data-brackets-id="2677">
+						<a data-brackets-id="2678">Advert End Date:</a>
+						<input data-brackets-id="2679" placeholder="Advert End Date:(mmddyyyy)" type="datetime-local" size="40" name="tenddate"> Enter your E-mail:<input data-brackets-id="2680" type="text" name="email" value="&lt;?php echo $email;?&gt;"><br data-brackets-id="2681"> E-mail2: <input data-brackets-id="2682" type="text" id="email2" name="email2"><br data-brackets-id="2683">
+					</fieldset>
+
+				</div>
+
+				<br data-brackets-id="2684">
+			</form>
+			<div data-brackets-id="2685" id="div1">
+			<h data-brackets-id="2686" class="tn1">The Advert</h>
+		</div><br data-brackets-id="2687">
+			<div data-brackets-id="2688" class="container">
+				<br data-brackets-id="2689">
+				<fieldset data-brackets-id="2690">
+					<h data-brackets-id="2691"> Upload Advert</h>
+					<form data-brackets-id="2692" id="form2" name="form2" action="http://127.0.0.1:54927/upload.php" method="post" enctype="multipart/form-data" style="text-align: left" target="formresponse2">
+						<a data-brackets-id="2693"> Uploade poster file below:</a>
+						<input data-brackets-id="2694" type="file" name="fileToUpload" id="fileToUpload">
+					</form>
+
+
+				</fieldset>
+
+				<fieldset data-brackets-id="2695">
+					<button data-brackets-id="2696" type="button" onclick="submitForm()">Submit</button>
+					<br data-brackets-id="2697">
+					<p data-brackets-id="2698">Upload <a data-brackets-id="2699" href="http://127.0.0.1:54927/tn2.php"> <strong data-brackets-id="2700">Again</strong> </a></p><br data-brackets-id="2701">
+					<p data-brackets-id="2702"> See <a data-brackets-id="2703" href="http://127.0.0.1:54927/display.php"> <strong data-brackets-id="2704">Uploaded</strong> </a></p>
+
+				</fieldset>
+
+			</div>
+		</div>
+
+		<script data-brackets-id="2705">
+			function submitForms() {
+				document.getElementById("form1").submit();
+				document.getElementByID("form2").submit();
+			}
+
+			function submitForm() {
+				document.forms['form1'].action = 'data.php';
+				document.forms['form1'].target = 'frame_result1';
+				document.forms['form1'].submit();
+
+				document.forms['form2'].action = 'upload.php';
+				document.forms['form2'].target = 'frame_result2';
+				document.forms['form2'].submit();
+				return true;
+			}
+		</script>
+
+
+
+
+
+</body></html>

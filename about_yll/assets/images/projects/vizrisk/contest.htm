@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://www.hemanthpnair.com/vizrisk/contest/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+
+
+<title></title>
+<link type="text/css" rel="stylesheet" href="./contest_files/viz.css">
+</head>	
+<body onload="updateDisease()" style="background-image: url(&quot;http://www.investwithalex.com/wp-content/uploads/2014/03/americans-inveswithalex.jpg&quot;); background-size: cover;">
+
+
+<div id="page">	
+<div id="banner">
+	<div id="bannerTitle">Chronic Disease and Healthcare Cost Predictor 
+		<div class="bannerInfo"><a href="http://www.hemanthpnair.com/vizrisk/contest/index.html">Home</a></div>
+		<div class="bannerInfo"><a href="http://www.hemanthpnair.com/vizrisk/contest/creators.html">Creators</a></div>
+		<div class="bannerInfo"><a href="http://www.hemanthpnair.com/vizrisk/contest/about.html">About</a></div>
+	</div>
+</div>
+
+<!--<div id="userinfo_report"></div>-->
+
+<div id="userinfo">
+<form id="userinput">
+<div id="dis_box">
+<span>Disease of Interest</span>
+<select name="disease" class="formstyle" style="color:red;" onchange="updateDisease();">
+			<option value="diabetes">Diabetes</option>
+			<option value="chd">Coronary Heart Disease</option>
+			<option value="hattack">Heart Attack</option>
+			<option value="stroke">Stroke</option>
+			<option value="copd">COPD</option>
+			<option value="asthma">Asthma</option>
+			<option value="scancer">Skin Cancer</option>
+			<option value="ocancer">Other Cancer</option>
+		</select>
+</div>
+
+<!--User Characteristics-->
+<div class="userInfoBox" id="topbox">
+<span style="font-weight: 900; font-size: 11px">Enter Your Characteristics:</span> <br>
+Sex<br>
+<select name="sex" class="formstyle" onchange="updateDisease();">
+		<option value="male">Male</option>
+		<option value="female">Female</option>
+</select>
+<br>
+Age<br>
+<select name="age" class="formstyle" onchange="updateDisease();">
+		<option value="18-24">18-24</option>
+		<option value="25-34">25-34</option>
+		<option value="35-44">35-44</option>
+		<option value="45-54">45-54</option>
+		<option value="55-64">55-64</option>
+		<option value="65+">65 and older</option>
+</select>
+<br>
+Race/Ethnicity<br>
+<select name="race" class="formstyle" onchange="updateDisease();">
+		<option value="white">White</option>
+		<option value="black">Black</option>
+		<option value="hispanic">Hispanic</option>
+		<option value="asian">Asian</option>
+		<option value="HPI">Hawaiian or Pac. Islander </option>
+		<option value="Alaskan">Native American/Alaskan</option>
+		<option value="multiracial">Multiracial or Other</option>
+		
+</select>
+<br>
+Annual Household Income<br>
+<select name="income" class="formstyle" onchange="updateDisease();">
+		<option value="75K+">$75K or more</option>
+		<option value="50-75K">$50 to less than 75K</option>
+		<option value="25-50K">$25 to less than 50K</option>
+		<option value="&lt;25K">Less than $25K</option>
+</select>
+<br>
+
+<br>
+Height:
+<input type="number" class="formstyle" name="ft" min="3" max="7" value="5" style="width:30px" onchange="updateDisease();">feet
+<input type="number" class="formstyle" name="inch" min="0" max="12" value="10" style="width:35px" onchange="updateDisease();">inches<br>
+Weight: 
+<input type="number" class="formstyle" name="weight" min="70" max="600" value="165" style="width:45px" onchange="updateDisease();">lb
+<br><span>Your BMI Category</span>:
+<span id="BMIcat" style="font-size:12px; Color:red;">obese</span> 
+<a href="http://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html?s_cid=tw_ob064" target="_blank" style="margin-left:5px;">(Learn More)</a>
+</div>
+<!--End Top Panel Of User Info-->
+<div class="userInfoBox">
+<span style="font-weight: 900; font-size: 11px">Enter Your Risk Factors:</span>
+
+
+<br>
+Smoking Status <br>
+<select name="smoke" class="formstyle" onchange="updateDisease();">
+		<option value="nsmoker">Never Smoked</option>
+		<option value="fsmoker">Former Smoker</option>		
+		<option value="ssmoker">Smoke some days</option>
+		<option value="smoker">Smoke every day</option>
+		
+
+</select>
+<br><br>Have you EVER been told by a doctor, nurse or other health professional that: <br>your blood pressure is high?
+<select name="bp" class="formstyle" onchange="updateDisease();">
+	<option value="no"> No</option>
+	<option value="yes"> Yes</option>
+</select>  
+<br>you have high cholesterol?
+<select name="chol" class="formstyle" onchange="updateDisease();">
+	<option value="no"> No</option>
+	<option value="yes">Yes</option>
+</select>  
+<!--About how many alcholic beverages do you have per month?
+<input type="number" name="alco" min="0" max="200" value="0" onchange='updateDisease();'>-->
+<br><br>
+During the past month, other than your regular job, did you participate in any physical activities or exercises such as 
+running, calisthenics, golf, gardening, or walking for exercise?<br>
+<select name="exer" class="formstyle" onchange="updateDisease();">
+	<option value="no"> No</option>
+	<option value="yes">Yes</option>
+</select>
+<br>
+</div>
+
+
+
+</form>
+
+</div>
+
+<div class="chart">
+<div id="dis_prob">
+	<div id="disTitle" class="graphTitle">
+	<span>Predicted Probability of</span>  <span style="padding-left:0px;" id="disease_name">Diabetes</span>
+	</div>
+<svg width="350" height="320" style="background: rgba(245, 245, 250, 0.980392);"><g transform="translate(50,10)"><circle class="circ" r="4.5" cx="16.57894736842105" cy="174.59704403684435" style="fill: rgb(204, 0, 0);"></circle><circle class="circ" r="4.5" cx="63.94736842105263" cy="193.4219931756995" style="fill: rgb(204, 0, 0);"></circle><circle class="circ" r="4.5" cx="111.3157894736842" cy="175.57484403012012" style="fill: rgb(204, 0, 0);"></circle><circle class="circ" r="4.5" cx="158.68421052631578" cy="163.100973139335" style="fill: rgb(204, 0, 0);"></circle><circle class="circ" r="4.5" cx="206.05263157894734" cy="145.82020275252012" style="fill: rgb(204, 0, 0);"></circle><circle class="circ" r="4.5" cx="253.4210526315789" cy="131.37794839162615" style="fill: rgb(204, 0, 0);"></circle></g><g transform="translate(50,10)"><circle class="reflines" r="4.5" cx="16.57894736842105" cy="236.73094760974416" style="fill: rgb(255, 165, 0);"></circle><circle class="reflines" r="4.5" cx="63.94736842105263" cy="243.1794768238217" style="fill: rgb(255, 165, 0);"></circle><circle class="reflines" r="4.5" cx="111.3157894736842" cy="237.0907036205583" style="fill: rgb(255, 165, 0);"></circle><circle class="reflines" r="4.5" cx="158.68421052631578" cy="232.27035601680578" style="fill: rgb(255, 165, 0);"></circle><circle class="reflines" r="4.5" cx="206.05263157894734" cy="224.65167244600497" style="fill: rgb(255, 165, 0);"></circle><circle class="reflines" r="4.5" cx="253.4210526315789" cy="217.25787342270883" style="fill: rgb(255, 165, 0);"></circle></g><g transform="translate(50,10)"><circle id="refcircUser" class="circ" stroke="blue" r="5" cx="158.68421052631578" cy="163.100973139335" style="fill: none;"></circle></g><g transform="translate(50,10)"><circle id="refcircRef" class="circ" stroke="blue" r="5" cx="158.68421052631578" cy="232.27035601680578" style="fill: none;"></circle></g><g transform="translate(50,270)"><g class="tick" transform="translate(16.57894736842105,0)" style="opacity: 1;"><line y2="6" x2="0" style="stroke: rgb(0, 0, 0);"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">18-24</text></g><g class="tick" transform="translate(63.94736842105263,0)" style="opacity: 1;"><line y2="6" x2="0" style="stroke: rgb(0, 0, 0);"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">25-34</text></g><g class="tick" transform="translate(111.3157894736842,0)" style="opacity: 1;"><line y2="6" x2="0" style="stroke: rgb(0, 0, 0);"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">35-44</text></g><g class="tick" transform="translate(158.68421052631578,0)" style="opacity: 1;"><line y2="6" x2="0" style="stroke: rgb(0, 0, 0);"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">45-54</text></g><g class="tick" transform="translate(206.05263157894734,0)" style="opacity: 1;"><line y2="6" x2="0" style="stroke: rgb(0, 0, 0);"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">55-64</text></g><g class="tick" transform="translate(253.4210526315789,0)" style="opacity: 1;"><line y2="6" x2="0" style="stroke: rgb(0, 0, 0);"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">65+</text></g><path class="domain" d="M0,6V0H270V6" style="fill: none; stroke: rgb(0, 0, 0);"></path></g><g transform="translate(50,10)"><g class="tick" transform="translate(0,260)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">0.0</text></g><g class="tick" transform="translate(0,234)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">0.1</text></g><g class="tick" transform="translate(0,208)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">0.2</text></g><g class="tick" transform="translate(0,182)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">0.3</text></g><g class="tick" transform="translate(0,156)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">0.4</text></g><g class="tick" transform="translate(0,130)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">0.5</text></g><g class="tick" transform="translate(0,104)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">0.6</text></g><g class="tick" transform="translate(0,78)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">0.7</text></g><g class="tick" transform="translate(0,52)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">0.8</text></g><g class="tick" transform="translate(0,26)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">0.9</text></g><g class="tick" transform="translate(0,0)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">1.0</text></g><path class="domain" d="M-6,0H0V260H-6" style="fill: none; stroke: rgb(0, 0, 0);"></path></g><text x="55" y="15">Predicted</text><text x="55" y="25">Probability</text><text x="130" y="305">Age Groups (in years)</text></svg></div>
+<div class="legend">
+	 <p>The yellow dots indicate probability of disease among individuals who responded to the 2011 and 2012 
+		BRFSS surveys with your characteristics and had normal BMI, were non-smokers,
+		reported no high blood pressure or cholesterol, and reported exercising in the last month.</p>
+		<p>The red dots indicate probability of disease among individuals who responded to the 2011 and 2012 
+		BRFSS surveys with your characteristics and your risk factors. If you see no red dots, your disease probabilities are the same as the individuals reporting with no risk factors. </p>
+	</div>
+</div>
+
+<div class="chart">
+<div id="cost">
+	<div id="costTitle" class="graphTitle">
+	<p>Predicted Healthcare Costs per Year</p>
+	</div>
+<svg width="350" height="325" style="background: rgba(245, 245, 250, 0.980392);"><g transform="translate(50,10)"><rect class="urrects" height="88.05673305560765" width="25" x="12.857142857142858" y="176.94326694439235" style="fill: rgb(204, 0, 0); margin-right: 1px;"></rect><rect class="urrects" height="86.2007025613462" width="25" x="55.71428571428572" y="178.7992974386538" style="fill: rgb(204, 0, 0); margin-right: 1px;"></rect><rect class="urrects" height="97.37472522396004" width="25" x="98.57142857142858" y="167.62527477603996" style="fill: rgb(204, 0, 0); margin-right: 1px;"></rect><rect class="urrects" height="140.11579172556512" width="25" x="141.42857142857144" y="124.88420827443488" style="fill: rgb(204, 0, 0); margin-right: 1px;"></rect><rect class="urrects" height="186.15158964241937" width="25" x="184.2857142857143" y="78.84841035758063" style="fill: rgb(204, 0, 0); margin-right: 1px;"></rect><rect class="urrects" height="241.2330538891428" width="25" x="227.14285714285717" y="23.76694611085719" style="fill: rgb(204, 0, 0); margin-right: 1px;"></rect></g><g transform="translate(50,10)"><rect class="refrects" height="57.44318888116753" width="25" x="12.857142857142858" y="207.55681111883246" style="fill: rgb(255, 165, 0); margin-right: 1px;"></rect><rect class="refrects" height="64.6932587527682" width="25" x="55.71428571428572" y="200.3067412472318" style="fill: rgb(255, 165, 0); margin-right: 1px;"></rect><rect class="refrects" height="67.64373556503152" width="25" x="98.57142857142858" y="197.35626443496847" style="fill: rgb(255, 165, 0); margin-right: 1px;"></rect><rect class="refrects" height="100.96838574831966" width="25" x="141.42857142857144" y="164.03161425168034" style="fill: rgb(255, 165, 0); margin-right: 1px;"></rect><rect class="refrects" height="134.76615228346023" width="25" x="184.2857142857143" y="130.23384771653977" style="fill: rgb(255, 165, 0); margin-right: 1px;"></rect><rect class="refrects" height="176.1086650618071" width="25" x="227.14285714285717" y="88.8913349381929" style="fill: rgb(255, 165, 0); margin-right: 1px;"></rect></g><g transform="translate(50,10)"><rect id="costref" class="urrects" stroke="blue" height="140.11579172556512" width="25" x="141.42857142857144" y="124.88420827443488" style="fill: none; margin-right: 1px;"></rect></g><g transform="translate(50,10)"><g class="tick" transform="translate(0,265)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">0</text></g><g class="tick" transform="translate(0,238.5)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">1,000</text></g><g class="tick" transform="translate(0,212)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">2,000</text></g><g class="tick" transform="translate(0,185.5)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">3,000</text></g><g class="tick" transform="translate(0,159)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">4,000</text></g><g class="tick" transform="translate(0,132.5)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">5,000</text></g><g class="tick" transform="translate(0,106)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">6,000</text></g><g class="tick" transform="translate(0,79.49999999999997)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">7,000</text></g><g class="tick" transform="translate(0,53)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">8,000</text></g><g class="tick" transform="translate(0,26.5)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">9,000</text></g><g class="tick" transform="translate(0,0)" style="opacity: 1;"><line x2="-6" y2="0" style="stroke: rgb(0, 0, 0);"></line><text x="-9" y="0" dy=".32em" style="text-anchor: end;">10,000</text></g><path class="domain" d="M-6,0H0V265H-6" style="fill: none; stroke: rgb(0, 0, 0);"></path></g><g transform="translate(50,275)"><g class="tick" transform="translate(27.857142857142858,0)" style="opacity: 1;"><line y2="6" x2="0" style="stroke: rgb(0, 0, 0);"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">18-24</text></g><g class="tick" transform="translate(70.71428571428572,0)" style="opacity: 1;"><line y2="6" x2="0" style="stroke: rgb(0, 0, 0);"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">25-34</text></g><g class="tick" transform="translate(113.57142857142858,0)" style="opacity: 1;"><line y2="6" x2="0" style="stroke: rgb(0, 0, 0);"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">35-44</text></g><g class="tick" transform="translate(156.42857142857144,0)" style="opacity: 1;"><line y2="6" x2="0" style="stroke: rgb(0, 0, 0);"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">45-54</text></g><g class="tick" transform="translate(199.2857142857143,0)" style="opacity: 1;"><line y2="6" x2="0" style="stroke: rgb(0, 0, 0);"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">55-64</text></g><g class="tick" transform="translate(242.14285714285717,0)" style="opacity: 1;"><line y2="6" x2="0" style="stroke: rgb(0, 0, 0);"></line><text y="9" x="0" dy=".71em" style="text-anchor: middle;">65+</text></g><path class="domain" d="M0,6V0H270V6" style="fill: none; stroke: rgb(0, 0, 0);"></path></g><text x="55" y="15">Cost (in $)</text><text x="130" y="305">Age Groups (in years)</text></svg></div>
+<div class="legend"> 
+		<p>The yellow bars indicate predicted healthcare costs for individuals with your characteristics and disease probabilities based on having no risk factors (i.e. individuals with normal BMI, non-smokers,
+		no high blood pressure or cholesterol, and reported exercise in the last month.)</p>
+		<p>As you change your risk factors your disease probabilities will change, and you will see an increase (red extension of the bar) in predicted healthcare costs for individuals with your characteristics and your risk factors, based on the 2012 
+			Medical Expenditure Panel Survey.</p>
+		</div>
+</div>
+
+<!--<div id="outputtextBox">
+	<div id="outputtext"></div>
+</div>-->
+
+</div>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js" type="text/javascript"></script>-->
+<script src="./contest_files/jquery-2.0.0.min.js" type="text/javascript"></script>
+<script src="./contest_files/d3.min.js" type="text/javascript"></script>
+<script src="./contest_files/vizDisProbs2.js" type="text/javascript"></script>
+<!--	<script src="js/vizDisPercs.js"></script> -->
+
+	
+	
+</body></html>

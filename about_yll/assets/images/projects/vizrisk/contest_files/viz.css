@@ -1,0 +1,224 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,700,400&subset=latin,cyrillic-ext);
+
+html{
+/*	background: url('/Hemu_prac/img/crowded-britain_796405c.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	*/
+	font-family: 'Roboto';
+	height:auto;
+}
+#note{
+	color:red; 
+	font-size:12px;
+	background:rgba(245,245,250,.90);
+	padding:2px;
+	
+}
+#page{
+	height:auto;
+}
+#banner{
+	font-family: 'Roboto';
+	background:rgba(245,245,250,.90);
+	width:1025px;
+	height:35px;
+	margin-top:5px;
+	margin-bottom:5px;
+	padding:5px;
+	font-size:20px;
+}
+
+.userInfoBox{
+	border:solid;
+	border-color:steelblue;
+	border-width:1px;
+	border-radius:5px;
+	padding:5px;
+	margin: 2px 1px 2px 1px;
+	box-shadow: 5px 5px 5px #888888;
+
+}
+	#topbox{
+		margin-bottom:15px;}
+
+
+#bannerTitle{
+	font-family: 'Roboto';
+	padding:5px;
+	width:980;
+	height:auto;
+	background-color:#444444;
+	color:white;
+}
+
+.bannerInfo{
+	float:right;
+	border-color:rgba(245,245,250,.90);
+	font-family: 'Roboto';
+	font-size: 12px;
+	padding:5px;
+	width:auto;
+	height:auto;
+	background-color:#444444;
+	color:white;
+}
+	.bannerInfo a {
+		text-decoration:none;
+		color:inherit;
+	}
+	.bannerInfo a:hover {
+		color:steelblue;
+	}
+	.bannerInfo a:active {
+		color:steelblue;
+	}
+
+
+#userinfo {
+	float:left;
+	padding:10px;
+	font-family: 'Roboto';
+	color:steelblue;
+	font-size:11px;
+	margin-right:10px;
+	width:250px;
+	height:auto;
+	background:rgba(245,245,250,.98);
+	
+}
+
+#riskdesc{
+	float:left;
+	width:auto;
+	height:auto;
+	background:rgba(245,245,250,.98);
+	margin-bottom:2px;
+	font-size:12px;
+	padding:5px;
+	font-weight:900;
+
+}
+
+
+#outputtextBox {
+	float:left;
+	padding:5px;
+	font-family: 'Roboto';
+	color:black;
+	font-size:11px;
+	margin-right:10px;
+	width:auto;
+	height:auto;
+	background:rgba(245,245,250,.98);
+	border:solid;
+	border-color:steelblue;
+	border-width:1px;
+	border-radius:5px;
+	box-shadow: 2px 2px 2px #888888;
+}
+
+#dis_prob {
+	float:left;
+	padding:5px;
+	font-family: 'Roboto';
+	color:steelblue;
+	font-size:10px;
+
+	/*margin-bottom:2px;*/
+	width:350px;
+	height:auto;
+}
+
+#cost {
+	float:left;
+	padding:5px;
+	font-family: 'Roboto';
+	color:steelblue;
+	font-size:10px;
+
+
+	width:350px;
+	height:auto;
+
+}
+.chart {
+	float:left;
+	font-family: 'Roboto';
+	color:steelblue;
+	padding:5px 5px 5px 5px;
+	width:365px;
+	font-size:10px;
+	margin-right:5px;
+	background:rgba(245,245,250,.85);
+}
+
+.inlabs{
+	color:black;
+}
+
+#dis_box{
+	padding:5px;
+	background-color:#444444;
+	border-style:thin;
+	border-color:black;
+	color:white;
+}
+
+.formstyle{
+	font-family: 'Roboto';
+	font-size:10px;
+	margin:1px;
+	width:auto;
+	padding:2px;
+}
+
+
+
+.graphTitle{
+	background-color:rgba(245,245,250,.98);
+	height:40px;
+	padding-top:10px;
+
+	
+	
+}
+#disTitle span{
+	font-size:13px; 
+	font-weight:900; 
+	color:black;
+display:table;
+margin:0 auto;
+
+}
+
+#costTitle p{
+	padding-top:10px;
+	font-size:13px; 
+	font-weight:900; 
+	color:black;
+	display:table;
+margin:0 auto;
+	
+}
+
+
+	
+.legend {
+	margin:5px;
+	color:black;
+	font-weight:900;
+}
+
+
+.about_creator{
+		font-size:12px;
+		background-color:rgba(245,245,250,.98);
+		width:975px;
+		height:auto;
+		padding:10px;
+		border-radius:5px;
+		box-shadow: 5px 5px 5px #888888;
+}
