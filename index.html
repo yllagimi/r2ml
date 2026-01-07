@@ -3,314 +3,328 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>R2ML | Data Science for Public Health</title>
-    <meta name="description" content="Specialized consulting in Mental Health, Epidemiology, and Health Services Research." />
+    <title>R2ML | Research & Data Science</title>
+    <meta name="description" content="Data Science Consulting for Mental Health, Epidemiology, and Health Services." />
 
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Fonts: Merriweather (Serif/Academic) & Open Sans (Clean) -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
 
     <style>
-        /* --- CUSTOM STYLES --- */
         :root {
-            --primary-color: #0e4c5e; /* Deep Teal - Trust/Health */
-            --secondary-color: #2c3e50; /* Slate - Data/Tech */
-            --accent-color: #20c997; /* Light Teal - Highlights */
-            --light-bg: #f8f9fa;
+            --r2-blue: #004d70; /* RAND-like deep blue */
+            --r2-dark: #222;
+            --r2-gray: #f3f3f3;
+            --r2-accent: #007bff;
         }
 
         body {
             font-family: 'Open Sans', sans-serif;
             color: #333;
-            line-height: 1.6;
+            background-color: #fff;
         }
 
-        h1, h2, h3, h4, h5 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            color: var(--secondary-color);
-        }
-
-        /* Navbar */
-        .navbar {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 1rem 0;
-        }
-        .navbar-brand img {
-            height: 60px; /* Adjusted size */
-        }
-        .nav-link {
-            color: var(--secondary-color);
-            font-weight: 600;
-            margin-left: 15px;
-        }
-        .nav-link:hover {
-            color: var(--primary-color);
-        }
-        .btn-login {
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-            border-radius: 30px;
-            padding: 5px 20px;
-        }
-        .btn-login:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(rgba(14, 76, 94, 0.9), rgba(44, 62, 80, 0.8)), url('images/cj_banner.png'); /* Reusing your image */
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 150px 0 100px 0;
-            text-align: center;
-        }
-        .hero-section h1 {
-            color: white;
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .hero-section .lead {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-        }
-
-        /* Services Section */
-        .service-box {
-            padding: 30px;
-            border-radius: 8px;
-            background: white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-            height: 100%;
-            border-top: 4px solid var(--primary-color);
-        }
-        .service-box:hover {
-            transform: translateY(-5px);
-        }
-        .icon-box {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background-color: var(--light-bg);
-            padding: 80px 0;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 50px 0 20px 0;
-        }
-        footer a {
-            color: #ddd;
-            text-decoration: none;
-        }
-        footer a:hover {
-            color: var(--accent-color);
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4, h5, .serif-font {
+            font-family: 'Merriweather', serif;
+            color: var(--r2-dark);
         }
         
-        /* Utility */
-        .text-accent { color: var(--primary-color); }
-        .bg-light-gray { background-color: #f9f9f9; }
+        a {
+            color: var(--r2-blue);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: var(--r2-accent);
+        }
+
+        /* --- HEADER --- */
+        .top-bar {
+            background-color: var(--r2-blue);
+            color: white;
+            padding: 5px 0;
+            font-size: 0.85rem;
+        }
+        .top-bar a { color: white; margin-left: 15px; }
+
+        .navbar {
+            border-bottom: 4px solid var(--r2-blue);
+            padding: 1rem 0;
+            background: white;
+        }
+        .navbar-brand img { height: 55px; }
+        .nav-link {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: #444 !important;
+            margin-left: 15px;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-featured {
+            background-color: var(--r2-gray);
+            padding: 0;
+            overflow: hidden;
+        }
+        .hero-img {
+            background-image: url('images/cj_banner.png'); /* Fallback image */
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+        }
+        .hero-content {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .tag-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* --- NEWS GRID --- */
+        .news-item {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+        .news-item:last-child { border-bottom: none; }
+        .news-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+        .news-meta {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- RIGHT SIDEBAR --- */
+        .sidebar-box {
+            background: var(--r2-gray);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-top: 3px solid var(--r2-blue);
+        }
+        .service-link {
+            display: block;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+            font-weight: 600;
+            color: #444;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 3rem 0;
+            font-size: 0.9rem;
+        }
+        footer h5 { color: white; margin-bottom: 1.5rem; }
+        footer a { color: #bbb; }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <!-- TOP BAR (Utility) -->
+    <div class="top-bar">
+        <div class="container text-end">
+            <span>Jersey City, NJ</span>
+            <a href="mailto:info@r2ml.org">info@r2ml.org</a>
+            <a href="cj/cj.html">Client Portal</a>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/cj5_LogoMakr_4HKMb1.png" alt="R2ML Logo"> 
-                <span class="ms-2 d-none d-sm-inline-block" style="font-weight:700; color:var(--primary-color)">R2ML</span>
+                <img src="images/cj5_LogoMakr_4HKMb1.png" alt="R2ML Logo">
+                <span class="d-none d-md-inline-block ms-2 serif-font" style="font-weight:900; color:var(--r2-blue); vertical-align:middle;">R2ML</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About & Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://yllagimi.com/">About & Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news">Research</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item ms-lg-3"><a class="nav-link btn-login" href="cj/cj.html">Client Portal</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section">
-        <div class="container">
-            <div class="animate-box">
-                <h1>Evidence-Based Data Science</h1>
-                <p class="lead">Specializing in Epidemiology, Behavioral Health, and Health Services Research.</p>
-                <p>We transform complex health data into actionable clinical and policy insights.</p>
-                <a href="#contact" class="btn btn-light btn-lg mt-3" style="color:var(--primary-color); font-weight:bold;">Start a Conversation</a>
+    <!-- FEATURED HERO (The "Rand" Big Story) -->
+    <section class="hero-featured mb-5">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-lg-7 hero-img" style="background-image: url('images/risk.png');">
+                    <!-- Image handled by CSS background for cover effect -->
+                </div>
+                <div class="col-lg-5 hero-content">
+                    <span class="tag-label text-primary">Featured Analysis</span>
+                    <h1>Predicting Healthcare Costs in Chronic Disease Populations</h1>
+                    <p class="lead my-3">
+                        Using machine learning to analyze longitudinal patient data, we identified key predictors for high-cost outliers in hospital systems.
+                    </p>
+                    <a href="services.html#ds" class="btn btn-outline-dark rounded-0 px-4">Read the Methodology</a>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <section class="py-5">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <h2 class="mb-4">From Raw Data to <span class="text-accent">Public Health Impact</span></h2>
-                    <p class="text-muted">
-                        R2ML connects disparate data sources to answer critical health and wellbeing questions. 
-                        Whether it is modeling patient behaviors for a hospital system, analyzing epidemiological trends, 
-                        or developing NLP pipelines for clinical notes, we bring academic rigor to industry challenges.
+    <!-- MAIN CONTENT GRID -->
+    <div class="container mb-5">
+        <div class="row">
+            
+            <!-- LEFT COLUMN: NEWS & ARTICLES (2/3 Width) -->
+            <div class="col-lg-8 pe-lg-5" id="news">
+                <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
+                    <h2 class="m-0">Latest Insights</h2>
+                    <span class="text-muted small">Curated from SmartBrief & R2ML Research</span>
+                </div>
+
+                <!-- INSTRUCTIONS FOR UPDATING NEWS:
+                     1. Copy one of the <div class="news-item"> blocks below.
+                     2. Paste it at the TOP of this list.
+                     3. Update the Title, Link, and Summary.
+                -->
+
+                <!-- ARTICLE 1 -->
+                <div class="news-item">
+                    <div class="news-meta">April 2025 | Epidemiology</div>
+                    <a href="https://newsletter.smartbrief.com/servlet/encodeServlet?issueid=0BB872C5-0204-4DC3-AB48-68636CFE79E3" target="_blank">
+                        <h3 class="news-title">AI's Growing Role in Mental Health Diagnosis</h3>
+                    </a>
+                    <p>
+                        Recent studies indicate that natural language processing (NLP) can detect early signs of depression in clinical notes with 85% accuracy. R2ML is currently exploring similar pipelines for behavioral health partners.
                     </p>
                 </div>
+
+                <!-- ARTICLE 2 -->
+                <div class="news-item">
+                    <div class="news-meta">March 2025 | Health Policy</div>
+                    <a href="#" class="text-decoration-none text-dark">
+                        <h3 class="news-title">The Economics of Preventive Nutrition</h3>
+                    </a>
+                    <p>
+                        New data suggests that for every $1 spent on nutritional counseling for at-risk diabetic populations, health systems save $3.40 in long-term care costs.
+                    </p>
+                </div>
+
+                <!-- ARTICLE 3 -->
+                <div class="news-item">
+                    <div class="news-meta">February 2025 | Tech & Data</div>
+                    <a href="cj/cj.html">
+                        <h3 class="news-title">Project Spotlight: CookieJar AI</h3>
+                    </a>
+                    <p>
+                        Our internal project, CookieJar, demonstrates how "Just-in-Time" adaptive interventions (JITAI) can interrupt binge-eating behaviors using location-based triggers.
+                    </p>
+                </div>
+
+                <!-- ARTICLE 4 -->
+                <div class="news-item">
+                    <div class="news-meta">January 2025 | Industry News</div>
+                    <a href="https://www.rand.org/health-care.html" target="_blank">
+                        <h3 class="news-title">Healthcare Systems Adapt to Post-Pandemic Data Flows</h3>
+                    </a>
+                    <p>
+                        Interoperability remains the biggest challenge for hospital networks trying to integrate behavioral health data with primary care records.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: SERVICES & INFO (1/3 Width) -->
+            <div class="col-lg-4">
+                
+                <!-- Services Box -->
+                <div class="sidebar-box">
+                    <h4 class="mb-3">Our Expertise</h4>
+                    <nav class="nav flex-column">
+                        <a href="services.html#ds" class="service-link">Data Science & Predictive Modeling</a>
+                        <a href="services.html#ha" class="service-link">Epidemiology & Public Health</a>
+                        <a href="services.html#wd" class="service-link">Behavioral Health Interventions</a>
+                        <a href="services.html#api" class="service-link">NLP & Clinical Informatics</a>
+                    </nav>
+                </div>
+
+                <!-- Contact Box -->
+                <div class="sidebar-box bg-light">
+                    <h4 class="mb-3">Engage with R2ML</h4>
+                    <p class="small">We partner with health systems, research institutes, and government agencies to solve complex data problems.</p>
+                    <a href="mailto:info@r2ml.org" class="btn btn-primary w-100 rounded-0">Contact Us</a>
+                </div>
+
+                <!-- Featured Project Small -->
+                <div class="mb-4">
+                    <img src="images/h2h.png" class="img-fluid mb-2" alt="H2H Project">
+                    <h5>H2H Voting Comparator</h5>
+                    <p class="small text-muted">A look back at our Library of Congress Data Challenge submission.</p>
+                </div>
+
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="py-5 bg-light-gray">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2>Core Competencies</h2>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <div class="icon-box"><i class="bi bi-activity"></i></div>
-                        <h4>Epidemiology & Research</h4>
-                        <p>Study design, surveillance system evaluation, and longitudinal data analysis for public health initiatives.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <div class="icon-box"><i class="bi bi-brain"></i></div>
-                        <h4>Mental & Behavioral Health</h4>
-                        <p>Predictive modeling for patient outcomes, CBT app development support, and neuropsychological assessment metrics (ANAM) analysis.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-box">
-                        <div class="icon-box"><i class="bi bi-cpu"></i></div>
-                        <h4>AI & Machine Learning</h4>
-                        <p>Natural Language Processing (NLP) for medical records, quantitative trading models, and custom Python-based AI agents.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                <a href="services.html" class="btn btn-outline-dark">View All Services</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2>Selected Work</h2>
-            </div>
-            <div class="row g-3">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div style="height:150px; background: #eee; background-image:url('images/logocookie.png'); background-size:contain; background-repeat:no-repeat; background-position:center;"></div>
-                        <div class="card-body">
-                            <h5 class="card-title">CookieJar AI</h5>
-                            <p class="card-text small">Behavioral health chatbot using CBT principles to manage dietary choices.</p>
-                            <a href="cj/cj.html" class="stretched-link"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div style="height:150px; background: #eee; background-image:url('images/risk.png'); background-size:cover;"></div>
-                        <div class="card-body">
-                            <h5 class="card-title">Health Cost Predictor</h5>
-                            <p class="card-text small">Chronic disease and healthcare cost prediction modeling (HHS Data Challenge).</p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div style="height:150px; background: #eee; background-image:url('images/h2h.png'); background-size:cover;"></div>
-                        <div class="card-body">
-                            <h5 class="card-title">Voting Comparator</h5>
-                            <p class="card-text small">Congressional Library data challenge submission.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div style="height:150px; background: #eee; display:flex; align-items:center; justify-content:center;">
-                            <i class="bi bi-graph-up text-muted" style="font-size:3rem;"></i>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Quant Trading</h5>
-                            <p class="card-text small">Algorithmic trading strategies using Python and ThinkScript.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="cta-section text-center">
-        <div class="container">
-            <h2 class="mb-3">Ready to Leverage Your Data?</h2>
-            <p class="mb-4">We are currently accepting new consulting engagements for health systems and research institutes.</p>
-            
-            <a href="mailto:info@r2ml.org?subject=Inquiry%20from%20R2ML%20Website" class="btn btn-primary btn-lg px-5">
-                <i class="bi bi-envelope-fill me-2"></i> Contact Us
-            </a>
-            <p class="mt-3 text-muted small">Or email us directly at <strong>info@r2ml.org</strong></p>
-        </div>
-    </section>
-
-    <footer>
+    <!-- FOOTER -->
+    <footer id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5 class="text-white">R2 Media Labs</h5>
-                    <p class="small text-white-50">
-                        Bridging the gap between clinical public health and advanced data science. 
-                        We bring a multidisciplinary approach including epidemiology, economics, and software engineering.
+                <div class="col-md-5 mb-4">
+                    <h5>R2 Media Labs</h5>
+                    <p>
+                        A data science consultancy bridging the gap between clinical public health and advanced machine learning.
                     </p>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h6 class="text-white">Navigate</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                    </ul>
+                    <div class="mt-3">
+                        <a href="#" class="me-3"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-github fs-5"></i></a>
+                    </div>
                 </div>
                 <div class="col-md-3 mb-4">
-                    <h6 class="text-white">Connect</h6>
-                    <ul class="list-unstyled small">
-                        <li><a href="https://www.linkedin.com/in/yllagimi/" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
-                        <li><a href="mailto:info@r2ml.org"><i class="bi bi-envelope"></i> info@r2ml.org</a></li>
+                    <h5>Research Areas</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html">Mental Health</a></li>
+                        <li><a href="services.html">Epidemiology</a></li>
+                        <li><a href="services.html">Health Economics</a></li>
                     </ul>
                 </div>
-                 <div class="col-md-3 mb-4">
-                    <h6 class="text-white">Office</h6>
-                    <ul class="list-unstyled small text-white-50">
-                        <li>Jersey City, NJ</li>
-                        <li>United States</li>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope me-2"></i> info@r2ml.org</li>
+                        <li><i class="bi bi-geo-alt me-2"></i> Jersey City, NJ</li>
                     </ul>
-                </div>
-            </div>
-            <hr style="border-color: rgba(255,255,255,0.1);">
-            <div class="row">
-                <div class="col-md-12 text-center small text-white-50">
-                    &copy; 2025 R2ML.org. All Rights Reserved.
+                    <p class="small text-muted mt-3">
+                        &copy; 2025 R2ML.org. All Rights Reserved.
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
