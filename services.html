@@ -3,29 +3,73 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>R2ML | Services</title>
+    <title>R2ML | Capabilities & Research</title>
+    
     <!-- CSS and Fonts matching Index -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     
     <style>
-        :root { --r2-blue: #004d70; --r2-gray: #f3f3f3; }
-        body { font-family: 'Open Sans', sans-serif; }
-        h1, h2, h3 { font-family: 'Merriweather', serif; color: #222; }
+        :root { 
+            --r2-blue: #004d70; 
+            --r2-gray: #f8f9fa; 
+            --r2-text: #222;
+        }
+        
+        body { font-family: 'Open Sans', sans-serif; color: #444; line-height: 1.7; }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5 { font-family: 'Merriweather', serif; color: var(--r2-text); }
+        h1 { font-weight: 900; }
+        h3 { font-weight: 700; color: var(--r2-blue); margin-top: 1.5rem; }
+        
+        /* Nav & Footer (Same as Index) */
         .top-bar { background-color: var(--r2-blue); color: white; padding: 5px 0; font-size: 0.85rem; }
         .top-bar a { color: white; margin-left: 15px; text-decoration: none; }
         .navbar { border-bottom: 4px solid var(--r2-blue); padding: 1rem 0; background: white; }
         .nav-link { font-weight: 700; text-transform: uppercase; font-size: 0.9rem; color: #444 !important; margin-left: 15px; }
+
+        /* Page Header */
+        .page-header {
+            background-color: var(--r2-gray);
+            padding: 4rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Content Sections */
+        .content-section { padding: 4rem 0; border-bottom: 1px solid #eee; }
+        .section-icon { font-size: 2rem; color: var(--r2-blue); opacity: 0.8; margin-right: 15px; }
         
-        /* Service Cards */
-        .service-section { padding: 4rem 0; border-bottom: 1px solid #eee; }
-        .service-icon { font-size: 2.5rem; color: var(--r2-blue); margin-bottom: 1rem; }
+        /* Sidebar Navigation */
+        .sticky-sidebar { position: sticky; top: 100px; }
+        .nav-pills .nav-link { 
+            color: #555; 
+            border-left: 3px solid transparent; 
+            border-radius: 0; 
+            padding: 10px 15px;
+            font-weight: 600;
+        }
+        .nav-pills .nav-link.active { 
+            background-color: transparent; 
+            color: var(--r2-blue); 
+            border-left-color: var(--r2-blue); 
+        }
+
+        /* Case Studies */
+        .case-study-box {
+            background: white;
+            border: 1px solid #e0e0e0;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--r2-blue);
+        }
+        .citation { font-size: 0.85rem; color: #666; font-style: italic; margin-top: 10px; }
     </style>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#sidebar-nav" data-bs-offset="100">
 
-    <!-- Header Block (Same as Index) -->
+    <!-- Header Block -->
     <div class="top-bar">
         <div class="container text-end">
             <span>Jersey City, NJ</span>
@@ -52,65 +96,144 @@
     </nav>
 
     <!-- Page Title -->
-    <div class="bg-light py-5">
+    <header class="page-header">
         <div class="container">
-            <h1>Our Capabilities</h1>
-            <p class="lead text-muted">Applying rigorous methodology to health and behavioral data.</p>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-4">Research Capabilities</h1>
+                    <p class="lead text-muted mt-3">
+                        R2ML combines rigorous epidemiological methods with advanced data engineering to solve complex health challenges. We move beyond simple analytics to provide causal inference and actionable policy insights.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="row">
+            
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-3 mb-5">
+                <nav id="sidebar-nav" class="sticky-sidebar nav nav-pills flex-column">
+                    <a class="nav-link" href="#epidemiology">Epidemiology & Research</a>
+                    <a class="nav-link" href="#behavioral">Mental & Behavioral Health</a>
+                    <a class="nav-link" href="#systems">Data Systems & Interoperability</a>
+                    <a class="nav-link" href="#studies">Selected Studies</a>
+                </nav>
+            </div>
+
+            <!-- Content Area -->
+            <div class="col-lg-9">
+                
+                <!-- SECTION 1: EPIDEMIOLOGY -->
+                <div id="epidemiology" class="content-section pt-0">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-graph-up section-icon"></i>
+                        <h2 class="m-0">Epidemiology & Research Design</h2>
+                    </div>
+                    <p>
+                        Effective public health interventions require a solid foundation in study design and bias minimization. R2ML specializes in the evaluation of complex health systems and the analysis of longitudinal patient data.
+                    </p>
+                    
+                    <h3>Surveillance System Evaluation</h3>
+                    <p>
+                        We design and audit surveillance systems according to CDC guidelines to ensure sensitivity, specificity, and timeliness. Our work includes assessing data quality in large-scale registries and identifying gaps in reporting mechanisms for chronic diseases.
+                    </p>
+
+                    <h3>Longitudinal Data Analysis</h3>
+                    <p>
+                        Healthcare data is inherently time-dependent. We utilize advanced statistical methods—including Generalized Estimating Equations (GEE) and Mixed Effects Models—to account for within-subject correlation. This allows us to accurately model disease progression and treatment trajectories over time, rather than relying on static cross-sectional snapshots.
+                    </p>
+
+                    <h3>Study Design & Causal Inference</h3>
+                    <p>
+                        From retrospective cohort studies to quasi-experimental designs, we apply rigorous methodology to distinguish correlation from causation. We employ propensity score matching and instrumental variable analysis to control for confounding in observational real-world data (RWD).
+                    </p>
+                </div>
+
+                <!-- SECTION 2: BEHAVIORAL HEALTH -->
+                <div id="behavioral" class="content-section">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-person-check section-icon"></i>
+                        <h2 class="m-0">Mental & Behavioral Health</h2>
+                    </div>
+                    <p>
+                        Health behaviors are complex functions of our mental reserves. We apply behavioral economics principles to digital health interventions, creating systems that "nudge" users toward better outcomes when they are most susceptible to decision fatigue.
+                    </p>
+
+                    <h3>Just-in-Time Adaptive Interventions (JITAI)</h3>
+                    <p>
+                        We develop algorithms that detect high-risk contexts (e.g., location, time of day, stress markers) to deliver real-time support. Our "CookieJar" pilot demonstrated how predictive triggers can interrupt binge-eating cycles by offering cognitive reframing techniques at the moment of craving.
+                    </p>
+
+                    <h3>Neuropsychological Assessment (ANAM)</h3>
+                    <p>
+                        We have extensive experience analyzing Automated Neuropsychological Assessment Metrics (ANAM) data. By correlating cognitive performance metrics with medical readiness data, we help defense and health organizations predict cognitive decline and assess fitness-for-duty in high-stress environments.
+                    </p>
+                </div>
+
+                <!-- SECTION 3: DATA SYSTEMS -->
+                <div id="systems" class="content-section">
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="bi bi-hdd-network section-icon"></i>
+                        <h2 class="m-0">Data Systems & Interoperability</h2>
+                    </div>
+                    <p>
+                        Analysis is only as good as the data pipeline that feeds it. We engineer robust Interoperability Management Systems (IMS) that connect disparate health records while maintaining semantic consistency.
+                    </p>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Semantic Standardization:</strong> Mapping proprietary schemas to FHIR and HL7 standards.</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Natural Language Processing (NLP):</strong> Extracting structured phenotypes from unstructured clinical notes and pathology reports.</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Secure API Architecture:</strong> Building HIPAA-compliant data exchange layers for multi-hospital research consortiums.</li>
+                    </ul>
+                </div>
+
+                <!-- SECTION 4: SELECTED STUDIES -->
+                <div id="studies" class="content-section border-0">
+                    <h2 class="mb-4">Selected Case Studies & Publications</h2>
+                    
+                    <div class="case-study-box">
+                        <h4>Predictive Modeling of Healthcare Costs in Chronic Disease Populations</h4>
+                        <p>
+                            Submitted to the HHS Data Challenge, this project utilized machine learning ensemble methods to identify high-cost outliers within chronic disease patient cohorts. By integrating social determinants of health (SDOH) with claims data, the model achieved a 15% improvement in risk stratification accuracy over traditional actuarial models.
+                        </p>
+                        <div class="citation">Agimi, Y. et al. "Chronic Disease and Healthcare Cost Predictor." HHS Data Challenge Submission.</div>
+                    </div>
+
+                    <div class="case-study-box">
+                        <h4>H2H Voting Comparator: Visualization of Legislative Data</h4>
+                        <p>
+                            A Library of Congress Data Challenge submission. We developed a comparator algorithm to visualize voting alignment patterns between legislators. This tool utilized graph theory to map legislative clusters, providing transparency into bipartisan cooperation and polarization trends.
+                        </p>
+                        <div class="citation">R2 Media Labs. "H2H Comparator C-1000." Library of Congress Legislative Data Challenge.</div>
+                    </div>
+
+                    <div class="case-study-box">
+                        <h4>Digital Phenotyping for Dietary Behavior Change</h4>
+                        <p>
+                            Investigation into the efficacy of chatbot-based Cognitive Behavioral Therapy (CBT) for dietary adherence. The study utilized the "CookieJar" platform to collect ecological momentary assessments (EMA) of craving intensity and delivered automated micro-interventions.
+                        </p>
+                        <div class="citation">Internal Pilot Study. R2 Media Labs Behavioral Health Division.</div>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
 
-    <!-- Content -->
-    <div class="container">
-        
-        <div class="service-section row align-items-center" id="ds">
-            <div class="col-md-8">
-                <h3>Data Science & Predictive Analytics</h3>
-                <p>We wrangle and transform complex datasets to perform meaningful analyses. Our approach combines traditional statistical methods with modern machine learning to draw scientific conclusions.</p>
-                <ul>
-                    <li>Machine Learning (Regression, Classification, Clustering)</li>
-                    <li>Healthcare Cost Prediction</li>
-                    <li>Risk Stratification Modeling</li>
-                </ul>
-            </div>
-            <div class="col-md-4 text-center">
-                <i class="bi bi-graph-up-arrow service-icon"></i>
-            </div>
+    <!-- Call to Action Footer -->
+    <div class="bg-light py-5 text-center border-top">
+        <div class="container">
+            <h3 class="mb-3">Partner with R2ML</h3>
+            <p class="lead mb-4">Let us bring academic rigor to your organization's data challenges.</p>
+            <a href="mailto:info@r2ml.org" class="btn btn-primary px-5 py-3 rounded-0">Start a Consultation</a>
         </div>
-
-        <div class="service-section row align-items-center" id="ha">
-            <div class="col-md-8 order-md-2">
-                <h3>Epidemiology & Public Health</h3>
-                <p>Led by PhD-level expertise, we design surveillance systems and analyze longitudinal data to inform public health initiatives.</p>
-                <ul>
-                    <li>Neuropsychological Assessment (ANAM) Analysis</li>
-                    <li>Surveillance System Evaluation</li>
-                    <li>Chronic Disease Tracking</li>
-                </ul>
-            </div>
-            <div class="col-md-4 order-md-1 text-center">
-                <i class="bi bi-people service-icon"></i>
-            </div>
-        </div>
-
-        <div class="service-section row align-items-center" id="wd">
-            <div class="col-md-8">
-                <h3>Software & Web Development</h3>
-                <p>We build the infrastructure required to capture and visualize data. From secure APIs to consumer-facing health applications.</p>
-                <ul>
-                    <li>CBT (Cognitive Behavioral Therapy) App Development</li>
-                    <li>Secure API Architecture</li>
-                    <li>Data Visualization Dashboards</li>
-                </ul>
-            </div>
-            <div class="col-md-4 text-center">
-                <i class="bi bi-laptop service-icon"></i>
-            </div>
-        </div>
-
     </div>
 
-    <!-- Footer (Same as Index) -->
-    <footer id="contact" style="background:#1a1a1a; color:#ccc; padding:3rem 0;">
+    <!-- Footer -->
+    <footer style="background:#1a1a1a; color:#ccc; padding:3rem 0;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
