@@ -71,21 +71,21 @@
         /* --- HERO SECTION --- */
         .hero-featured {
             background-color: var(--r2-gray);
-            padding: 0;
+            padding: 4rem 0;
             overflow: hidden;
+            border-bottom: 1px solid #ddd;
+        }
+        .hero-img-container {
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         .hero-img {
-            background-image: url('images/risk.png'); /* Fallback image */
-            background-size: cover;
-            background-position: center;
-            min-height: 450px;
-        }
-        .hero-content {
-            padding: 4rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: #fff; /* White background for text contrast like RAND */
+            width: 100%;
+            height: auto;
+            display: block;
         }
         .tag-label {
             font-size: 0.75rem;
@@ -94,13 +94,31 @@
             color: #666;
             font-weight: 700;
             margin-bottom: 15px;
-            display: block;
-            border-bottom: 2px solid var(--r2-blue);
             display: inline-block;
+            border-bottom: 2px solid var(--r2-blue);
             padding-bottom: 3px;
         }
 
         /* --- NEWS GRID --- */
+        .news-scroll-container {
+            max-height: 800px; /* Limits height to keep sidebar visible */
+            overflow-y: auto;  /* Adds scrollbar */
+            padding-right: 15px; /* Spacing for scrollbar */
+            scrollbar-width: thin;
+            scrollbar-color: var(--r2-blue) #eee;
+        }
+        /* Custom scrollbar for webkit */
+        .news-scroll-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .news-scroll-container::-webkit-scrollbar-track {
+            background: #eee;
+        }
+        .news-scroll-container::-webkit-scrollbar-thumb {
+            background-color: var(--r2-blue);
+            border-radius: 4px;
+        }
+
         .news-item {
             margin-bottom: 2rem;
             border-bottom: 1px solid #eee;
@@ -108,7 +126,7 @@
         }
         .news-item:last-child { border-bottom: none; }
         .news-title {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
             line-height: 1.3;
@@ -203,80 +221,141 @@
         </div>
     </nav>
 
-    <!-- HERO FEATURED (RAND Placeholder Style) -->
-    <section class="hero-featured mb-5 border-bottom">
-        <div class="container-fluid p-0">
-            <div class="row g-0">
-                <!-- Image Left -->
-                <div class="col-lg-3 hero-img" style="background-image: url('images/risk.png');"></div>
-                
-                <!-- Text Right -->
-                <div class="col-lg-5 hero-content">
-                    <span class="tag-label text-primary">Featured Research</span>
-                    <h1>How to Create 'Order in Data'</h1>
-                    <p class="lead my-3">
-                        With healthcare data and disparate sources on the rise, the need for an effective interoperability management system has never been more pressing. What would it take to create, develop, and operationalize such a system?
-                    </p>
-                    <a href="services.html#ds" class="btn btn-outline-dark rounded-0 px-4 mt-2">Read the Analysis</a>
+    <!-- HERO FEATURED (Centered & Updated) -->
+    <section class="hero-featured">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <!-- Image with constrained width -->
+                    <div class="hero-img-container">
+                        <img src="images/risk.png" alt="Data Interoperability" class="hero-img">
+                    </div>
+                    
+                    <span class="tag-label text-primary">Featured Analysis</span>
+                    <h1 class="mb-4">How to Create 'Order in Data'</h1>
+                    
+                    <div class="text-start mx-auto" style="max-width: 700px;">
+                        <p class="lead mb-4">
+                            Operationalizing an effective Interoperability Management System (IMS) requires more than just technical connections; it demands a structured framework for semantic consistency.
+                        </p>
+                        <p class="mb-4">
+                            Best practices indicate that a robust IMS rests on three pillars: <strong>governance</strong> (defining data stewardship), <strong>standardization</strong> (adopting FHIR and HL7 protocols), and <strong>workflow integration</strong>. By shifting from point-to-point interfaces to a centralized data exchange layer, health systems can reduce redundancy, improve clinical decision support, and ensure that data is not just moved, but understood.
+                        </p>
+                    </div>
+                    
+                    <a href="services.html#ds" class="btn btn-primary rounded-0 px-5 py-2 mt-2">Read the Analysis</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- MAIN CONTENT GRID -->
-    <div class="container mb-5">
+    <div class="container my-5">
         <div class="row">
             
-            <!-- LEFT COLUMN: LATEST INSIGHTS (Extracted from SmartBrief) -->
+            <!-- LEFT COLUMN: LATEST INSIGHTS (Scrollable) -->
             <div class="col-lg-8 pe-lg-5" id="news">
                 <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
                     <h2 class="m-0">Latest Insights</h2>
                     <span class="text-muted small">Curated from SmartBrief</span>
                 </div>
 
-                <!-- Story 1 -->
-                <div class="news-item">
-                    <div class="news-meta">Tech & Society</div>
-                    <a href="https://techcrunch.com/2023/09/08/threads-reaches-33m-daily-active-users-report-says/?utm_source=brief" target="_blank">
-                        <h3 class="news-title">Meta's Threads reaches 33M daily active users</h3>
-                    </a>
-                    <p>
-                        App intelligence firm data.ai estimates that Threads has around 33 million daily active users, including a significant number of cross-platform users from Twitter, now X.
-                    </p>
-                </div>
+                <!-- SCROLLABLE CONTAINER START -->
+                <div class="news-scroll-container">
 
-                <!-- Story 2 -->
-                <div class="news-item">
-                    <div class="news-meta">Policy & Regulation</div>
-                    <a href="https://www.cnbc.com/2023/09/08/elon-musks-x-sues-california-over-law-requiring-moderation-reports.html?utm_source=brief" target="_blank">
-                        <h3 class="news-title">X sues Calif. over content moderation law</h3>
-                    </a>
-                    <p>
-                        X has filed a lawsuit challenging the constitutionality of a California law known as AB 587, which requires social media companies to publish transparency reports detailing their content moderation policies.
-                    </p>
-                </div>
+                    <!-- R2ML Highlight -->
+                    <div class="news-item bg-light p-3 border-start border-4 border-primary">
+                        <div class="news-meta text-primary">R2ML Spotlight</div>
+                        <a href="cj/cj.html">
+                            <h3 class="news-title">CookieJar AI: Behavioral Nudging in Real-Time</h3>
+                        </a>
+                        <p>
+                            Our internal pilot demonstrates how "Just-in-Time" adaptive interventions can interrupt negative dietary behaviors using location-based triggers.
+                        </p>
+                    </div>
 
-                <!-- Story 3 -->
-                <div class="news-item">
-                    <div class="news-meta">Legal & Ethics</div>
-                    <a href="https://www.wired.com/story/openai-copyright-battle-legal-cases/?utm_source=brief" target="_blank">
-                        <h3 class="news-title">OpenAI's copyright battle with authors</h3>
-                    </a>
-                    <p>
-                        Author Michael Chabon and others have filed a lawsuit in San Francisco federal court accusing OpenAI of copyright infringement, alleging their works were used to train the company's AI models.
-                    </p>
-                </div>
+                    <!-- SmartBrief Article 1 -->
+                    <div class="news-item">
+                        <div class="news-meta">Tech Trends</div>
+                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAVcNWbfR" target="_blank">
+                            <h3 class="news-title"> Survey shows AI gains ground as clinical support tool</h3>
+                        </a>
+                        <p>Athenahealth's recent survey, which polled 501 physicians and practice administrators across the US, reveals that physicians are increasingly using AI as a clinical support tool, not just for administrative tasks. AI helps quickly look up clinical information (60%), bring lab and imaging results into a single view (55%), and surface recent clinical evidence during patient visits (56%), enhancing decision-making during patient care. However, challenges like data interoperability and the learning curve for AI tools persist.</p>
+                    </div>
 
-                <!-- Story 4 (Placeholder for R2ML internal) -->
-                <div class="news-item">
-                    <div class="news-meta">Internal Research</div>
-                    <a href="cj/cj.html">
-                        <h3 class="news-title">CookieJar AI: Behavioral Nudging in Real-Time</h3>
-                    </a>
-                    <p>
-                        Our internal pilot demonstrates how "Just-in-Time" adaptive interventions can interrupt negative dietary behaviors using location-based triggers.
-                    </p>
-                </div>
+                    <!-- SmartBrief Article 2 -->
+                    <div class="news-item">
+                        <div class="news-meta">Military Health System</div>
+                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAVipYPZl" target="_blank">
+                            <h3 class="news-title"> University of Idaho secures DOD funding for PTSD research</h3>
+                        </a>
+                        <p>The University of Idaho has been awarded $1.3 million in grants from the DOD to advance machine learning research for diagnosing PTSD in military personnel. Led by Psychology Professor Colin Xu, the research aims to enhance early detection of PTSD risks and symptoms, thereby improving support for service members and their families. The funding will also support studies on the impact of deployment on families' stress levels, with collaboration from institutions like Walter Reed National Military Medical Center and Northwestern University.</p>
+                    </div>
+
+                    <!-- SmartBrief Article 3 -->
+                    <div class="news-item">
+                        <div class="news-meta">Veterans Health Administration</div>
+                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAVldcpfY" target="_blank">
+                            <h3 class="news-title"> Vietnam Veterans' advocacy reshaped PTSD treatment</h3>
+                        </a>
+                        <p>Vietnam Veterans played a pivotal role in establishing modern PTSD treatments by advocating for recognition of their combat trauma, which was initially dismissed by the psychiatric community. Their efforts led to the inclusion of PTSD in the DSM-III in 1980, shifting the perception of trauma from a personal weakness to a response to external events. This change paved the way for specialized VA programs and evidence-based treatments, benefiting today's Veterans.</p>
+                    </div>
+
+                    <!-- SmartBrief Article 4 -->
+                    <div class="news-item">
+                        <div class="news-meta">Veterans Health Administration</div>
+                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAVnRhiOz" target="_blank">
+                            <h3 class="news-title"> Virtual care may reduce ED use for low-acuity conditions </h3>
+                        </a>
+                        <p>Low-acuity emergency department utilization declined by 12.4% after the Department of Veterans Affairs expanded access to care via telephone and video in March 2020, researchers reported in JAMA Network Open. The implementation of virtual care was not directly associated with lower ED use across all low-acuity conditions, but ED use declined for major depression, gastroenteritis, conjunctivitis, low-back pain, knee pain and cellulitis.</p>
+                    </div>
+
+                    <!-- SmartBrief Article 5 -->
+                    <div class="news-item">
+                        <div class="news-meta">Veterans Health Administration</div>
+                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAVqFnwUo" target="_blank">
+                            <h3 class="news-title">VA, community efforts combat Veteran suicide risks</h3>
+                        </a>
+                        <p>Suicide among US Veterans and service members remains a critical issue, with Veterans dying by suicide at a higher rate than the general population. The VA and other organizations offer crisis support through the Veterans Crisis Line and Military OneSource, emphasizing the need for these services to act as gateways to long-term care. The VA's strategy includes community partnerships and reducing access to lethal means, while community-based programs like Stop Soldier Suicide provide confidential support.</p>
+                    </div>
+
+                    <!-- SmartBrief Article 6 -->
+                    <div class="news-item">
+                        <div class="news-meta">Cybersecurity</div>
+                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAVyVOGUb" target="_blank">
+                            <h3 class="news-title">Telehealth prescribing flexibility extended for another year</h3>
+                        </a>
+                        <p>The Drug Enforcement Administration has extended remote prescribing flexibilities through the end of 2026, allowing controlled substances to be prescribed via telehealth without in-person exams. The flexibility was first enacted in March 2020 and has been extended four times. "I believe our collective focus must now shift toward establishing a permanent, proactive framework that ensures uninterrupted access to care," said Deepti Pandita, chief medical information officer at the University of California Irvine Health system</p>
+                    </div>
+
+                    <!-- SmartBrief Article 7 -->
+                    <div class="news-item">
+                        <div class="news-meta">National Health Care</div>
+                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAWipjoek" target="_blank">
+                            <h3 class="news-title">Attempted suicide may be a risk after head injury</h3>
+                        </a>
+                        <p>A large study in the UK found elevated suicide risks among people who had sustained a head injury, suggesting that suicide screening should be a standard component of concussion or traumatic brain injury care. Researchers analyzed two decades worth of records from 1.8 million adults in the UK and found a 21% higher risk for attempted suicide, but not death by suicide, among those who had a head injury, particularly in the first year after the injury. The study was published in the journal Neurology.</p>
+                    </div>
+
+                    <!-- SmartBrief Article 8 -->
+                    <div class="news-item">
+                        <div class="news-meta">AI Innovation</div>
+                        <a href="https://www.bloomberg.com/news/articles/2023-09-08/meta-developing-new-ai-model-to-rival-openai-s-gpt-4?utm_source=brief" target="_blank">
+                            <h3 class="news-title">Meta developing new AI model to rival GPT-4</h3>
+                        </a>
+                        <p>Meta is reportedly working on a new artificial intelligence system intended to be as powerful as OpenAI's most advanced model, aiming to help companies build text-generation tools.</p>
+                    </div>
+
+                    <!-- SmartBrief Article 9 -->
+                    <div class="news-item">
+                        <div class="news-meta">Health and Medical Research </div>
+                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAWnRrGTy" target="_blank">
+                            <h3 class="news-title"> Veterans with cardiometabolic diseases at risk during heatwaves</h3>
+                        </a>
+                        <p>A study published in JAMA Network Open shows the increased mortality risk among Veterans with cardiometabolic diseases during extreme heat events. Conducted by researchers at the Veterans Affairs Health Systems Research Center, the study found that Veterans living in high-deprivation areas or experiencing homelessness are particularly vulnerable. The study suggests that these findings could inform the development of heat-response plans, including cooling centers and anticipatory alerts, to mitigate risks during heatwaves..</p>
+                    </div>
+                </div> 
+                <!-- SCROLLABLE CONTAINER END -->
 
             </div>
 
@@ -319,7 +398,7 @@
         </div>
     </div>
 
-    <!-- EXPERT INSIGHTS SECTION (New) -->
+    <!-- EXPERT INSIGHTS SECTION -->
     <section class="expert-section">
         <div class="container">
             <h2 class="mb-5 border-bottom pb-3">Expert Insights</h2>
