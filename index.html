@@ -68,36 +68,106 @@
             margin-left: 15px;
         }
 
-        /* --- HERO SECTION --- */
-        .hero-featured {
+        /* --- CAROUSEL STYLES --- */
+        .featured-carousel-section {
             background-color: var(--r2-gray);
             padding: 4rem 0;
             overflow: hidden;
             border-bottom: 1px solid #ddd;
         }
-        .hero-img-container {
-            max-width: 600px;
-            margin: 0 auto 2rem auto;
-            border-radius: 4px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        .carousel-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
-        .hero-img {
-            width: 100%;
-            height: auto;
+        .carousel-nav-btn {
+            background: var(--r2-blue);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+            flex-shrink: 0;
+        }
+        .carousel-nav-btn:hover {
+            background: var(--r2-accent);
+        }
+        .carousel-nav-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .carousel-content-wrapper {
+            flex: 1;
+            overflow: hidden;
+        }
+        .carousel-slide {
+            display: none;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .carousel-slide.active {
             display: block;
         }
-        .tag-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #666;
-            font-weight: 700;
-            margin-bottom: 15px;
-            display: inline-block;
-            border-bottom: 2px solid var(--r2-blue);
-            padding-bottom: 3px;
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
+        .study-card-featured {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .study-year-badge {
+            display: inline-block;
+            background: var(--r2-blue);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .featured-study-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            color: var(--r2-dark);
+        }
+        .featured-study-journal {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1.25rem;
+            font-style: italic;
+        }
+        .featured-study-summary {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        .featured-study-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .carousel-counter {
+            text-align: center;
+            margin-top: 1.5rem;
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
 
                 /* --- MISSION BANNER --- */
         .mission-banner {
@@ -213,7 +283,7 @@
         <div class="container text-end">
             <span>Jersey City, NJ</span>
             <a href="mailto:info@r2ml.org">info@r2ml.org</a>
-            <a href="cj/cj.html">Client Portal</a>
+            <a href="restricted.html">Client Portal</a>
         </div>
     </div>
 
@@ -222,47 +292,123 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <img src="images/cj5_LogoMakr_4HKMb1.png" alt="R2ML Logo">
-                <span class="d-none d-md-inline-block ms-2 serif-font" style="font-weight:900; color:var(--r2-blue); vertical-align:middle;">R2ML</span>
+                <span class="d-none d-md-inline-block ms-2 serif-font" style="font-weight:900; color:var(--r2-blue); vertical-align:middle;">Research & Data Science </span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="https://yllagimi.com">About & Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About & Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#news">Research</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/crosswalk/index.html">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#News">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crosswalk/tool_crosswalk.html">Tools</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- HERO FEATURED (Centered & Updated) -->
-    <section class="hero-featured">
+    <!-- FEATURED STUDIES CAROUSEL -->
+    <section class="featured-carousel-section">
         <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8">
-                    <!-- Image with constrained width -->
-                    <div class="hero-img-container">
-                        <img src="images/risk.png" alt="Data Interoperability" class="hero-img">
+            <h2 class="mb-4 text-center">Featured Research</h2>
+            
+            <div class="carousel-container">
+                <button class="carousel-nav-btn" id="prevBtn" onclick="previousSlide()">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+
+                <div class="carousel-content-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide active">
+                        <div class="study-card-featured">
+                            <span class="study-year-badge">2024</span>
+                            <h3 class="featured-study-title">Clinical Trajectories of Comorbidity Associated With Military-Sustained Mild Traumatic Brain Injury</h3>
+                            <p class="featured-study-journal">Journal of Head Trauma Rehabilitation, 2024</p>
+                            <p class="featured-study-summary">
+                                This study examines the clinical pathways and comorbidity patterns among military service members following mild traumatic brain injury (TBI). Using longitudinal health records data, the research identifies distinct trajectories of recovery and identifies predictive factors for long-term complications and healthcare utilization following TBI.
+                            </p>
+                            <div class="featured-study-links">
+                                <a href="https://pubmed.ncbi.nlm.nih.gov/38758066/" class="btn btn-primary btn-sm" target="_blank">View on PubMed</a>
+                                <a href="research.html" class="btn btn-outline-primary btn-sm">See All Research</a>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <span class="tag-label text-primary">Featured Analysis</span>
-                    <h1 class="mb-4">How to Create 'Order in Data'</h1>
-                    
-                    <div class="text-start mx-auto" style="max-width: 700px;">
-                        <p class="lead mb-4">
-                            Operationalizing an effective Interoperability Management System (IMS) requires more than just technical connections; it demands a structured framework for semantic consistency.
-                        </p>
-                        <p class="mb-4">
-                            Best practices indicate that a robust IMS rests on three pillars: <strong>governance</strong> (defining data stewardship), <strong>standardization</strong> (adopting FHIR and HL7 protocols), and <strong>workflow integration</strong>. By shifting from point-to-point interfaces to a centralized data exchange layer, health systems can reduce redundancy, improve clinical decision support, and ensure that data is not just moved, but understood.
-                        </p>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide">
+                        <div class="study-card-featured">
+                            <span class="study-year-badge">2023</span>
+                            <h3 class="featured-study-title">Clusters of Conditions Among US Service Members Diagnosed with Mild TBI from 2017 through 2019</h3>
+                            <p class="featured-study-journal">Military Medicine, 2023</p>
+                            <p class="featured-study-summary">
+                                Using clustering analysis, this study identifies distinct groupings of comorbid conditions that commonly co-occur with mild traumatic brain injury in military populations. These clusters help inform clinical decision-making and allow for more targeted intervention strategies.
+                            </p>
+                            <div class="featured-study-links">
+                                <a href="https://pubmed.ncbi.nlm.nih.gov/36438977/" class="btn btn-primary btn-sm" target="_blank">View on PubMed</a>
+                                <a href="research.html" class="btn btn-outline-primary btn-sm">See All Research</a>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <a href="services.html#ds" class="btn btn-primary rounded-0 px-5 py-2 mt-2">Read the Analysis</a>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide">
+                        <div class="study-card-featured">
+                            <span class="study-year-badge">2023</span>
+                            <h3 class="featured-study-title">Prevalence of Comorbidities in Active and Reserve Service Members Pre and Post Traumatic Brain Injury, 2017-2019</h3>
+                            <p class="featured-study-journal">Journal of Head Trauma Rehabilitation, 2021</p>
+                            <p class="featured-study-summary">
+                                This research compares comorbidity profiles before and after TBI diagnosis among both active duty and reserve service members. The findings provide critical insights into how TBI impacts overall health status and disease burden in military populations.
+                            </p>
+                            <div class="featured-study-links">
+                                <a href="https://pubmed.ncbi.nlm.nih.gov/34423819/" class="btn btn-primary btn-sm" target="_blank">View on PubMed</a>
+                                <a href="research.html" class="btn btn-outline-primary btn-sm">See All Research</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="carousel-slide">
+                        <div class="study-card-featured">
+                            <span class="study-year-badge">2023</span>
+                            <h3 class="featured-study-title">Trends in Traumatic Brain Injury Among U.S. Service Members</h3>
+                            <p class="featured-study-journal">Military Medicine, 2023</p>
+                            <p class="featured-study-summary">
+                                This epidemiological study tracks the incidence and prevalence of traumatic brain injury among U.S. military personnel over time. The analysis reveals temporal trends in TBI occurrence and helps identify high-risk periods and populations within the military.
+                            </p>
+                            <div class="featured-study-links">
+                                <a href="https://pubmed.ncbi.nlm.nih.gov/36870787/" class="btn btn-primary btn-sm" target="_blank">View on PubMed</a>
+                                <a href="research.html" class="btn btn-outline-primary btn-sm">See All Research</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="carousel-slide">
+                        <div class="study-card-featured">
+                            <span class="study-year-badge">2020</span>
+                            <h3 class="featured-study-title">Estimates of Long-Term Disability Among U.S. Service Members with Traumatic Brain Injuries</h3>
+                            <p class="featured-study-journal">Military Medicine, 2020</p>
+                            <p class="featured-study-summary">
+                                This study quantifies the burden of long-term disability associated with TBI among military service members. The research provides prevalence estimates and identifies demographic and clinical factors associated with persistent disability, informing rehabilitation and support service planning.
+                            </p>
+                            <div class="featured-study-links">
+                                <a href="https://pubmed.ncbi.nlm.nih.gov/32472830/" class="btn btn-primary btn-sm" target="_blank">View on PubMed</a>
+                                <a href="research.html" class="btn btn-outline-primary btn-sm">See All Research</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-counter">
+                        <span id="currentSlide">1</span> / <span id="totalSlides">5</span>
+                    </div>
                 </div>
+
+                <button class="carousel-nav-btn" id="nextBtn" onclick="nextSlide()">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -444,7 +590,7 @@
                     </div>
                 </div>
 
-                <!-- Expert 2: Josy Olivari (Placeholder) -->
+                <!-- Expert 2: Ilire Agimi, PhD (Placeholder) -->
                 <div class="col-md-6 px-4">
                     <blockquote class="expert-quote">
                         "Innovation in healthcare isn't just about new drugs; it's about structuring the economic incentives that drive patient behavior and provider adoption."
@@ -452,8 +598,8 @@
                     <div class="d-flex align-items-center mt-4">
                          <div style="width:50px; height:50px; background-color:#ccc; border-radius:50%; margin-right:15px; background-image:url('images/person_3.jpg'); background-size:cover;"></div>
                         <div>
-                            <div class="expert-name">Josy Olivari, PhD</div>
-                            <div class="expert-title">Economist & Innovation Policy</div>
+                            <div class="expert-name">Ilire Agimi, PhD</div>
+                            <div class="expert-title">Policy Researcher</div>
                         </div>
                     </div>
                 </div>
@@ -466,7 +612,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <h5>R2 Media Labs</h5>
+                    <h5>R2ML</h5>
                     <p>
                         Objective Analysis. Effective Solutions.
                     </p>
@@ -508,5 +654,41 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Carousel Script -->
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+
+        function showSlide(n) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            if (n >= totalSlides) {
+                currentSlideIndex = 0;
+            }
+            if (n < 0) {
+                currentSlideIndex = totalSlides - 1;
+            }
+            slides[currentSlideIndex].classList.add('active');
+            document.getElementById('currentSlide').textContent = currentSlideIndex + 1;
+            
+            // Disable/enable nav buttons based on position
+            document.getElementById('prevBtn').disabled = currentSlideIndex === 0;
+            document.getElementById('nextBtn').disabled = currentSlideIndex === totalSlides - 1;
+        }
+
+        function nextSlide() {
+            currentSlideIndex++;
+            showSlide(currentSlideIndex);
+        }
+
+        function previousSlide() {
+            currentSlideIndex--;
+            showSlide(currentSlideIndex);
+        }
+
+        // Initialize carousel
+        showSlide(currentSlideIndex);
+    </script>
 </body>
 </html>

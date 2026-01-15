@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research | R2ML</title>
+    <meta name="description" content="Published research and studies by R2ML on healthcare, epidemiology, and data science." />
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Fonts: Merriweather (Serif/Academic) & Open Sans (Clean) -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+
+    <style>
+        :root {
+            --r2-blue: #004d70; /* RAND-like deep blue */
+            --r2-dark: #222;
+            --r2-gray: #f3f3f3;
+            --r2-accent: #007bff;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4, h5, .serif-font {
+            font-family: 'Merriweather', serif;
+            color: var(--r2-dark);
+        }
+        
+        a {
+            color: var(--r2-blue);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: var(--r2-accent);
+        }
+
+        /* --- HEADER --- */
+        .top-bar {
+            background-color: var(--r2-blue);
+            color: white;
+            padding: 5px 0;
+            font-size: 0.85rem;
+        }
+        .top-bar a { color: white; margin-left: 15px; }
+
+        .navbar {
+            border-bottom: 4px solid var(--r2-blue);
+            padding: 1rem 0;
+            background: white;
+        }
+        .navbar-brand img { height: 55px; }
+        .nav-link {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: #444 !important;
+            margin-left: 15px;
+        }
+
+        /* --- PAGE HERO --- */
+        .page-hero {
+            background-color: var(--r2-gray);
+            padding: 3rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .page-hero h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .page-hero .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* --- CONTENT SECTION --- */
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        /* --- RESEARCH CARDS --- */
+        .research-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: box-shadow 0.3s ease;
+        }
+        .research-card:hover {
+            box-shadow: 0 4px 16px rgba(0,77,112,0.15);
+        }
+        .research-card .research-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        .research-card .research-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        .research-card .research-summary {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+        .research-card .research-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .research-card .btn {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+
+        /* --- CATEGORY BADGE --- */
+        .category-badge {
+            display: inline-block;
+            background: var(--r2-blue);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 4rem 0;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+        footer h5 { 
+            color: white; 
+            margin-bottom: 1.5rem; 
+            font-family: 'Open Sans', sans-serif; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            font-size: 1rem;
+        }
+        footer a { color: #bbb; }
+        footer ul li { margin-bottom: 8px; }
+    </style>
+
+</head>
+<body>
+
+    <!-- TOP BAR (Utility) -->
+    <div class="top-bar">
+        <div class="container text-end">
+            <span>Jersey City, NJ</span>
+            <a href="mailto:info@r2ml.org">info@r2ml.org</a>
+            <a href="restricted.html">Client Portal</a>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/cj5_LogoMakr_4HKMb1.png" alt="R2ML Logo">
+                <span class="d-none d-md-inline-block ms-2 serif-font" style="font-weight:900; color:var(--r2-blue); vertical-align:middle;">R2ML</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="https://yllagimi.com">About & Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crosswalk/tool_crosswalk.html">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO SECTION -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Research & Publications</h1>
+            <p class="subtitle">Peer-reviewed studies on traumatic brain injury, military health, epidemiology, and healthcare outcomes.</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT SECTION -->
+    <section class="content-section">
+        <div class="container">
+
+            <!-- INTRODUCTION -->
+            <div class="mb-5">
+                <p class="lead">
+                    R2ML's research focuses on understanding health outcomes, healthcare utilization patterns, and the impact of policy interventions on vulnerable populations, particularly military service members and their families.
+                </p>
+            </div>
+
+            <!-- TRAUMATIC BRAIN INJURY RESEARCH -->
+            <h2 class="mb-4 border-bottom pb-3">Traumatic Brain Injury & Military Health</h2>
+
+            <!-- Study 1 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2024</span>
+                <h3 class="research-title">Clinical Trajectories of Comorbidity Associated With Military-Sustained Mild Traumatic Brain Injury</h3>
+                <p class="research-meta">Journal of Head Trauma Rehabilitation, 2024</p>
+                <p class="research-summary">
+                    This study examines the clinical pathways and comorbidity patterns among military service members following mild traumatic brain injury (TBI). Using longitudinal health records data, the research identifies distinct trajectories of recovery and identifies predictive factors for long-term complications and healthcare utilization following TBI.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/38758066/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                    <a href="https://yllagimi.com/pdf/clinical_trajectories_of_comorbidity_associated.16.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                        <i class="bi bi-download me-1"></i>PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 2 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2024</span>
+                <h3 class="research-title">Mechanisms of Injury for Traumatic Brain Injury Among U.S. Military Service Members Before and During the COVID-19 Pandemic</h3>
+                <p class="research-meta">Military Medicine, 2024</p>
+                <p class="research-summary">
+                    This research analyzes trends in traumatic brain injury mechanisms among active duty and reserve service members, comparing pre-pandemic and pandemic periods. The study reveals how operational changes during COVID-19 affected injury patterns and identifies the predominant causes of TBI in military populations.
+                </p>
+                <div class="research-links">
+                    <a href="https://academic.oup.com/milmed/article/190/3-4/e830/7866810" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>View Study
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 3 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2023</span>
+                <h3 class="research-title">Clusters of Conditions Among US Service Members Diagnosed with Mild TBI from 2017 through 2019</h3>
+                <p class="research-meta">Military Medicine, 2023</p>
+                <p class="research-summary">
+                    Using clustering analysis, this study identifies distinct groupings of comorbid conditions that commonly co-occur with mild traumatic brain injury in military populations. These clusters help inform clinical decision-making and allow for more targeted intervention strategies.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/36438977/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                    <a href="https://yllagimi.com/pdf/clusters.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                        <i class="bi bi-download me-1"></i>PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 4 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2023</span>
+                <h3 class="research-title">Benzodiazepine Prescription Patterns After Mild Traumatic Brain Injury in U.S. Military Service Members</h3>
+                <p class="research-meta">Military Medicine, 2023</p>
+                <p class="research-summary">
+                    This study examines prescription patterns and clinical practices related to benzodiazepine use following mild TBI in military service members. The research provides insights into medication management strategies and identifies potential areas for improved clinical guidelines.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/39028226/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 5 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2023</span>
+                <h3 class="research-title">Trends in Traumatic Brain Injury Among U.S. Service Members</h3>
+                <p class="research-meta">Military Medicine, 2023</p>
+                <p class="research-summary">
+                    This epidemiological study tracks the incidence and prevalence of traumatic brain injury among U.S. military personnel over time. The analysis reveals temporal trends in TBI occurrence and helps identify high-risk periods and populations within the military.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/36870787/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 6 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2021</span>
+                <h3 class="research-title">Prevalence of Comorbidities in Active and Reserve Service Members Pre and Post Traumatic Brain Injury, 2017-2019</h3>
+                <p class="research-meta">Journal of Head Trauma Rehabilitation, 2021</p>
+                <p class="research-summary">
+                    This research compares comorbidity profiles before and after TBI diagnosis among both active duty and reserve service members. The findings provide critical insights into how TBI impacts overall health status and disease burden in military populations.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/34423819/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                    <a href="https://yllagimi.com/pdf/Prev_Comorbidities.pdf" class="btn btn-outline-primary btn-sm" target="_blank">
+                        <i class="bi bi-download me-1"></i>PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 7 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2020</span>
+                <h3 class="research-title">Estimates of Long-Term Disability Among U.S. Service Members with Traumatic Brain Injuries</h3>
+                <p class="research-meta">Military Medicine, 2020</p>
+                <p class="research-summary">
+                    This study quantifies the burden of long-term disability associated with TBI among military service members. The research provides prevalence estimates and identifies demographic and clinical factors associated with persistent disability, informing rehabilitation and support service planning.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/32472830/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 8 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2020</span>
+                <h3 class="research-title">Estimating Repeat Traumatic Brain Injury in the U.S. Military, 2015-2017</h3>
+                <p class="research-meta">Military Medicine, 2020</p>
+                <p class="research-summary">
+                    This research investigates the incidence of repeat or recurrent TBI among military service members. The study identifies risk factors for sustaining multiple brain injuries and provides epidemiological estimates critical for prevention and clinical management strategies.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/33591307/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 9 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2019</span>
+                <h3 class="research-title">Traumatic Brain Injury Following Military Deployment: Evaluation of Diagnosis and Cause of Injury</h3>
+                <p class="research-meta">Military Medicine, 2019</p>
+                <p class="research-summary">
+                    This study examines TBI outcomes in deployed military personnel, analyzing diagnostic patterns and mechanisms of injury in combat and operational settings. The research provides evidence for improved field assessment and triage protocols.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/30045222/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 10 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2021</span>
+                <h3 class="research-title">Epidemiology, Patterns of Care and Outcomes of Traumatic Brain Injury in Deployed Military Settings</h3>
+                <p class="research-meta">Journal of Head Trauma Rehabilitation, 2021</p>
+                <p class="research-summary">
+                    This comprehensive epidemiological study examines TBI in deployed military settings, including incidence rates, clinical management practices, and patient outcomes. The findings have direct implications for military medical policy and operational planning.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/34908023/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 11 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2019</span>
+                <h3 class="research-title">Incidence of Traumatic Brain Injury in the U.S. Military, 2010-2014</h3>
+                <p class="research-meta">Military Medicine, 2019</p>
+                <p class="research-summary">
+                    This foundational epidemiological study provides incidence estimates for traumatic brain injury across the U.S. military during a five-year period. The research establishes baseline burden estimates and identifies trends in TBI occurrence across service branches.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/30517721/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <!-- HEALTHCARE POLICY & OUTCOMES RESEARCH -->
+            <h2 class="mb-4 border-bottom pb-3">Healthcare Policy & Public Health</h2>
+
+            <!-- Study 12 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2018</span>
+                <h3 class="research-title">Mandatory Physician Reporting of At Risk Drivers: The Older Driver Example</h3>
+                <p class="research-meta">Journal of the American Geriatrics Society, 2018</p>
+                <p class="research-summary">
+                    This policy analysis examines the effectiveness and implications of mandatory physician reporting requirements for at-risk drivers, using older adults with dementia as a case study. The research evaluates how such policies affect public safety while considering unintended consequences.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/28069887/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 13 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2019</span>
+                <h3 class="research-title">Continuum of the United States Military's Traumatic Brain Injury Care</h3>
+                <p class="research-meta">Military Medicine, 2019</p>
+                <p class="research-summary">
+                    This comprehensive review examines the entire care continuum for TBI in the military health system, from initial assessment through long-term rehabilitation and reintegration. The study identifies gaps, best practices, and opportunities for system improvement.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/30544329/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 14 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2018</span>
+                <h3 class="research-title">Role of Department of Defense Policies in Identifying Traumatic Brain Injuries</h3>
+                <p class="research-meta">Military Medicine, 2018</p>
+                <p class="research-summary">
+                    This study analyzes how DoD policies and clinical guidelines influence the identification and diagnosis of TBI in military populations. The research examines the impact of policy changes on case detection rates and clinical practice patterns.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/29565670/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                </div>
+            </div>
+
+            <!-- Study 15 -->
+            <div class="research-card">
+                <span class="category-badge">Published 2019</span>
+                <h3 class="research-title">Dementia and Motor Vehicle Crash Hospitalizations</h3>
+                <p class="research-meta">Accident Analysis & Prevention, 2019</p>
+                <p class="research-summary">
+                    This epidemiological study examines the association between dementia and motor vehicle crash-related hospitalizations. The research quantifies injury risk among drivers with cognitive impairment and provides evidence for public health interventions.
+                </p>
+                <div class="research-links">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/29386271/" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-file-pdf me-1"></i>PubMed
+                    </a>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <!-- BOOKS & CHAPTERS -->
+            <h2 class="mb-4 border-bottom pb-3">Books & Book Chapters</h2>
+
+            <div class="research-card">
+                <span class="category-badge">Publication</span>
+                <h3 class="research-title">Traumatic Brain Injury: A Clinician's Guide to Diagnosis, Management, and Rehabilitation</h3>
+                <p class="research-meta">Edited Book, Clinical Reference</p>
+                <p class="research-summary">
+                    This comprehensive clinical guide covers the full spectrum of traumatic brain injury management from initial assessment through long-term rehabilitation. The text combines evidence-based practices with practical clinical guidance for healthcare providers across multiple disciplines.
+                </p>
+                <div class="research-links">
+                    <a href="https://content.e-bookshelf.de/media/reading/L-12633604-0f2bc0571a.pdf" class="btn btn-primary btn-sm" target="_blank">
+                        <i class="bi bi-book me-1"></i>View PDF
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>R2 Media Labs</h5>
+                    <p>
+                        Objective Analysis. Effective Solutions.
+                    </p>
+                    <p class="small text-muted">
+                        R2ML is a research organization that develops solutions to public health challenges to help make communities healthier and more prosperous.
+                    </p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="crosswalk/tool_crosswalk.html">Tools</a></li>
+                        <li><a href="services.html">Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>About</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="about.html">Leadership</a></li>
+                        <li><a href="https://yllagimi.com">Team Profile</a></li>
+                        <li><a href="mailto:info@r2ml.org">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Subscribe</h5>
+                    <p class="small">Get the latest R2ML research and timely insights from our experts.</p>
+                    <a href="mailto:info@r2ml.org" class="btn btn-outline-light btn-sm rounded-0">Email Subscribe</a>
+                </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top border-secondary">
+                <div class="col-12 text-center small text-muted">
+                    &copy; 2025 R2ML.org. All Rights Reserved. | Jersey City, NJ
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

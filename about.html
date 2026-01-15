@@ -1,37 +1,513 @@
-<div class="container py-5 mt-5">
-    <div class="row mb-5">
-        <div class="col-lg-6">
-            <h1 class="mb-4">About R2ML</h1>
-            <p>R2 Media Labs (R2ML) is a boutique data science consultancy based in Jersey City, NJ. We operate at the intersection of technology and human health.</p>
-            <p>Health behaviors are complex. We make up to 200 food and drink decisions per day. Our mental reserves deplete under stress. R2ML believes that by applying rigorous data science to these digital footprints, we can nudge systems and individuals toward better health outcomes.</p>
-        </div>
-        <div class="col-lg-6">
-             <div style="background-color:#eee; height:300px; width:100%; border-radius:8px;"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About R2ML | Team & Leadership</title>
+    <meta name="description" content="Meet the R2ML team. Learn about our leadership, expertise, and mission in health data science and epidemiology." />
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Fonts: Merriweather (Serif/Academic) & Open Sans (Clean) -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+
+    <style>
+        :root {
+            --r2-blue: #004d70; /* RAND-like deep blue */
+            --r2-dark: #222;
+            --r2-gray: #f3f3f3;
+            --r2-accent: #007bff;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4, h5, .serif-font {
+            font-family: 'Merriweather', serif;
+            color: var(--r2-dark);
+        }
+        
+        a {
+            color: var(--r2-blue);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: var(--r2-accent);
+        }
+
+        /* --- HEADER --- */
+        .top-bar {
+            background-color: var(--r2-blue);
+            color: white;
+            padding: 5px 0;
+            font-size: 0.85rem;
+        }
+        .top-bar a { color: white; margin-left: 15px; }
+
+        .navbar {
+            border-bottom: 4px solid var(--r2-blue);
+            padding: 1rem 0;
+            background: white;
+        }
+        .navbar-brand img { height: 55px; }
+        .nav-link {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: #444 !important;
+            margin-left: 15px;
+        }
+
+        /* --- PAGE HERO --- */
+        .page-hero {
+            background-color: var(--r2-gray);
+            padding: 3rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .page-hero h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .page-hero .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        /* --- CONTENT SECTION --- */
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        /* --- TEAM MEMBER CARD --- */
+        .team-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: box-shadow 0.3s ease;
+        }
+        .team-card:hover {
+            box-shadow: 0 4px 16px rgba(0,77,112,0.15);
+        }
+        .team-card.lead-member {
+            border-left: 5px solid var(--r2-blue);
+        }
+        .team-member-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            gap: 2rem;
+        }
+        .team-member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .team-member-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+        }
+        .team-member-title {
+            font-size: 1.05rem;
+            color: var(--r2-blue);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .team-member-credentials {
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+        .team-member-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.75rem;
+        }
+        .team-member-social a {
+            font-size: 1.1rem;
+            color: var(--r2-blue);
+        }
+
+        .team-member-bio {
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        .expertise-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .expertise-item {
+            background: var(--r2-gray);
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--r2-blue);
+        }
+        .expertise-item h5 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--r2-blue);
+        }
+        .expertise-item p {
+            font-size: 0.9rem;
+            margin: 0;
+            color: #666;
+        }
+
+        /* --- MISSION SECTION --- */
+        .mission-section {
+            background: var(--r2-gray);
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* --- SERVICES SECTION --- */
+        .service-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .service-card h4 {
+            color: var(--r2-blue);
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        .service-card p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 4rem 0;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+        footer h5 { 
+            color: white; 
+            margin-bottom: 1.5rem; 
+            font-family: 'Open Sans', sans-serif; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            font-size: 1rem;
+        }
+        footer a { color: #bbb; }
+        footer ul li { margin-bottom: 8px; }
+    </style>
+
+</head>
+<body>
+
+    <!-- TOP BAR (Utility) -->
+    <div class="top-bar">
+        <div class="container text-end">
+            <span>Jersey City, NJ</span>
+            <a href="mailto:info@r2ml.org">info@r2ml.org</a>
+            <a href="cj/cj.html">Client Portal</a>
         </div>
     </div>
 
-    <h2 class="text-center mb-5">Leadership</h2>
+    <!-- MAIN NAVIGATION -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/cj5_LogoMakr_4HKMb1.png" alt="R2ML Logo">
+                <span class="d-none d-md-inline-block ms-2 serif-font" style="font-weight:900; color:var(--r2-blue); vertical-align:middle;">R2ML</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About & Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crosswalk/tool_crosswalk.html">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card border-0 shadow-sm mb-4">
-                <div class="row g-0 align-items-center">
-                    <div class="col-md-4 text-center p-3">
-                        <img src="images/yll_3.jpeg" class="img-fluid rounded-circle" alt="Yll Agimi" style="max-width:150px;">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h4 class="card-title">Yll Agimi, PhD, MPH, MS</h4>
-                            <h6 class="text-accent mb-2">Principal Data Scientist</h6>
-                            <p class="card-text">
-                                Dr. Agimi is a Senior Data Scientist specializing in Public Health and Epidemiology. He received his doctorate from the University of Pittsburgh. With extensive experience in healthcare analytics, he has worked on projects involving the ANAM program, DoD medical readiness, and mental health AI applications. He specializes in bridging the gap between clinical research and Python-based machine learning engineering.
-                            </p>
-                            <a href="https://www.linkedin.com/in/yllagimi/" class="text-decoration-none"><i class="bi bi-linkedin"></i> Connect on LinkedIn</a>
-                        </div>
-                    </div>
+    <!-- PAGE HERO SECTION -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>About R2ML</h1>
+            <p class="subtitle">Leadership in health data science, epidemiology, and data-driven innovation for public health systems.</p>
+        </div>
+    </section>
+
+    <!-- MISSION SECTION -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="mb-3 text-center">Our Mission</h2>
+                    <p class="lead text-center" style="font-style: italic; color: #444; line-height: 1.7;">
+                        R2ML brings academic rigor and data science expertise to solving the most pressing challenges in healthcare delivery, public health policy, and health services research. We work at the intersection of epidemiology, innovation, and health systems to transform data into actionable insights that improve outcomes for vulnerable populations and drive evidence-based policy.
+                    </p>
                 </div>
             </div>
         </div>
-        
+    </section>
+
+    <!-- MAIN CONTENT SECTION -->
+    <section class="content-section">
+        <div class="container">
+
+            <!-- LEADERSHIP SECTION -->
+            <h2 class="mb-5 border-bottom pb-3">Leadership</h2>
+
+            <!-- Dr. Yll Agimi -->
+            <div class="team-card lead-member">
+                <div class="team-member-header">
+                    <div class="team-member-photo" style="background-image: url('images/yll_3.jpeg');"></div>
+                    <div class="team-member-info">
+                        <h3>Dr. Yll Agimi</h3>
+                        <div class="team-member-title">Founder & Principal Data Scientist</div>
+                        <div class="team-member-credentials">PhD, MS, MPH</div>
+                        <p style="font-size: 0.95rem; color: #666; margin-bottom: 0;">
+                            Specializing in Healthcare Delivery and Health Services Research
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-member-bio">
+                    <p>
+                        Dr. Yll Agimi is a Senior Data Scientist specializing in healthcare delivery, health services research, and epidemiology. With extensive experience in both government and private sector, Dr. Agimi has led large-scale research initiatives spanning military health systems, public health policy, and healthcare innovation. Currently serving as a Presidential Innovation Fellow (PIF), he brings a unique blend of academic rigor, policy expertise, and practical implementation experience.
+                    </p>
+                    <p>
+                        Dr. Agimi has held leadership positions at General Dynamics Information Technology (GDIT), GovCIO, Booz Allen Hamilton, and the Altarum Institute, where he led teams building advanced data solutions for the Military Health System and other major integrated health organizations. His research has examined healthcare utilization patterns, injury epidemiology, and the impact of state and federal policies on population health outcomes.
+                    </p>
+                </div>
+
+                <h5 style="margin-top: 1.5rem; margin-bottom: 1rem; font-weight: 700; color: var(--r2-blue);">Core Expertise</h5>
+                <div class="expertise-list">
+                    <div class="expertise-item">
+                        <h5>Epidemiology & Surveillance</h5>
+                        <p>Disease surveillance, injury epidemiology, population health assessment, trend analysis</p>
+                    </div>
+                    <div class="expertise-item">
+                        <h5>Health Systems Analytics</h5>
+                        <p>Healthcare utilization, clinical pathways, care coordination, health disparities</p>
+                    </div>
+                    <div class="expertise-item">
+                        <h5>Data Science & ML</h5>
+                        <p>Statistical modeling, machine learning, big data analytics, natural language processing</p>
+                    </div>
+                    <div class="expertise-item">
+                        <h5>Health Policy Research</h5>
+                        <p>Policy impact evaluation, regulatory analysis, public health strategy</p>
+                    </div>
+                    <div class="expertise-item">
+                        <h5>Clinical Decision Support</h5>
+                        <p>Evidence synthesis, clinical informatics, decision modeling systems</p>
+                    </div>
+                    <div class="expertise-item">
+                        <h5>Innovation & Strategy</h5>
+                        <p>Digital health solutions, implementation science, organizational transformation</p>
+                    </div>
+                </div>
+
+                <h5 style="margin-top: 2rem; margin-bottom: 1rem; font-weight: 700; color: var(--r2-blue);">Academic & Professional Background</h5>
+                <ul style="color: #666; line-height: 1.8;">
+                    <li><strong>Education:</strong> PhD and MS in Data Science/Statistics, MPH in Epidemiology</li>
+                    <li><strong>Current Role:</strong> Presidential Innovation Fellow (PIF)</li>
+                    <li><strong>Previous Leadership:</strong> Senior Data Scientist at GDIT (4 years); Lead Scientist, Booz Allen Hamilton; Senior Data Scientist, GovCIO; Surveillance Lead, Altarum Institute</li>
+                    <li><strong>Key Focus Areas:</strong> Military Health System analytics, behavioral health, traumatic brain injury epidemiology, health policy evaluation</li>
+                    <li><strong>Publications:</strong> 15+ peer-reviewed publications in leading journals; contributor to clinical handbooks</li>
+                </ul>
+
+            </div>
+
+            <hr class="my-5">
+
+            <!-- TEAM SECTION -->
+            <h2 class="mb-4 border-bottom pb-3">Collaborating Experts</h2>
+            <p class="mb-4" style="color: #666;">
+                R2ML collaborates with a network of subject matter experts, domain specialists, and research partners to deliver comprehensive solutions across the healthcare landscape.
+            </p>
+
+            <!-- Team Member 2 -->
+            <div class="team-card">
+                <div class="team-member-header">
+                    <div class="team-member-photo" style="background-image: url('images/person_3.jpg');"></div>
+                    <div class="team-member-info">
+                        <h3>Health Economics & Policy</h3>
+                        <div class="team-member-title">Expert Network</div>
+                    </div>
+                </div>
+
+                <div class="team-member-bio">
+                    <p>
+                        R2ML maintains collaborative relationships with health economists and policy researchers specializing in behavioral economics, healthcare finance, and health systems innovation. These experts contribute deep knowledge of economic incentives, payment models, and policy mechanisms that drive healthcare system performance and population health outcomes.
+                    </p>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <!-- CORE SERVICES SECTION -->
+            <h2 class="mb-4 border-bottom pb-3">Core Services & Capabilities</h2>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <h4>Health Data Analytics</h4>
+                        <p>Advanced statistical analysis, population health assessment, healthcare utilization analysis, and trend forecasting leveraging large health datasets and electronic health records.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Epidemiological Research</h4>
+                        <p>Observational studies, disease surveillance, injury epidemiology, and population health research focused on military, veteran, and civilian populations.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Machine Learning Solutions</h4>
+                        <p>Predictive modeling, patient risk stratification, clinical decision support systems, and artificial intelligence applications in healthcare operations and clinical care.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Health Systems Optimization</h4>
+                        <p>Care pathway analysis, clinical workflow optimization, healthcare system design, and operational efficiency improvement through data-driven insights.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="service-card">
+                        <h4>Health Policy Evaluation</h4>
+                        <p>Evidence synthesis, policy impact assessment, regulatory analysis, and program evaluation to inform health policy development and implementation.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Natural Language Processing</h4>
+                        <p>Clinical text analysis, medical record mining, qualitative data analysis, and information extraction from unstructured healthcare data.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Custom Software Development</h4>
+                        <p>Specialized tools for healthcare analytics, data visualization platforms, research support systems, and integrated health IT solutions.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h4>Consulting & Strategy</h4>
+                        <p>Strategic health analytics consulting, research methodology guidance, data science roadmap development, and organizational digital health strategy.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-5">
+
+            <!-- FOCUS AREAS SECTION -->
+            <h2 class="mb-4 border-bottom pb-3">Focus Areas</h2>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div style="background: white; border-left: 4px solid var(--r2-blue); padding: 1.5rem; border-radius: 4px;">
+                        <h4 style="color: var(--r2-blue); margin-bottom: 1rem;">Military & Veteran Health</h4>
+                        <p>Specialized expertise in military health systems, veteran population health, traumatic brain injury epidemiology, behavioral health, and readiness analytics.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div style="background: white; border-left: 4px solid var(--r2-blue); padding: 1.5rem; border-radius: 4px;">
+                        <h4 style="color: var(--r2-blue); margin-bottom: 1rem;">Mental Health & Behavioral Health</h4>
+                        <p>Research and analytics on PTSD, behavioral health outcomes, mental health service utilization, and behavioral interventions in health systems.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div style="background: white; border-left: 4px solid var(--r2-blue); padding: 1.5rem; border-radius: 4px;">
+                        <h4 style="color: var(--r2-blue); margin-bottom: 1rem;">Health Services Research</h4>
+                        <p>Healthcare utilization analysis, clinical outcomes assessment, health disparities research, and population health management strategies.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div style="background: white; border-left: 4px solid var(--r2-blue); padding: 1.5rem; border-radius: 4px;">
+                        <h4 style="color: var(--r2-blue); margin-bottom: 1rem;">Public Health & Health Policy</h4>
+                        <p>Policy impact evaluation, regulatory compliance research, public health strategy, and evidence-based intervention development.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-</div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>R2 Media Labs</h5>
+                    <p>
+                        Objective Analysis. Effective Solutions.
+                    </p>
+                    <p class="small text-muted">
+                        R2ML is a research organization that develops solutions to public health challenges to help make communities healthier and more prosperous.
+                    </p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="crosswalk/tool_crosswalk.html">Tools</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="mailto:info@r2ml.org">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Connect</h5>
+                    <p class="small">Follow our research and connect with the R2ML team.</p>
+                    <a href="https://www.linkedin.com/in/yllagimi/" class="btn btn-outline-light btn-sm rounded-0 me-2" target="_blank">
+                        <i class="bi bi-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-5 pt-4 border-top border-secondary">
+                <div class="col-12 text-center small text-muted">
+                    &copy; 2025 R2ML.org. All Rights Reserved. | Jersey City, NJ
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
