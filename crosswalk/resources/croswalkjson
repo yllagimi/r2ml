@@ -1,0 +1,2032 @@
+[
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Accuracy",
+    "Field": "Computer Science",
+    "Definition": "The proportion of correct predictions made by a model.",
+    "Category": "Model Evaluation",
+    "Related_Term": "R²",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Accuracy",
+    "Field": "Computer Science",
+    "Definition": "The proportion of correct predictions made by a model.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Sensitivity/Specificity",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Arima",
+    "Field": "All",
+    "Definition": "Autoregressive Integrated Moving Average model for analyzing and forecasting time series data.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Forecasting Models",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Attribute",
+    "Field": "Computer Science",
+    "Definition": "Another term for feature, often used in data mining.",
+    "Category": "Input Variable",
+    "Related_Term": "Predictor",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Attribute",
+    "Field": "Computer Science",
+    "Definition": "Another term for feature, often used in data mining.",
+    "Category": "Input Variable",
+    "Related_Term": "Regressor",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Backward Elimination",
+    "Field": "Health Science",
+    "Definition": "Removing predictors from a model sequentially based on least contribution.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Feature Selection",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Backward Elimination",
+    "Field": "Health Science",
+    "Definition": "Removing predictors from a model sequentially based on least contribution.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Model Specification",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Beta Weight",
+    "Field": "Health Science",
+    "Definition": "A standardized coefficient showing the relative importance of a predictor.",
+    "Category": "Model Component",
+    "Related_Term": "Coefficient",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Beta Weight",
+    "Field": "Health Science",
+    "Definition": "A standardized coefficient showing the relative importance of a predictor.",
+    "Category": "Model Component",
+    "Related_Term": "Weight",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Bias",
+    "Field": "Computer Science",
+    "Definition": "A parameter in neural networks or models representing the baseline contribution to output.",
+    "Category": "Model Component",
+    "Related_Term": "Intercept",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Causal Inference",
+    "Field": "All",
+    "Definition": "Methods to estimate the effect of one variable on another while accounting for confounding.",
+    "Category": "Causality / Confounding",
+    "Related_Term": "Do-Calculus",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Causal Inference",
+    "Field": "All",
+    "Definition": "Methods to estimate the effect of one variable on another while accounting for confounding.",
+    "Category": "Causality / Confounding",
+    "Related_Term": "Structural Causal Models",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Coefficients",
+    "Field": "All",
+    "Definition": "Numeric values that quantify the effect of an input variable on the output.",
+    "Category": "Model Component",
+    "Related_Term": "Parameters",
+    "Related_Field": "Computer Science/Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Coefficients",
+    "Field": "All",
+    "Definition": "Numeric values that quantify the effect of an input variable on the output.",
+    "Category": "Model Component",
+    "Related_Term": "Weights",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Cohort Study",
+    "Field": "Health Science",
+    "Definition": "A study following a group of individuals over time to observe outcomes.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Panel Data",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Cohort Study",
+    "Field": "Health Science",
+    "Definition": "A study following a group of individuals over time to observe outcomes.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Sequence Modeling",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Confounding / Bias",
+    "Field": "All",
+    "Definition": "A distortion in estimating the effect of a predictor due to correlation with other variables.",
+    "Category": "Causality / Confounding",
+    "Related_Term": "Endogeneity",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Confounding / Bias",
+    "Field": "All",
+    "Definition": "A distortion in estimating the effect of a predictor due to correlation with other variables.",
+    "Category": "Causality / Confounding",
+    "Related_Term": "Spurious Correlation",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Confounding Variable",
+    "Field": "Health Science",
+    "Definition": "A variable associated with both the predictor and outcome that can bias results.",
+    "Category": "Causality / Confounding",
+    "Related_Term": "Endogenous Variable",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Confounding Variable",
+    "Field": "Health Science",
+    "Definition": "A variable associated with both the predictor and outcome that can bias results.",
+    "Category": "Causality / Confounding",
+    "Related_Term": "Spurious Correlation",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Covariate",
+    "Field": "Health Science",
+    "Definition": "A variable included in a model to adjust or control for potential confounding or variation.",
+    "Category": "Input Variable",
+    "Related_Term": "Feature",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Covariate",
+    "Field": "Health Science",
+    "Definition": "A variable included in a model to adjust or control for potential confounding or variation.",
+    "Category": "Input Variable",
+    "Related_Term": "Regressor",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Cross-Sectional Time Series",
+    "Field": "Economics",
+    "Definition": "Data combining multiple entities observed over multiple time periods.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Panel Data",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Cross-Sectional Time Series",
+    "Field": "Economics",
+    "Definition": "Data combining multiple entities observed over multiple time periods.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Time Series",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Cross-Validation",
+    "Field": "All",
+    "Definition": "A method to assess model performance by testing it on data not used for training.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Hold-Out Sample",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Cross-Validation",
+    "Field": "All",
+    "Definition": "A method to assess model performance by testing it on data not used for training.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Out-Of-Sample Testing",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Decision Tree",
+    "Field": "Computer Science",
+    "Definition": "A tree-based model that splits data based on feature thresholds to predict outcomes.",
+    "Category": "Methods / Models",
+    "Related_Term": "Cart",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Decision Tree",
+    "Field": "Computer Science",
+    "Definition": "A tree-based model that splits data based on feature thresholds to predict outcomes.",
+    "Category": "Methods / Models",
+    "Related_Term": "Random Forest",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Dependent Variable",
+    "Field": "All",
+    "Definition": "The variable that the model aims to explain or predict.",
+    "Category": "Output Variable",
+    "Related_Term": "Explained Variable",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Dependent Variable",
+    "Field": "All",
+    "Definition": "The variable that the model aims to explain or predict.",
+    "Category": "Output Variable",
+    "Related_Term": "Outcome",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Dependent Variable",
+    "Field": "All",
+    "Definition": "The variable that the model aims to explain or predict.",
+    "Category": "Output Variable",
+    "Related_Term": "Target",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Difference-In-Differences (Did)",
+    "Field": "Economics",
+    "Definition": "A method comparing changes over time between treatment and control groups to estimate causal effect.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Intervention Analysis",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Difference-In-Differences (Did)",
+    "Field": "Economics",
+    "Definition": "A method comparing changes over time between treatment and control groups to estimate causal effect.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Pre-Post Comparison",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Discriminant Analysis",
+    "Field": "Health Science",
+    "Definition": "A statistical method for classifying observations into groups.",
+    "Category": "Methods / Models",
+    "Related_Term": "Classification",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Distribution",
+    "Field": "All",
+    "Definition": "A function describing the probabilities of different values of a random variable.",
+    "Category": "Probability / Distributions",
+    "Related_Term": "Density Function",
+    "Related_Field": "Computer Science/Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Disturbance",
+    "Field": "Economics",
+    "Definition": "The part of a model’s dependent variable not explained by regressors; residual.",
+    "Category": "Error / Noise",
+    "Related_Term": "Noise",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Disturbance",
+    "Field": "Economics",
+    "Definition": "The part of a model’s dependent variable not explained by regressors; residual.",
+    "Category": "Error / Noise",
+    "Related_Term": "Random Error",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Dummy Variable",
+    "Field": "Health Science / Economicsomics",
+    "Definition": "A binary variable representing categories of a categorical variable.",
+    "Category": "Dimensionality Reduction / Feature Engineering",
+    "Related_Term": "One-Hot Encoding",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Effect Estimate",
+    "Field": "Health Science",
+    "Definition": "The estimated change in the outcome associated with a one-unit change in a predictor.",
+    "Category": "Model Component",
+    "Related_Term": "Coefficient",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Effect Estimate",
+    "Field": "Health Science",
+    "Definition": "The estimated change in the outcome associated with a one-unit change in a predictor.",
+    "Category": "Model Component",
+    "Related_Term": "Weight",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Effect Modification",
+    "Field": "Health Science",
+    "Definition": "When the magnitude or direction of an effect differs across levels of a third variable.",
+    "Category": "Causality / Effect Modification",
+    "Related_Term": "Interaction Effect",
+    "Related_Field": "Computer Science/Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Endogeneity",
+    "Field": "Economics",
+    "Definition": "When an explanatory variable correlates with the error term, biasing causal estimates.",
+    "Category": "Causality / Confounding",
+    "Related_Term": "Confounding Variable",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Endogeneity",
+    "Field": "Economics",
+    "Definition": "When an explanatory variable correlates with the error term, biasing causal estimates.",
+    "Category": "Causality / Confounding",
+    "Related_Term": "Spurious Correlation",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Endogenous Variable",
+    "Field": "Economics",
+    "Definition": "A variable whose value is determined within the system being modeled.",
+    "Category": "Output Variable",
+    "Related_Term": "Dependent Variable",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Endogenous Variable",
+    "Field": "Economics",
+    "Definition": "A variable whose value is determined within the system being modeled.",
+    "Category": "Output Variable",
+    "Related_Term": "Target",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Endpoint",
+    "Field": "Health Science",
+    "Definition": "The primary outcome used to evaluate an intervention or exposure.",
+    "Category": "Output Variable",
+    "Related_Term": "Dependent Variable",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Endpoint",
+    "Field": "Health Science",
+    "Definition": "The primary outcome used to evaluate an intervention or exposure.",
+    "Category": "Output Variable",
+    "Related_Term": "Target",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Error Term",
+    "Field": "All",
+    "Definition": "A model component representing unexplained variability or noise.",
+    "Category": "Error / Noise",
+    "Related_Term": "Residuals",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Explained Variable",
+    "Field": "Economics",
+    "Definition": "The variable in a regression model that is being modeled or predicted.",
+    "Category": "Output Variable",
+    "Related_Term": "Dependent Variable",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Explained Variable",
+    "Field": "Economics",
+    "Definition": "The variable in a regression model that is being modeled or predicted.",
+    "Category": "Output Variable",
+    "Related_Term": "Target",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Explanatory Variable",
+    "Field": "Economics",
+    "Definition": "A variable thought to explain variation in the dependent variable.",
+    "Category": "Input Variable",
+    "Related_Term": "Feature",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Explanatory Variable",
+    "Field": "Economics",
+    "Definition": "A variable thought to explain variation in the dependent variable.",
+    "Category": "Input Variable",
+    "Related_Term": "Predictor",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Exposure",
+    "Field": "Health Science",
+    "Definition": "A variable representing a factor or condition to which individuals are subjected.",
+    "Category": "Input Variable",
+    "Related_Term": "Feature",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Exposure",
+    "Field": "Health Science",
+    "Definition": "A variable representing a factor or condition to which individuals are subjected.",
+    "Category": "Input Variable",
+    "Related_Term": "Regressor",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "External Validity",
+    "Field": "Health Science",
+    "Definition": "The extent to which study results generalize to other populations or settings.",
+    "Category": "Population / Sample",
+    "Related_Term": "Generalization",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Feature",
+    "Field": "Computer Science",
+    "Definition": "A measurable property or characteristic of an observation used by a model.",
+    "Category": "Input Variable",
+    "Related_Term": "Predictor",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Feature",
+    "Field": "Computer Science",
+    "Definition": "A measurable property or characteristic of an observation used by a model.",
+    "Category": "Input Variable",
+    "Related_Term": "Regressor",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Feature Engineering",
+    "Field": "Computer Science",
+    "Definition": "The process of creating new input features from raw data to improve model performance.",
+    "Category": "Dimensionality Reduction / Feature Engineering",
+    "Related_Term": "Predictor Creation",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Feature Engineering",
+    "Field": "Computer Science",
+    "Definition": "The process of creating new input features from raw data to improve model performance.",
+    "Category": "Dimensionality Reduction / Feature Engineering",
+    "Related_Term": "Variable Transformation",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Feature Selection",
+    "Field": "Computer Science",
+    "Definition": "Methods to select the most relevant variables to improve model performance.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Model Specification",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Feature Selection",
+    "Field": "Computer Science",
+    "Definition": "Methods to select the most relevant variables to improve model performance.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Stepwise Selection",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Follow-Up Data",
+    "Field": "Health Science",
+    "Definition": "Data collected at multiple points to track changes over time.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Time Series Data",
+    "Related_Field": "Computer Science/Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Forward Selection",
+    "Field": "Health Science",
+    "Definition": "Adding predictors one at a time to a model based on improvement in fit.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Feature Selection",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Forward Selection",
+    "Field": "Health Science",
+    "Definition": "Adding predictors one at a time to a model based on improvement in fit.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Model Specification",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Generalization",
+    "Field": "All",
+    "Definition": "The ability of a model or study findings to apply beyond the observed data.",
+    "Category": "Population / Sample",
+    "Related_Term": "External Validity",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Generalization",
+    "Field": "All",
+    "Definition": "The ability of a model or study findings to apply beyond the observed data.",
+    "Category": "Population / Sample",
+    "Related_Term": "Out-Of-Sample Performance",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Glm (Generalized Linear Model)",
+    "Field": "Health Science",
+    "Definition": "A flexible regression framework allowing different distributions and link functions.",
+    "Category": "Methods / Models",
+    "Related_Term": "Linear Regression",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Glm (Generalized Linear Model)",
+    "Field": "Health Science",
+    "Definition": "A flexible regression framework allowing different distributions and link functions.",
+    "Category": "Methods / Models",
+    "Related_Term": "Logistic Regression",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Heckman Correction",
+    "Field": "Economics",
+    "Definition": "A statistical method to correct for sample selection bias in regression.",
+    "Category": "Missing Data",
+    "Related_Term": "Imputation",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Heterogeneous Treatment Effect",
+    "Field": "Health Science / Economicsomics",
+    "Definition": "Variation in causal effect across subgroups or contexts.",
+    "Category": "Causality / Effect Modification",
+    "Related_Term": "Effect Modification",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Heterogeneous Treatment Effect",
+    "Field": "Health Science / Economicsomics",
+    "Definition": "Variation in causal effect across subgroups or contexts.",
+    "Category": "Causality / Effect Modification",
+    "Related_Term": "Interaction Effect",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "High Variance",
+    "Field": "Computer Science",
+    "Definition": "When a model is sensitive to small fluctuations in the training data.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Overfitting",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Hold-Out Sample",
+    "Field": "Health Science",
+    "Definition": "A portion of the data reserved for evaluating model performance.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Test Set",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Hold-Out Sample",
+    "Field": "Health Science",
+    "Definition": "A portion of the data reserved for evaluating model performance.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Validation Sample",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Imputation",
+    "Field": "Health Science / Computer Science / Econ",
+    "Definition": "Methods used to replace missing values with estimated or predicted values.",
+    "Category": "Missing Data",
+    "Related_Term": "Missing Data",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Independent Variable",
+    "Field": "All",
+    "Definition": "A variable assumed to influence or explain the outcome variable.",
+    "Category": "Input Variable",
+    "Related_Term": "Feature",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Independent Variable",
+    "Field": "All",
+    "Definition": "A variable assumed to influence or explain the outcome variable.",
+    "Category": "Input Variable",
+    "Related_Term": "Predictor",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Independent Variable",
+    "Field": "All",
+    "Definition": "A variable assumed to influence or explain the outcome variable.",
+    "Category": "Input Variable",
+    "Related_Term": "Regressor",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Instrument (Iv)",
+    "Field": "Economics",
+    "Definition": "A variable correlated with the regressor but not with the error term, used for causal estimation.",
+    "Category": "Input Variable",
+    "Related_Term": "Feature",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Instrument (Iv)",
+    "Field": "Economics",
+    "Definition": "A variable correlated with the regressor but not with the error term, used for causal estimation.",
+    "Category": "Input Variable",
+    "Related_Term": "Predictor",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Instrumental Variable (Iv)",
+    "Field": "Economics",
+    "Definition": "A variable used to identify causal effects when a regressor is endogenous.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Feature",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Instrumental Variable (Iv)",
+    "Field": "Economics",
+    "Definition": "A variable used to identify causal effects when a regressor is endogenous.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Predictor",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Interaction Effect",
+    "Field": "Computer Science / Economicsomics",
+    "Definition": "When the combined effect of two variables differs from the sum of their individual effects.",
+    "Category": "Causality / Effect Modification",
+    "Related_Term": "Moderation",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Interaction Effect",
+    "Field": "Economics / Computer Science",
+    "Definition": "When the combined effect of two variables on the outcome differs from the sum of individual effects.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Moderation",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Interaction Term",
+    "Field": "Computer Science / Economics",
+    "Definition": "A variable representing the product of two features to capture interaction effects.",
+    "Category": "Dimensionality Reduction / Feature Engineering",
+    "Related_Term": "Effect Modification",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Intercept",
+    "Field": "All",
+    "Definition": "The value of the output when all input variables are zero; baseline value in linear models.",
+    "Category": "Model Component",
+    "Related_Term": "Bias",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Intervention / Treatment",
+    "Field": "Health Science / Computer Science / Econ",
+    "Definition": "An action or condition applied to subjects or the system to produce a change in outcome.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Exposure",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Intervention / Treatment",
+    "Field": "Health Science / Computer Science / Econ",
+    "Definition": "An action or condition applied to subjects or the system to produce a change in outcome.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Input Manipulation",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Intervention / Treatment",
+    "Field": "Health Science / Computer Science / Econ",
+    "Definition": "An action or condition applied to subjects or the system to produce a change in outcome.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Policy / Shock",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Label",
+    "Field": "Computer Science",
+    "Definition": "The true value of the target variable in supervised learning.",
+    "Category": "Output Variable",
+    "Related_Term": "Dependent Variable",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Label",
+    "Field": "Computer Science",
+    "Definition": "The true value of the target variable in supervised learning.",
+    "Category": "Output Variable",
+    "Related_Term": "Outcome",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Likelihood",
+    "Field": "All",
+    "Definition": "A function describing how likely observed data are for different parameter values.",
+    "Category": "Probability / Distributions",
+    "Related_Term": "Probability",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Linear Regression",
+    "Field": "All",
+    "Definition": "A model that assumes a linear relationship between input variables and the output.",
+    "Category": "Methods / Models",
+    "Related_Term": "Glm",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Linear Regression",
+    "Field": "All",
+    "Definition": "A model that assumes a linear relationship between input variables and the output.",
+    "Category": "Methods / Models",
+    "Related_Term": "Ols",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Logistic Regression",
+    "Field": "Health Science / Computer Science / Econ",
+    "Definition": "A model predicting the probability of a binary outcome.",
+    "Category": "Methods / Models",
+    "Related_Term": "Binary Choice Models",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Logistic Regression",
+    "Field": "Health Science / Computer Science / Econ",
+    "Definition": "A model predicting the probability of a binary outcome.",
+    "Category": "Methods / Models",
+    "Related_Term": "Glm",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Loss Function",
+    "Field": "Computer Science",
+    "Definition": "A function that quantifies the difference between predicted and actual values; minimized during training.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Residuals",
+    "Related_Field": "Health Science/Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Mae (Mean Absolute Error)",
+    "Field": "Economics",
+    "Definition": "The average absolute difference between predicted and actual values.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Loss",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Mae (Mean Absolute Error)",
+    "Field": "Economics",
+    "Definition": "The average absolute difference between predicted and actual values.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Residual Variance",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Measurement Error",
+    "Field": "Health Science",
+    "Definition": "Error arising from imperfect measurement of variables.",
+    "Category": "Error / Noise",
+    "Related_Term": "Disturbance",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Measurement Error",
+    "Field": "Health Science",
+    "Definition": "Error arising from imperfect measurement of variables.",
+    "Category": "Error / Noise",
+    "Related_Term": "Noise",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Missing Data",
+    "Field": "All",
+    "Definition": "Occurs when some values in a dataset are not observed; requires imputation or modeling.",
+    "Category": "Missing Data",
+    "Related_Term": "Not A Number (Nan)",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Missing Data",
+    "Field": "All",
+    "Definition": "Occurs when some values in a dataset are not observed; requires imputation or modeling.",
+    "Category": "Missing Data",
+    "Related_Term": "Sample Selection",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Mixed / Multilevel Models",
+    "Field": "Health Science / Computer Science",
+    "Definition": "Models that include both fixed and random effects for nested data.",
+    "Category": "Methods / Models",
+    "Related_Term": "Panel Data Models",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Model Specification",
+    "Field": "Economics",
+    "Definition": "Choosing which variables and functional forms to include in a model.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Feature Selection",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Model Specification",
+    "Field": "Economics",
+    "Definition": "Choosing which variables and functional forms to include in a model.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Stepwise Selection",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Moderation",
+    "Field": "Health Science",
+    "Definition": "When the effect of one variable on the outcome depends on the level of another variable.",
+    "Category": "Causality / Effect Modification",
+    "Related_Term": "Interaction",
+    "Related_Field": "Computer Science/Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Moderation / Effect Modification",
+    "Field": "Health Science",
+    "Definition": "When the effect of a predictor on an outcome depends on another variable.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Interaction Terms",
+    "Related_Field": "Computer Science/Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Natural Experiment",
+    "Field": "Economics",
+    "Definition": "Observational study where external events create quasi-random variation in exposure.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Intervention",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Natural Experiment",
+    "Field": "Economics",
+    "Definition": "Observational study where external events create quasi-random variation in exposure.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Rct",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Neural Network",
+    "Field": "Computer Science",
+    "Definition": "A model composed of layers of interconnected nodes simulating neurons to learn patterns.",
+    "Category": "Methods / Models",
+    "Related_Term": "Deep Learning",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Noise",
+    "Field": "Computer Science",
+    "Definition": "Unpredictable variation in data that can obscure the signal.",
+    "Category": "Error / Noise",
+    "Related_Term": "Disturbance",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Noise",
+    "Field": "Computer Science",
+    "Definition": "Unpredictable variation in data that can obscure the signal.",
+    "Category": "Error / Noise",
+    "Related_Term": "Random Error",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Odds",
+    "Field": "Health Science",
+    "Definition": "The ratio of the probability of an event occurring to it not occurring.",
+    "Category": "Probability / Distributions",
+    "Related_Term": "Probability",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Odds Ratio",
+    "Field": "Health Science",
+    "Definition": "The odds of an event occurring in one group relative to another.",
+    "Category": "Model Component",
+    "Related_Term": "Coefficient",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Omitted Variable Bias",
+    "Field": "Economics",
+    "Definition": "Bias caused by leaving out a variable that affects both predictor and outcome.",
+    "Category": "Causality / Confounding",
+    "Related_Term": "Confounding",
+    "Related_Field": "Health Science/Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "One-Hot Encoding",
+    "Field": "Computer Science",
+    "Definition": "Transforming categorical variables into binary features for modeling.",
+    "Category": "Dimensionality Reduction / Feature Engineering",
+    "Related_Term": "Dummy Variables",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "One-Hot Encoding",
+    "Field": "Computer Science",
+    "Definition": "Transforming categorical variables into binary features for modeling.",
+    "Category": "Dimensionality Reduction / Feature Engineering",
+    "Related_Term": "Indicator Variables",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Out-Of-Sample Performance",
+    "Field": "Computer Science",
+    "Definition": "The predictive accuracy of a model on data not used for training.",
+    "Category": "Population / Sample",
+    "Related_Term": "External Validity",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Out-Of-Sample Performance",
+    "Field": "Computer Science",
+    "Definition": "The predictive accuracy of a model on data not used for training.",
+    "Category": "Population / Sample",
+    "Related_Term": "Generalization",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Out-Of-Sample Testing",
+    "Field": "Economics",
+    "Definition": "Evaluating model predictions on data not used during estimation.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Cross-Validation",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Out-Of-Sample Testing",
+    "Field": "Economics",
+    "Definition": "Evaluating model predictions on data not used during estimation.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Hold-Out Sample",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Outcome",
+    "Field": "Health Science",
+    "Definition": "The health-related event, condition, or measurement of interest.",
+    "Category": "Output Variable",
+    "Related_Term": "Dependent Variable",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Outcome",
+    "Field": "Health Science",
+    "Definition": "The health-related event, condition, or measurement of interest.",
+    "Category": "Output Variable",
+    "Related_Term": "Target",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Over-Parameterization",
+    "Field": "Economics",
+    "Definition": "Using too many parameters relative to the data, leading to poor out-of-sample performance.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "High Variance",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Over-Parameterization",
+    "Field": "Economics",
+    "Definition": "Using too many parameters relative to the data, leading to poor out-of-sample performance.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Overfitting",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Overfitting",
+    "Field": "All",
+    "Definition": "When a model fits the training data too closely and fails to generalize to new data.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "High Variance",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Overfitting",
+    "Field": "All",
+    "Definition": "When a model fits the training data too closely and fails to generalize to new data.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Over-Parameterization",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Panel Data",
+    "Field": "Economics",
+    "Definition": "Multi-period cross-sectional data tracking the same units over time.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Cohort / Repeated Measures",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Panel Data",
+    "Field": "Economics",
+    "Definition": "Multi-period cross-sectional data tracking the same units over time.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Time Series",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Panel Data Models",
+    "Field": "Economics",
+    "Definition": "Models that analyze multi-period cross-sectional data, accounting for individual effects.",
+    "Category": "Methods / Models",
+    "Related_Term": "Hierarchical Models",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Panel Data Models",
+    "Field": "Economics",
+    "Definition": "Models that analyze multi-period cross-sectional data, accounting for individual effects.",
+    "Category": "Methods / Models",
+    "Related_Term": "Mixed Models",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Parameters",
+    "Field": "All",
+    "Definition": "Quantities in a model that are estimated from the data to describe relationships.",
+    "Category": "Model Component",
+    "Related_Term": "Coefficients",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Parameters",
+    "Field": "All",
+    "Definition": "Quantities in a model that are estimated from the data to describe relationships.",
+    "Category": "Model Component",
+    "Related_Term": "Weights",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Poisson Regression",
+    "Field": "Health Science / Economics",
+    "Definition": "A regression model for count-dependent variables.",
+    "Category": "Methods / Models",
+    "Related_Term": "Count Models",
+    "Related_Field": "Health Science/Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Population",
+    "Field": "All",
+    "Definition": "The entire group of individuals or units that a study or model aims to represent.",
+    "Category": "Population / Sample",
+    "Related_Term": "Sample",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Ppv (Positive Predictive Value)",
+    "Field": "Health Science",
+    "Definition": "The proportion of positive test results that are true positives.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Precision",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Precision",
+    "Field": "Computer Science",
+    "Definition": "The fraction of predicted positives that are true positives.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Ppv",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Predictor",
+    "Field": "Health Science",
+    "Definition": "A variable used to help predict an outcome of interest.",
+    "Category": "Input Variable",
+    "Related_Term": "Feature",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Predictor",
+    "Field": "Health Science",
+    "Definition": "A variable used to help predict an outcome of interest.",
+    "Category": "Input Variable",
+    "Related_Term": "Regressor",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Probability",
+    "Field": "All",
+    "Definition": "The measure of the likelihood of an event occurring.",
+    "Category": "Probability / Distributions",
+    "Related_Term": "Likelihood",
+    "Related_Field": "Computer Science/Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Probability",
+    "Field": "All",
+    "Definition": "The measure of the likelihood of an event occurring.",
+    "Category": "Probability / Distributions",
+    "Related_Term": "Risk",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Propensity Score",
+    "Field": "Health Science",
+    "Definition": "Probability of treatment assignment given covariates, used to balance groups in observational studies.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Matching",
+    "Related_Field": "Computer Science/Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Random Error",
+    "Field": "Health Science",
+    "Definition": "Unsystematic variability in measurements that cannot be explained by the model.",
+    "Category": "Error / Noise",
+    "Related_Term": "Disturbance",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Random Error",
+    "Field": "Health Science",
+    "Definition": "Unsystematic variability in measurements that cannot be explained by the model.",
+    "Category": "Error / Noise",
+    "Related_Term": "Noise",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Random Forest",
+    "Field": "Computer Science",
+    "Definition": "An ensemble of decision trees used for classification or regression.",
+    "Category": "Methods / Models",
+    "Related_Term": "Decision Tree",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Random Forest",
+    "Field": "Computer Science",
+    "Definition": "An ensemble of decision trees used for classification or regression.",
+    "Category": "Methods / Models",
+    "Related_Term": "Ensemble Methods",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Randomized Controlled Trial (Rct)",
+    "Field": "Health Science",
+    "Definition": "A study design that randomly assigns exposure to eliminate confounding.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Experimental Intervention",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Randomized Controlled Trial (Rct)",
+    "Field": "Health Science",
+    "Definition": "A study design that randomly assigns exposure to eliminate confounding.",
+    "Category": "Causality / Interventions",
+    "Related_Term": "Natural Experiment",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Recall",
+    "Field": "Computer Science",
+    "Definition": "The fraction of actual positives that are correctly identified.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Sensitivity",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Regressor",
+    "Field": "Economics",
+    "Definition": "An explanatory variable in a regression model.",
+    "Category": "Input Variable",
+    "Related_Term": "Feature",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Regressor",
+    "Field": "Economics",
+    "Definition": "An explanatory variable in a regression model.",
+    "Category": "Input Variable",
+    "Related_Term": "Predictor",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Repeated Measures",
+    "Field": "Health Science",
+    "Definition": "Multiple measurements taken from the same subjects across time.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Panel Data",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Repeated Measures",
+    "Field": "Health Science",
+    "Definition": "Multiple measurements taken from the same subjects across time.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Sequence Modeling",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Residual",
+    "Field": "All",
+    "Definition": "The difference between the observed and predicted values for an observation.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Error Term",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Residuals",
+    "Field": "All",
+    "Definition": "The difference between observed and predicted values for an observation.",
+    "Category": "Error / Noise",
+    "Related_Term": "Error Term",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Response",
+    "Field": "Health Science",
+    "Definition": "The observed effect or result associated with predictors.",
+    "Category": "Output Variable",
+    "Related_Term": "Dependent Variable",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Response",
+    "Field": "Health Science",
+    "Definition": "The observed effect or result associated with predictors.",
+    "Category": "Output Variable",
+    "Related_Term": "Target",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Risk",
+    "Field": "Health Science",
+    "Definition": "The probability of an outcome occurring in a defined population over time.",
+    "Category": "Probability / Distributions",
+    "Related_Term": "Probability",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Risk Factor",
+    "Field": "Health Science",
+    "Definition": "A variable associated with an increased probability of the outcome.",
+    "Category": "Input Variable",
+    "Related_Term": "Feature",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Risk Factor",
+    "Field": "Health Science",
+    "Definition": "A variable associated with an increased probability of the outcome.",
+    "Category": "Input Variable",
+    "Related_Term": "Regressor",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Risk Ratio",
+    "Field": "Health Science",
+    "Definition": "The ratio of the probability of an outcome occurring in exposed vs unexposed groups.",
+    "Category": "Model Component",
+    "Related_Term": "Coefficient",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Rmse (Root Mean Squared Error)",
+    "Field": "Economics",
+    "Definition": "A measure of the average prediction error magnitude.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Loss",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Rmse (Root Mean Squared Error)",
+    "Field": "Economics",
+    "Definition": "A measure of the average prediction error magnitude.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Residual Variance",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Roc Auc",
+    "Field": "Computer Science",
+    "Definition": "A measure of model discrimination ability; area under the ROC curve.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Auc",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "R²",
+    "Field": "Economics",
+    "Definition": "The proportion of variance in the dependent variable explained by the model.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Accuracy",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "R²",
+    "Field": "Economics",
+    "Definition": "The proportion of variance in the dependent variable explained by the model.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Explained Variance",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Sample",
+    "Field": "All",
+    "Definition": "A subset of the population used for analysis or modeling.",
+    "Category": "Population / Sample",
+    "Related_Term": "Population",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Sample Selection",
+    "Field": "Economics",
+    "Definition": "Bias introduced when the observed sample is not representative of the population.",
+    "Category": "Missing Data",
+    "Related_Term": "Missing Data",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Sampling Frame",
+    "Field": "Health Science",
+    "Definition": "The list or method used to select the study sample from the population.",
+    "Category": "Population / Sample",
+    "Related_Term": "Population",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Sampling Frame",
+    "Field": "Health Science",
+    "Definition": "The list or method used to select the study sample from the population.",
+    "Category": "Population / Sample",
+    "Related_Term": "Sample",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Sensitivity",
+    "Field": "Health Science",
+    "Definition": "The ability of a test/model to correctly identify positive cases.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Recall",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Sequence Modeling",
+    "Field": "Computer Science",
+    "Definition": "Machine learning models designed to predict sequential data points.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Time Series",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Spurious Correlation",
+    "Field": "Computer Science",
+    "Definition": "A false association between variables due to a hidden factor.",
+    "Category": "Causality / Confounding",
+    "Related_Term": "Confounding Variable",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Spurious Correlation",
+    "Field": "Computer Science",
+    "Definition": "A false association between variables due to a hidden factor.",
+    "Category": "Causality / Confounding",
+    "Related_Term": "Endogeneity",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Stepwise Selection",
+    "Field": "Health Science",
+    "Definition": "Sequentially adding or removing predictors based on statistical criteria.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Feature Selection",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Stepwise Selection",
+    "Field": "Health Science",
+    "Definition": "Sequentially adding or removing predictors based on statistical criteria.",
+    "Category": "Overfitting / Model Selection",
+    "Related_Term": "Model Specification",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Streaming Data",
+    "Field": "Computer Science",
+    "Definition": "Data generated continuously over time, often processed in real-time.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Time Series",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Study Sample",
+    "Field": "Health Science",
+    "Definition": "The actual set of participants or observations included in a study.",
+    "Category": "Population / Sample",
+    "Related_Term": "Population",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Study Sample",
+    "Field": "Health Science",
+    "Definition": "The actual set of participants or observations included in a study.",
+    "Category": "Population / Sample",
+    "Related_Term": "Sample",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Support Vector Machine (Svm)",
+    "Field": "Computer Science",
+    "Definition": "A model that finds the optimal hyperplane separating classes in feature space.",
+    "Category": "Methods / Models",
+    "Related_Term": "Classification",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Target",
+    "Field": "Computer Science",
+    "Definition": "The variable a machine learning model is trained to predict.",
+    "Category": "Output Variable",
+    "Related_Term": "Dependent Variable",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Target",
+    "Field": "Computer Science",
+    "Definition": "The variable a machine learning model is trained to predict.",
+    "Category": "Output Variable",
+    "Related_Term": "Outcome",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Target Population",
+    "Field": "Health Science",
+    "Definition": "The group of individuals to which study results are intended to generalize.",
+    "Category": "Population / Sample",
+    "Related_Term": "Population",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Target Population",
+    "Field": "Health Science",
+    "Definition": "The group of individuals to which study results are intended to generalize.",
+    "Category": "Population / Sample",
+    "Related_Term": "Sample",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Test Dataset",
+    "Field": "Computer Science",
+    "Definition": "Data used to evaluate model performance outside the training set.",
+    "Category": "Population / Sample",
+    "Related_Term": "Population",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Test Dataset",
+    "Field": "Computer Science",
+    "Definition": "Data used to evaluate model performance outside the training set.",
+    "Category": "Population / Sample",
+    "Related_Term": "Sample",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Test Set",
+    "Field": "Computer Science",
+    "Definition": "Data used to evaluate the predictive accuracy of a trained model.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Hold-Out Sample",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Test Set",
+    "Field": "Computer Science",
+    "Definition": "Data used to evaluate the predictive accuracy of a trained model.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Validation Sample",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Time Series",
+    "Field": "All",
+    "Definition": "Data collected in chronological order, often for forecasting or pattern analysis.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Panel Data",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Time Series",
+    "Field": "All",
+    "Definition": "Data collected in chronological order, often for forecasting or pattern analysis.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Sequential Data",
+    "Related_Field": "Computer Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Training Dataset",
+    "Field": "Computer Science",
+    "Definition": "Data used to fit or train a model.",
+    "Category": "Population / Sample",
+    "Related_Term": "Population",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Training Dataset",
+    "Field": "Computer Science",
+    "Definition": "Data used to fit or train a model.",
+    "Category": "Population / Sample",
+    "Related_Term": "Sample",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Transportability",
+    "Field": "Health Science",
+    "Definition": "The ability to apply causal findings from one population to another.",
+    "Category": "Population / Sample",
+    "Related_Term": "Generalization",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Validation Dataset",
+    "Field": "Computer Science",
+    "Definition": "Data used to tune model hyperparameters without affecting test set performance.",
+    "Category": "Population / Sample",
+    "Related_Term": "Population",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Validation Dataset",
+    "Field": "Computer Science",
+    "Definition": "Data used to tune model hyperparameters without affecting test set performance.",
+    "Category": "Population / Sample",
+    "Related_Term": "Sample",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Validation Set",
+    "Field": "Computer Science",
+    "Definition": "Data used to tune model parameters and avoid overfitting.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Hold-Out Sample",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Validation Set",
+    "Field": "Computer Science",
+    "Definition": "Data used to tune model parameters and avoid overfitting.",
+    "Category": "Model Evaluation",
+    "Related_Term": "Validation Sample",
+    "Related_Field": "Economics",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Var (Vector Autoregression)",
+    "Field": "Economics",
+    "Definition": "A model capturing interdependencies among multiple time series variables.",
+    "Category": "Longitudinal / Time Series",
+    "Related_Term": "Time Series",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Weight",
+    "Field": "Computer Science",
+    "Definition": "A multiplier applied to an input feature in a model; learned during training.",
+    "Category": "Model Component",
+    "Related_Term": "Coefficient",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "Weight",
+    "Field": "Computer Science",
+    "Definition": "A multiplier applied to an input feature in a model; learned during training.",
+    "Category": "Model Component",
+    "Related_Term": "Parameter",
+    "Related_Field": "All",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "X Variable",
+    "Field": "Computer Science",
+    "Definition": "Symbol often used to denote input variables in equations and code.",
+    "Category": "Input Variable",
+    "Related_Term": "Predictor",
+    "Related_Field": "Health Science",
+    "Notes": ""
+  },
+  {
+    "Term,Field,Related_Term,Related_Field,Definition,Category,Notes": NaN,
+    "Term": "X Variable",
+    "Field": "Computer Science",
+    "Definition": "Symbol often used to denote input variables in equations and code.",
+    "Category": "Input Variable",
+    "Related_Term": "Regressor",
+    "Related_Field": "Economics",
+    "Notes": ""
+  }
+]
