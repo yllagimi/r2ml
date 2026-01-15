@@ -241,27 +241,69 @@
             letter-spacing: 0.5px;
         }
 
-        /* --- EXPERT INSIGHTS --- */
-        .expert-section {
+        /* --- PARTNERS & CLIENTS SECTION --- */
+        .partners-section {
             background-color: #f9f9f9;
             padding: 4rem 0;
             border-top: 1px solid #ddd;
         }
-        .expert-quote {
-            font-size: 1.2rem;
-            font-style: italic;
-            color: #444;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-            font-family: 'Merriweather', serif;
+        .partners-carousel {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
         }
-        .expert-name {
-            font-weight: 700;
-            color: var(--r2-blue);
+        .partners-nav-btn {
+            background: var(--r2-blue);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+            flex-shrink: 0;
         }
-        .expert-title {
-            font-size: 0.9rem;
-            color: #666;
+        .partners-nav-btn:hover {
+            background: var(--r2-accent);
+        }
+        .partners-nav-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .partners-wrapper {
+            flex: 1;
+            overflow: hidden;
+        }
+        .partners-track {
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.4s ease;
+        }
+        .partner-logo-item {
+            flex: 0 0 150px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .partner-logo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,77,112,0.15);
+        }
+        .partner-logo-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         /* --- FOOTER --- */
@@ -570,39 +612,51 @@
         </div>
     </div>
 
-    <!-- EXPERT INSIGHTS SECTION -->
-    <section class="expert-section">
+    <!-- PARTNERS & CLIENTS SECTION -->
+    <section class="partners-section">
         <div class="container">
-            <h2 class="mb-5 border-bottom pb-3">Expert Insights</h2>
-            <div class="row">
-                <!-- Expert 1: Yll Agimi -->
-                <div class="col-md-6 mb-4 mb-md-0 px-4 border-end">
-                    <blockquote class="expert-quote">
-                        "We make up to 200 food and drink decisions per day. Rational decisions worsen when mental reserves deplete. Data science allows us to nudge people towards health when they are most susceptible."
-                    </blockquote>
-                    <div class="d-flex align-items-center mt-4">
-                        <!-- Placeholder image or link to image -->
-                        <div style="width:50px; height:50px; background-color:#ccc; border-radius:50%; margin-right:15px; background-image:url('images/yll_3.jpeg'); background-size:cover;"></div>
-                        <div>
-                            <div class="expert-name">Yll Agimi, PhD, MPH</div>
-                            <div class="expert-title">Principal Health Data Scientist</div>
+            <h2 class="mb-5 border-bottom pb-3">Partners & Clients</h2>
+            <p class="text-muted mb-4 text-center">R2ML has partnered with leading organizations in government, health systems, and research</p>
+            
+            <div class="partners-carousel">
+                <button class="partners-nav-btn" id="partnersNavPrev" onclick="previousPartnerSlide()">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+
+                <div class="partners-wrapper">
+                    <div class="partners-track" id="partnersTrack">
+                      <div class="partner-logo-item">
+                            <img src="images/clients/RTI.png" alt="RTI International">
+                        </div>
+                                                <div class="partner-logo-item">
+                            <img src="images/clients/MHS.jpg" alt="Military Health System">
+                        </div>
+                                                <div class="partner-logo-item">
+                            <img src="images/clients/dvbic.png" alt="Defense and Veterans Brain Injury Center">
+                        </div>
+                        <div class="partner-logo-item">
+                            <img src="images/clients/GDIT.png" alt="General Dynamics Information Technology">
+                        </div>
+
+                        <div class="partner-logo-item">
+                            <img src="images/clients/bah.png" alt="Booz Allen Hamilton">
+                        </div>
+                        <div class="partner-logo-item">
+                            <img src="images/clients/GovCIO.png" alt="GovCIO">
+                        </div>
+                        <div class="partner-logo-item">
+                            <img src="images/clients/Altarum.jpg" alt="Altarum Institute">
+                        </div>
+
+                        <div class="partner-logo-item">
+                            <img src="images/clients/RTI.png" alt="RTI International">
                         </div>
                     </div>
                 </div>
 
-                <!-- Expert 2: Ilire Agimi, PhD (Placeholder) -->
-                <div class="col-md-6 px-4">
-                    <blockquote class="expert-quote">
-                        "Innovation in healthcare isn't just about new drugs; it's about structuring the economic incentives that drive patient behavior and provider adoption."
-                    </blockquote>
-                    <div class="d-flex align-items-center mt-4">
-                         <div style="width:50px; height:50px; background-color:#ccc; border-radius:50%; margin-right:15px; background-image:url('images/person_3.jpg'); background-size:cover;"></div>
-                        <div>
-                            <div class="expert-name">Ilire Agimi, PhD</div>
-                            <div class="expert-title">Policy Researcher</div>
-                        </div>
-                    </div>
-                </div>
+                <button class="partners-nav-btn" id="partnersNavNext" onclick="nextPartnerSlide()">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -689,6 +743,43 @@
 
         // Initialize carousel
         showSlide(currentSlideIndex);
+
+        // Partners Carousel
+        let currentPartnerIndex = 0;
+        const partnerItems = document.querySelectorAll('.partner-logo-item');
+        const totalPartners = partnerItems.length;
+        const partnersTrack = document.getElementById('partnersTrack');
+
+        function showPartnerSlide(n) {
+            if (n >= totalPartners) {
+                currentPartnerIndex = 0;
+            }
+            if (n < 0) {
+                currentPartnerIndex = totalPartners - 1;
+            }
+            
+            // Calculate offset: show 4 items at a time, scroll by 1
+            const itemWidth = 150 + 32; // 150px width + 2rem gap (32px)
+            const offset = currentPartnerIndex * itemWidth;
+            partnersTrack.style.transform = `translateX(-${offset}px)`;
+            
+            // Update button states
+            document.getElementById('partnersNavPrev').disabled = currentPartnerIndex === 0;
+            document.getElementById('partnersNavNext').disabled = currentPartnerIndex >= totalPartners - 4;
+        }
+
+        function nextPartnerSlide() {
+            currentPartnerIndex++;
+            showPartnerSlide(currentPartnerIndex);
+        }
+
+        function previousPartnerSlide() {
+            currentPartnerIndex--;
+            showPartnerSlide(currentPartnerIndex);
+        }
+
+        // Initialize partners carousel
+        showPartnerSlide(currentPartnerIndex);
     </script>
 </body>
 </html>
