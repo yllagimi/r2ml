@@ -81,7 +81,7 @@
 </head>
 <body data-bs-spy="scroll" data-bs-target="#sidebar-nav" data-bs-offset="100">
 
-    <!-- Header Block -->
+    <!-- TOP BAR (Utility) -->
     <div class="top-bar">
         <div class="container text-end">
             <span>Jersey City, NJ</span>
@@ -89,24 +89,31 @@
             <a href="restricted.html">Client Portal</a>
         </div>
     </div>
+
     <!-- MAIN NAVIGATION -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../images/cj5_LogoMakr_4HKMb1.png" alt="R2ML Logo">
-                <span class="d-none d-md-inline-block ms-2 serif-font" style="font-weight:900; color:var(--r2-blue); vertical-align:middle;">R2ML</span>
+            <a class="navbar-brand" href="index.html">
+                <img src="images/cj5_LogoMakr_4HKMb1.png" alt="R2ML Logo">
+                <span class="d-none d-md-inline-block ms-2 serif-font" style="font-weight:900; color:var(--r2-blue); vertical-align:middle;">Research & Data Science </span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="../about.html">About & Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#news">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../research.html">Research</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html">Tools</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About & Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#News">News</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="dropdown">Tools</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="crosswalk/tool_crosswalk.html">Terminology Crosswalk</a></li>
+                            <li><a class="dropdown-item" href="stat_selector/stat_selector.html">Test Selector</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -146,7 +153,6 @@
                 <!-- SECTION 1: EPIDEMIOLOGY -->
                 <div id="epidemiology" class="content-section pt-0">
                     <div class="d-flex align-items-center mb-4">
-                        <i class="bi bi-graph-up section-icon"></i>
                         <h2 class="m-0">Epidemiology & Research Design</h2>
                     </div>
                     <p>
@@ -172,7 +178,6 @@
                 <!-- SECTION 2: BEHAVIORAL HEALTH -->
                 <div id="behavioral" class="content-section">
                     <div class="d-flex align-items-center mb-4">
-                        <i class="bi bi-person-check section-icon"></i>
                         <h2 class="m-0">Mental & Behavioral Health</h2>
                     </div>
                     <p>
@@ -193,7 +198,6 @@
                 <!-- SECTION 3: DATA SYSTEMS -->
                 <div id="systems" class="content-section">
                     <div class="d-flex align-items-center mb-4">
-                        <i class="bi bi-hdd-network section-icon"></i>
                         <h2 class="m-0">Data Systems & Interoperability</h2>
                     </div>
                     <p>
