@@ -17,68 +17,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>R2ML | Capabilities & Research</title>
     
-    <!-- CSS and Fonts matching Index -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Fonts: Merriweather (Serif/Academic) & Open Sans (Clean) -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
     
+   
     <style>
-        :root { 
-            --r2-blue: #004d70; 
-            --r2-gray: #f8f9fa; 
-            --r2-text: #222;
+        :root {
+            --r2-blue: #004d70; /* RAND-like deep blue */
+            --r2-dark: #222;
+            --r2-gray: #f3f3f3;
+            --r2-accent: #007bff;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            background-color: #fff;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4, h5, .serif-font {
+            font-family: 'Merriweather', serif;
+            color: var(--r2-dark);
         }
         
-        body { font-family: 'Open Sans', sans-serif; color: #444; line-height: 1.7; }
-        
-        /* Typography */
-        h1, h2, h3, h4, h5 { font-family: 'Merriweather', serif; color: var(--r2-text); }
-        h1 { font-weight: 900; }
-        h3 { font-weight: 700; color: var(--r2-blue); margin-top: 1.5rem; }
-        
-        /* Nav & Footer (Same as Index) */
-        .top-bar { background-color: var(--r2-blue); color: white; padding: 5px 0; font-size: 0.85rem; }
-        .top-bar a { color: white; margin-left: 15px; text-decoration: none; }
-        .navbar { border-bottom: 4px solid var(--r2-blue); padding: 1rem 0; background: white; }
-        .nav-link { font-weight: 700; text-transform: uppercase; font-size: 0.9rem; color: #444 !important; margin-left: 15px; }
+        a {
+            color: var(--r2-blue);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: var(--r2-accent);
+        }
 
-        /* Page Header */
-        .page-header {
+        /* --- HEADER --- */
+        .top-bar {
+            background-color: var(--r2-blue);
+            color: white;
+            padding: 5px 0;
+            font-size: 0.85rem;
+        }
+        .top-bar a { color: white; margin-left: 15px; }
+
+        .navbar {
+            border-bottom: 4px solid var(--r2-blue);
+            padding: 1rem 0;
+            background: white;
+        }
+        .navbar-brand img { height: 55px; }
+        .nav-link {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: #444 !important;
+            margin-left: 15px;
+        }
+
+        /* --- PAGE HERO --- */
+        .page-hero {
             background-color: var(--r2-gray);
-            padding: 4rem 0;
+            padding: 3rem 0;
             border-bottom: 1px solid #ddd;
         }
-
-        /* Content Sections */
-        .content-section { padding: 4rem 0; border-bottom: 1px solid #eee; }
-        .section-icon { font-size: 2rem; color: var(--r2-blue); opacity: 0.8; margin-right: 15px; }
-        
-        /* Sidebar Navigation */
-        .sticky-sidebar { position: sticky; top: 100px; }
-        .nav-pills .nav-link { 
-            color: #555; 
-            border-left: 3px solid transparent; 
-            border-radius: 0; 
-            padding: 10px 15px;
-            font-weight: 600;
+        .page-hero h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
         }
-        .nav-pills .nav-link.active { 
-            background-color: transparent; 
-            color: var(--r2-blue); 
-            border-left-color: var(--r2-blue); 
+        .page-hero .subtitle {
+            color: #666;
+            font-size: 1.1rem;
         }
 
-        /* Case Studies */
-        .case-study-box {
+        /* --- CONTENT SECTION --- */
+        .content-section {
+            padding: 3rem 0;
+        }
+
+        /* --- RESEARCH CARDS --- */
+        .research-card {
             background: white;
-            border: 1px solid #e0e0e0;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-left: 5px solid var(--r2-blue);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: box-shadow 0.3s ease;
         }
-        .citation { font-size: 0.85rem; color: #666; font-style: italic; margin-top: 10px; }
+        .research-card:hover {
+            box-shadow: 0 4px 16px rgba(0,77,112,0.15);
+        }
+        .research-card .research-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+        .research-card .research-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        .research-card .research-summary {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+        .research-card .research-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .research-card .btn {
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+        }
+
+        /* --- CATEGORY BADGE --- */
+        .category-badge {
+            display: inline-block;
+            background: var(--r2-blue);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 4rem 0;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+        footer h5 { 
+            color: white; 
+            margin-bottom: 1.5rem; 
+            font-family: 'Open Sans', sans-serif; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            font-size: 1rem;
+        }
+        footer a { color: #bbb; }
+        footer ul li { margin-bottom: 8px; }
     </style>
-</head>
+    </head>
 <body>
 
     <!-- TOP BAR (Utility) -->
