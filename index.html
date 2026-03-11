@@ -320,6 +320,206 @@
             object-fit: contain;
         }
 
+        /* --- VIDEOS SECTION --- */
+        .videos-section {
+            background-color: #f9f9f9;
+            padding: 4rem 0;
+            border-top: 1px solid #ddd;
+        }
+        .videos-horizontal-banner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
+        .video-tile {
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            background: #000;
+            aspect-ratio: 16 / 9;
+        }
+        .video-tile:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0, 77, 112, 0.25);
+        }
+        .video-tile-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .video-tile-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .video-tile:hover .video-tile-overlay {
+            opacity: 1;
+        }
+        .video-play-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--r2-blue);
+        }
+        .video-tile-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+            color: white;
+            padding: 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* --- VIDEO MODAL / LIGHTBOX --- */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .video-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            height: 90vh;
+            max-height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s ease;
+            z-index: 2001;
+        }
+        .video-modal-close:hover {
+            color: var(--r2-accent);
+        }
+        .video-player-wrapper {
+            position: relative;
+            width: 100%;
+            flex: 1;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-player {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .video-flip-btn {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            z-index: 2001;
+        }
+        .video-flip-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        .video-flip-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        .video-flip-prev {
+            top: 10px;
+        }
+        .video-flip-next {
+            bottom: 10px;
+        }
+        .video-info-bottom {
+            margin-top: 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .video-counter {
+            background: rgba(0, 77, 112, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .videos-horizontal-banner {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+            .video-modal-content {
+                width: 95%;
+                max-height: 90vh;
+            }
+            .video-modal-close {
+                top: -35px;
+            }
+            .video-flip-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+        }
+
         /* --- FOOTER --- */
         footer {
             background: #1a1a1a;
@@ -483,6 +683,55 @@
             <a href="services.html" class="btn btn-outline-light rounded-0 px-4 py-2 mt-2">Learn More</a>
         </div>
     </section>
+
+    <!-- LATEST VIDEOS SECTION -->
+    <section class="videos-section">
+        <div class="container">
+            <h2 class="mb-5 border-bottom pb-3">Watch Latest Videos</h2>
+            <p class="text-muted mb-4">Explore science and research insights through our curated video collection</p>
+            
+            <div class="videos-horizontal-banner" id="videosBanner">
+                <!-- Video tiles will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO MODAL / LIGHTBOX -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <button class="video-modal-close" id="videoModalClose" onclick="closeVideoModal()">×</button>
+            
+            <!-- Navigation Controls -->
+            <button class="video-flip-btn video-flip-prev" id="flipPrev" onclick="previousVideo()">
+                <i class="bi bi-chevron-up"></i>
+            </button>
+            
+            <!-- Video Container -->
+            <div class="video-player-wrapper">
+                <iframe 
+                    id="videoPlayer" 
+                    class="video-player"
+                    width="100%" 
+                    height="100%" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <!-- Bottom Info -->
+            <div class="video-info-bottom">
+                <span class="video-counter">
+                    <span id="currentVideoNumber">1</span> / <span id="totalVideosCount">0</span>
+                </span>
+            </div>
+            
+            <!-- Navigation Controls -->
+            <button class="video-flip-btn video-flip-next" id="flipNext" onclick="nextVideo()">
+                <i class="bi bi-chevron-down"></i>
+            </button>
+        </div>
+    </div>
 
     <!-- MAIN CONTENT GRID -->
     <div class="container my-5">
@@ -816,6 +1065,123 @@
 
         // Initialize partners carousel
         showPartnerSlide(currentPartnerIndex);
+
+        // ===== VIDEOS SECTION =====
+        // Video data structure - Add your videos here
+        // Each video should have: id, title, thumbnail (image URL), videoUrl (YouTube embed URL)
+        const scienceVideos = [
+            // Example structure - REPLACE WITH YOUR ACTUAL VIDEOS
+            // {
+            //     id: 1,
+            //     title: "Video Title Here",
+            //     thumbnail: "https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg",
+            //     videoUrl: "https://www.youtube.com/embed/VIDEO_ID"
+            // },
+            // Add more videos here...
+        ];
+
+        let currentVideoIndex = 0;
+
+        // Initialize videos section
+        function initializeVideos() {
+            const videosBanner = document.getElementById('videosBanner');
+            videosBanner.innerHTML = '';
+
+            scienceVideos.forEach((video, index) => {
+                const videoTile = document.createElement('div');
+                videoTile.className = 'video-tile';
+                videoTile.onclick = () => openVideoModal(index);
+                videoTile.innerHTML = `
+                    <img src="${video.thumbnail}" alt="${video.title}" class="video-tile-thumbnail">
+                    <div class="video-tile-overlay">
+                        <div class="video-play-icon">▶</div>
+                    </div>
+                    <div class="video-tile-title">${video.title}</div>
+                `;
+                videosBanner.appendChild(videoTile);
+            });
+
+            // Update total count
+            document.getElementById('totalVideosCount').textContent = scienceVideos.length;
+        }
+
+        function openVideoModal(index) {
+            if (scienceVideos.length === 0) return;
+            
+            currentVideoIndex = index;
+            const modal = document.getElementById('videoModal');
+            modal.classList.add('active');
+            loadVideo(currentVideoIndex);
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+            
+            // Add keyboard navigation
+            document.addEventListener('keydown', handleVideoKeyboard);
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            modal.classList.remove('active');
+            
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+            
+            // Remove keyboard listener
+            document.removeEventListener('keydown', handleVideoKeyboard);
+        }
+
+        function loadVideo(index) {
+            if (index < 0 || index >= scienceVideos.length) return;
+            
+            currentVideoIndex = index;
+            const video = scienceVideos[index];
+            
+            // Update iframe src
+            const videoPlayer = document.getElementById('videoPlayer');
+            videoPlayer.src = video.videoUrl;
+            
+            // Update counter
+            document.getElementById('currentVideoNumber').textContent = currentVideoIndex + 1;
+            
+            // Update button states
+            const prevBtn = document.getElementById('flipPrev');
+            const nextBtn = document.getElementById('flipNext');
+            prevBtn.disabled = currentVideoIndex === 0;
+            nextBtn.disabled = currentVideoIndex === scienceVideos.length - 1;
+        }
+
+        function nextVideo() {
+            if (currentVideoIndex < scienceVideos.length - 1) {
+                loadVideo(currentVideoIndex + 1);
+            }
+        }
+
+        function previousVideo() {
+            if (currentVideoIndex > 0) {
+                loadVideo(currentVideoIndex - 1);
+            }
+        }
+
+        function handleVideoKeyboard(e) {
+            if (e.key === 'ArrowDown' || e.key === 'j') {
+                nextVideo();
+            } else if (e.key === 'ArrowUp' || e.key === 'k') {
+                previousVideo();
+            } else if (e.key === 'Escape') {
+                closeVideoModal();
+            }
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('videoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeVideoModal();
+            }
+        });
+
+        // Initialize on page load
+        initializeVideos();
     </script>
 </body>
 </html>
