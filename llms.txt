@@ -1,0 +1,74 @@
+# R2ML — Research to Machine Learning
+> Federal health analytics, epidemiology, and machine learning consulting.
+
+## Organization
+- Name: R2ML
+- Website: https://r2ml.org
+- Location: Jersey City, NJ
+- Contact: info@r2ml.org | yagimi@r2ml.org
+- Founded: 2020
+
+## Mission
+R2ML transforms public health research and operations through epidemiology, machine learning, and evidence-driven analytics. We deliver rigorous, policy-relevant analytics that help federal agencies, health systems, and research organizations improve care, surveillance, and operational outcomes.
+
+## Principal Investigator
+Yll Agimi, PhD, MPHS, MS — Epidemiologist and data scientist specializing in military health, traumatic brain injury (TBI), neuropsychological informatics, and predictive modeling.
+
+## Core Services
+1. Assessments of Public Medical Surveillance Systems — Evaluate surveillance programs against CDC criteria including data quality, completeness, timeliness, and sensitivity.
+2. Epidemiologic Study Design & Analysis — Cohort and policy-impact studies using robust causal inference methods.
+3. Population Health Risk Stratification & Prediction — Models that identify high-risk groups and support intervention targeting.
+4. Comorbidity & Disease Pattern Analysis — Map co-occurring condition profiles and trajectories.
+5. Behavioral Health Care Pathway Modeling — Service utilization, treatment adherence, and decision node analysis.
+6. Healthcare Workforce Analytics & Planning — Workforce capacity, deployment, and skills alignment.
+7. Data Integration — HIPAA-compliant, cross-source harmonization pipelines for EHR, claims, and registry data.
+8. Clinical NLP — Extraction of meaningful structure from clinical narrative and free-text notes.
+9. Real-Time Dashboards — Executive and operational dashboards for surveillance, care quality, and program metrics.
+
+## Research Areas
+- Traumatic Brain Injury (TBI) epidemiology in U.S. military service members
+- Military health system surveillance
+- Behavioral health & PTSD
+- Comorbidity clustering and longitudinal trajectories
+- Benzodiazepine prescription patterns
+- Population health risk stratification
+- Healthcare policy and care pathway modeling
+
+## Selected Publications
+- "Clinical Trajectories of Comorbidity Associated With Military-Sustained Mild Traumatic Brain Injury" — https://pubmed.ncbi.nlm.nih.gov/38758066/
+- "Mechanisms of Injury for TBI Among U.S. Military Service Members Before and During the COVID-19 Pandemic" — https://academic.oup.com/milmed/article/190/3-4/e830/7866810
+- "Clusters of Conditions Among US Service Members Diagnosed with Mild TBI from 2017 through 2019" — https://pubmed.ncbi.nlm.nih.gov/36438977/
+- "Benzodiazepine Prescription Patterns After Mild TBI in U.S. Military Service Members" — https://pubmed.ncbi.nlm.nih.gov/39028226/
+- "Trends in Traumatic Brain Injury Among U.S. Service Members" — https://pubmed.ncbi.nlm.nih.gov/36870787/
+- "Prevalence of Comorbidities in Active and Reserve Service Members Pre and Post Traumatic Brain Injury, 2017-2019" — https://pubmed.ncbi.nlm.nih.gov/34423819/
+- "Estimates of Long-Term Disability Among U.S. Service Members with Traumatic Brain Injuries" — https://pubmed.ncbi.nlm.nih.gov/32472830/
+- "Estimating Repeat Traumatic Brain Injury in the U.S. Military, 2015-2017" — https://pubmed.ncbi.nlm.nih.gov/33591307/
+- "Traumatic Brain Injury Following Military Deployment: Evaluation of Diagnosis and Cause of Injury" — https://pubmed.ncbi.nlm.nih.gov/30045222/
+
+## Tools
+- Terminology Crosswalk (interactive) — https://r2ml.org/crosswalk/tool_crosswalk.html — Maps statistical and modeling terminology across health science, computer science, and economics domains.
+- Statistical Test Selector (Shiny app) — https://r2ml.org/stat_selector/stat_selector.html — Decision-tree framework for selecting appropriate statistical tests by data type and study design.
+
+## Opinion / Commentary
+- "Synthetic Data as a Scientific Bridge: Defending the Proactive Use of Structured Synthetic Datasets" — https://r2ml.org/opinion/article.html?slug=synthetic-data-as-a-scientific-bridge — Topic: Neuropsychological Informatics & Research Methods. Author: Yll Agimi, PhD, MPHS, MS.
+
+## Site Pages
+- Home: https://r2ml.org/
+- About & Team: https://r2ml.org/about.html
+- Services: https://r2ml.org/services.html
+- Research: https://r2ml.org/research.html
+- Factsheet: https://r2ml.org/factsheet.html
+- Consultation Request: https://r2ml.org/consultation_request.html
+- Terminology Crosswalk Tool: https://r2ml.org/crosswalk/tool_crosswalk.html
+- Statistical Test Selector: https://r2ml.org/stat_selector/stat_selector.html
+- Opinion Articles: https://r2ml.org/opinion/article.html
+
+## Markets Served
+- Federal health agencies (DoD, VA, HHS)
+- State and local public health departments
+- Health systems and provider networks
+- Academic and research institutions
+- Consulting, pharma, and medtech teams
+
+## Keywords
+federal health analytics, military epidemiology, traumatic brain injury research, TBI surveillance, public health machine learning, population health risk stratification, behavioral health modeling, healthcare workforce analytics, clinical NLP, HIPAA data integration, federal consulting

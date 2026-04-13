@@ -1,1351 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V8PVCD8JDW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V8PVCD8JDW');
-</script>
-
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>R2ML | Research & Data Science</title>
-    <meta name="description" content="Data Science Consulting for Mental Health, Epidemiology, and Health Services." />
-
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Fonts: Merriweather (Serif/Academic) & Open Sans (Clean) -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
-
-    <style>
-        :root {
-            --r2-blue: #004d70; /* RAND-like deep blue */
-            --r2-dark: #222;
-            --r2-gray: #f3f3f3;
-            --r2-accent: #007bff;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: #333;
-            background-color: #fff;
-        }
-
-        /* --- TYPOGRAPHY --- */
-        h1, h2, h3, h4, h5, .serif-font {
-            font-family: 'Merriweather', serif;
-            color: var(--r2-dark);
-        }
-        
-        a {
-            color: var(--r2-blue);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: var(--r2-accent);
-        }
-
-        /* --- HEADER --- */
-        .top-bar {
-            background-color: var(--r2-blue);
-            color: white;
-            padding: 5px 0;
-            font-size: 0.85rem;
-        }
-        .top-bar a { color: white; margin-left: 15px; }
-
-        .navbar {
-            border-bottom: 4px solid var(--r2-blue);
-            padding: 1rem 0;
-            background: white;
-        }
-        .navbar-brand img { height: 55px; }
-        .nav-link {
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            color: #444 !important;
-            margin-left: 15px;
-        }
-
-        /* --- CAROUSEL STYLES --- */
-        .featured-carousel-section {
-            background-color: var(--r2-gray);
-            padding: 4rem 0;
-            overflow: hidden;
-            border-bottom: 1px solid #ddd;
-        }
-        .carousel-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-        .carousel-nav-btn {
-            background: var(--r2-blue);
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s ease;
-            flex-shrink: 0;
-        }
-        .carousel-nav-btn:hover {
-            background: var(--r2-accent);
-        }
-        .carousel-nav-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-        .carousel-content-wrapper {
-            flex: 1;
-            overflow: hidden;
-        }
-        .carousel-slide {
-            display: none;
-            text-align: center;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        .carousel-slide.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .study-card-featured {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 4px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .study-year-badge {
-            display: inline-block;
-            background: var(--r2-blue);
-            color: white;
-            padding: 0.4rem 0.8rem;
-            border-radius: 3px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        .featured-study-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-            color: var(--r2-dark);
-        }
-        .featured-study-journal {
-            font-size: 0.95rem;
-            color: #666;
-            margin-bottom: 1.25rem;
-            font-style: italic;
-        }
-        .featured-study-summary {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-            text-align: left;
-        }
-        .featured-study-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-        .carousel-counter {
-            text-align: center;
-            margin-top: 1.5rem;
-            color: #666;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-        
-
-                /* --- MISSION BANNER --- */
-        .mission-banner {
-            background-color: var(--r2-blue);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        .mission-banner h2 {
-            color: white;
-            font-size: 2rem;
-            line-height: 1.4;
-            max-width: 900px;
-            margin: 0 auto 2rem auto;
-            font-weight: 300;
-            font-style: italic;
-        }
-        
-        /* --- NEWS GRID --- */
-        .news-scroll-container {
-            max-height: 800px; /* Limits height to keep sidebar visible */
-            overflow-y: auto;  /* Adds scrollbar */
-            padding-right: 15px; /* Spacing for scrollbar */
-            scrollbar-width: thin;
-            scrollbar-color: var(--r2-blue) #eee;
-        }
-        /* Custom scrollbar for webkit */
-        .news-scroll-container::-webkit-scrollbar {
-            width: 8px;
-        }
-        .news-scroll-container::-webkit-scrollbar-track {
-            background: #eee;
-        }
-        .news-scroll-container::-webkit-scrollbar-thumb {
-            background-color: var(--r2-blue);
-            border-radius: 4px;
-        }
-
-        .news-item {
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 1.5rem;
-        }
-        .news-item:last-child { border-bottom: none; }
-        .news-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
-        }
-        .news-meta {
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        /* --- RIGHT SIDEBAR --- */
-        .sidebar-box {
-            background: var(--r2-gray);
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border-top: 5px solid var(--r2-blue);
-        }
-        .sidebar-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* --- PARTNERS & CLIENTS SECTION --- */
-        .partners-section {
-            background-color: #f9f9f9;
-            padding: 4rem 0;
-            border-top: 1px solid #ddd;
-        }
-        .partners-carousel {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-        .partners-nav-btn {
-            background: var(--r2-blue);
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s ease;
-            flex-shrink: 0;
-        }
-        .partners-nav-btn:hover {
-            background: var(--r2-accent);
-        }
-        .partners-nav-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-        }
-        .partners-wrapper {
-            flex: 1;
-            overflow: hidden;
-        }
-        .partners-track {
-            display: flex;
-            gap: 2rem;
-            transition: transform 0.4s ease;
-        }
-        .partner-logo-item {
-            flex: 0 0 150px;
-            height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: white;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            padding: 1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .partner-logo-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,77,112,0.15);
-        }
-        .partner-logo-item img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        /* --- VIDEOS SECTION --- */
-        .videos-section {
-            background-color: #f9f9f9;
-            padding: 4rem 0;
-            border-top: 1px solid #ddd;
-        }
-        .videos-horizontal-banner {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            padding: 1rem 0;
-        }
-        .video-tile {
-            cursor: pointer;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            background: #000;
-            aspect-ratio: 16 / 9;
-        }
-        .video-tile:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 24px rgba(0, 77, 112, 0.25);
-        }
-        .video-tile-thumbnail {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .video-tile-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .video-tile:hover .video-tile-overlay {
-            opacity: 1;
-        }
-        .video-play-icon {
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            color: var(--r2-blue);
-        }
-        .video-tile-title {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
-            color: white;
-            padding: 1rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-
-        /* --- VIDEO MODAL / LIGHTBOX --- */
-        .video-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 2000;
-            animation: fadeIn 0.3s ease-in-out;
-        }
-        .video-modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .video-modal-content {
-            position: relative;
-            width: 90%;
-            max-width: 800px;
-            height: 90vh;
-            max-height: 600px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .video-modal-close {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 2.5rem;
-            cursor: pointer;
-            padding: 0;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: color 0.2s ease;
-            z-index: 2001;
-        }
-        .video-modal-close:hover {
-            color: var(--r2-accent);
-        }
-        .video-player-wrapper {
-            position: relative;
-            width: 100%;
-            flex: 1;
-            background: #000;
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .video-player {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        .video-flip-btn {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid rgba(255, 255, 255, 0.4);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            flex-shrink: 0;
-            z-index: 2001;
-        }
-        .video-flip-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-color: rgba(255, 255, 255, 0.6);
-        }
-        .video-flip-btn:disabled {
-            opacity: 0.3;
-            cursor: not-allowed;
-        }
-        .video-flip-prev {
-            top: 10px;
-        }
-        .video-flip-next {
-            bottom: 10px;
-        }
-        .video-info-bottom {
-            margin-top: 1.5rem;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-        .video-counter {
-            background: rgba(0, 77, 112, 0.8);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .videos-horizontal-banner {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 1rem;
-            }
-            .video-modal-content {
-                width: 95%;
-                max-height: 90vh;
-            }
-            .video-modal-close {
-                top: -35px;
-            }
-            .video-flip-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 1.2rem;
-            }
-        }
-
-        /* --- DATASETS SECTION --- */
-        .datasets-section {
-            background-color: white;
-            padding: 4rem 0;
-            border-top: 1px solid #ddd;
-            border-bottom: 1px solid #ddd;
-        }
-        .datasets-horizontal-banner {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            padding: 1rem 0;
-        }
-        .dataset-tile {
-            cursor: pointer;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            background: linear-gradient(135deg, var(--r2-blue) 0%, #003a52 100%);
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
-            min-height: 160px;
-            color: white;
-        }
-        .dataset-tile:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 24px rgba(0, 77, 112, 0.25);
-            color: white;
-            text-decoration: none;
-        }
-        .dataset-tile-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.8rem;
-        }
-        .dataset-tile-name {
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-align: center;
-            line-height: 1.3;
-            margin-bottom: 0.5rem;
-        }
-        .dataset-tile-meta {
-            font-size: 0.7rem;
-            opacity: 0.8;
-            text-align: center;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background: #1a1a1a;
-            color: #ccc;
-            padding: 4rem 0;
-            font-size: 0.9rem;
-        }
-        footer h5 { color: white; margin-bottom: 1.5rem; font-family: 'Open Sans', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-size: 1rem;}
-        footer a { color: #bbb; }
-        footer ul li { margin-bottom: 8px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R2ML | Federal Health-Style Experience</title>
+  <meta name="description" content="R2ML transforms public health research and operations through epidemiology, machine learning, and evidence-driven analytics.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/federal-health-theme.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8PVCD8JDW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V8PVCD8JDW');
+  </script>
+  <link rel="canonical" href="https://r2ml.org/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://r2ml.org/#organization",
+        "name": "R2ML",
+        "url": "https://r2ml.org",
+        "logo": "https://r2ml.org/images/cj5_LogoMakr_4HKMb1.png",
+        "description": "R2ML transforms public health research and operations through epidemiology, machine learning, and evidence-driven analytics.",
+        "email": "info@r2ml.org",
+        "address": {"@type": "PostalAddress", "addressLocality": "Jersey City", "addressRegion": "NJ", "addressCountry": "US"},
+        "knowsAbout": ["Epidemiology", "Machine Learning", "Public Health Analytics", "Military Health", "Traumatic Brain Injury", "Healthcare Policy", "Population Health", "Behavioral Health"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://r2ml.org/#website",
+        "url": "https://r2ml.org",
+        "name": "R2ML",
+        "description": "Federal health analytics, epidemiology, and machine learning consulting.",
+        "publisher": {"@id": "https://r2ml.org/#organization"}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://r2ml.org/",
+        "url": "https://r2ml.org/",
+        "name": "R2ML | Federal Health Analytics",
+        "description": "R2ML delivers rigorous, policy-relevant analytics that help agencies, health systems, and research organizations improve care, surveillance, and operational outcomes.",
+        "isPartOf": {"@id": "https://r2ml.org/#website"},
+        "about": {"@id": "https://r2ml.org/#organization"}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-
-    <!-- TOP BAR (Utility) -->
-    <div class="top-bar">
-        <div class="container text-end">
-            <span>Jersey City, NJ</span>
-            <a href="mailto:info@r2ml.org">info@r2ml.org</a>
-            <a href="restricted.html">Client Portal</a>
+  <header class="site-header">
+    <div class="topline">
+      <div class="container">
+        <span>Jersey City, NJ</span>
+        <div>
+          <a href="mailto:info@r2ml.org">info@r2ml.org</a>
+          <span class="mx-2">|</span>
+          <a href="restricted.html">Client Portal</a>
         </div>
+      </div>
     </div>
-
-    <!-- MAIN NAVIGATION -->
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="images/cj5_LogoMakr_4HKMb1.png" alt="R2ML Logo">
-                <span class="d-none d-md-inline-block ms-2 serif-font" style="font-weight:900; color:var(--r2-blue); vertical-align:middle;">Research & Data Science </span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="about.html">About & Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#News">News</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="dropdown">Tools</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="crosswalk/tool_crosswalk.html">Terminology Crosswalk</a></li>
-                            <li><a class="dropdown-item" href="stat_selector/stat_selector.html">Test Selector</a></li>
-                            <li><a class="dropdown-item" href="factsheet.html">Factsheet</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="">Contact Us</a></li>
-                </ul>
-            </div>
+    <nav class="main-nav navbar navbar-expand-sm">
+      <div class="container">
+        <a class="brand navbar-brand" href="index.html">
+          <img src="images/cj5_LogoMakr_4HKMb1.png" alt="R2ML logo">
+          
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navMain">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+            <li class="nav-item"><a class="nav-link" href="#News">News</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tools</a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="crosswalk/tool_crosswalk.html">Terminology Crosswalk</a></li>
+                <li><a class="dropdown-item" href="stat_selector/stat_selector.html">Test Selector</a></li>
+                <li><a class="dropdown-item" href="factsheet.html">Factsheet</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
         </div>
+      </div>
     </nav>
+  </header>
 
-    <!-- FEATURED STUDIES CAROUSEL -->
-    <section class="featured-carousel-section">
-        <div class="container">
-            <h2 class="mb-4 text-center">Featured Research</h2>
-            
-            <div class="carousel-container">
-                <button class="carousel-nav-btn" id="prevBtn" onclick="previousSlide()">
-                    <i class="bi bi-chevron-left"></i>
-                </button>
-
-                <div class="carousel-content-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="carousel-slide active">
-                        <div class="study-card-featured">
-                            <span class="study-year-badge">2024</span>
-                            <h3 class="featured-study-title">Clinical Trajectories of Comorbidity Associated With Military-Sustained Mild Traumatic Brain Injury</h3>
-                            <p class="featured-study-journal">Journal of Head Trauma Rehabilitation, 2024</p>
-                            <p class="featured-study-summary">
-                                This study examines the clinical pathways and comorbidity patterns among military service members following mild traumatic brain injury (TBI). Using longitudinal health records data, the research identifies distinct trajectories of recovery and identifies predictive factors for long-term complications and healthcare utilization following TBI.
-                            </p>
-                            <div class="featured-study-links">
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/38758066/" class="btn btn-primary btn-sm" target="_blank">View on PubMed</a>
-                                <a href="research.html" class="btn btn-outline-primary btn-sm">See All Research</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-slide">
-                        <div class="study-card-featured">
-                            <span class="study-year-badge">2023</span>
-                            <h3 class="featured-study-title">Clusters of Conditions Among US Service Members Diagnosed with Mild TBI from 2017 through 2019</h3>
-                            <p class="featured-study-journal">Military Medicine, 2023</p>
-                            <p class="featured-study-summary">
-                                Using clustering analysis, this study identifies distinct groupings of comorbid conditions that commonly co-occur with mild traumatic brain injury in military populations. These clusters help inform clinical decision-making and allow for more targeted intervention strategies.
-                            </p>
-                            <div class="featured-study-links">
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/36438977/" class="btn btn-primary btn-sm" target="_blank">View on PubMed</a>
-                                <a href="research.html" class="btn btn-outline-primary btn-sm">See All Research</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="carousel-slide">
-                        <div class="study-card-featured">
-                            <span class="study-year-badge">2023</span>
-                            <h3 class="featured-study-title">Prevalence of Comorbidities in Active and Reserve Service Members Pre and Post Traumatic Brain Injury, 2017-2019</h3>
-                            <p class="featured-study-journal">Journal of Head Trauma Rehabilitation, 2021</p>
-                            <p class="featured-study-summary">
-                                This research compares comorbidity profiles before and after TBI diagnosis among both active duty and reserve service members. The findings provide critical insights into how TBI impacts overall health status and disease burden in military populations.
-                            </p>
-                            <div class="featured-study-links">
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/34423819/" class="btn btn-primary btn-sm" target="_blank">View on PubMed</a>
-                                <a href="research.html" class="btn btn-outline-primary btn-sm">See All Research</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 4 -->
-                    <div class="carousel-slide">
-                        <div class="study-card-featured">
-                            <span class="study-year-badge">2023</span>
-                            <h3 class="featured-study-title">Trends in Traumatic Brain Injury Among U.S. Service Members</h3>
-                            <p class="featured-study-journal">Military Medicine, 2023</p>
-                            <p class="featured-study-summary">
-                                This epidemiological study tracks the incidence and prevalence of traumatic brain injury among U.S. military personnel over time. The analysis reveals temporal trends in TBI occurrence and helps identify high-risk periods and populations within the military.
-                            </p>
-                            <div class="featured-study-links">
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/36870787/" class="btn btn-primary btn-sm" target="_blank">View on PubMed</a>
-                                <a href="research.html" class="btn btn-outline-primary btn-sm">See All Research</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 5 -->
-                    <div class="carousel-slide">
-                        <div class="study-card-featured">
-                            <span class="study-year-badge">2020</span>
-                            <h3 class="featured-study-title">Estimates of Long-Term Disability Among U.S. Service Members with Traumatic Brain Injuries</h3>
-                            <p class="featured-study-journal">Military Medicine, 2020</p>
-                            <p class="featured-study-summary">
-                                This study quantifies the burden of long-term disability associated with TBI among military service members. The research provides prevalence estimates and identifies demographic and clinical factors associated with persistent disability, informing rehabilitation and support service planning.
-                            </p>
-                            <div class="featured-study-links">
-                                <a href="https://pubmed.ncbi.nlm.nih.gov/32472830/" class="btn btn-primary btn-sm" target="_blank">View on PubMed</a>
-                                <a href="research.html" class="btn btn-outline-primary btn-sm">See All Research</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-counter">
-                        <span id="currentSlide">1</span> / <span id="totalSlides">5</span>
-                    </div>
-                </div>
-
-                <button class="carousel-nav-btn" id="nextBtn" onclick="nextSlide()">
-                    <i class="bi bi-chevron-right"></i>
-                </button>
-            </div>
-        </div>
-    </section>
-    
-        <!-- NEW MISSION BANNER -->
-    <section class="mission-banner">
-        <div class="container">
-            <h2>"The right question can change the world for the better. That's why R2ML brings academic rigor to solving the biggest industry challenges."</h2>
-            <a href="services.html" class="btn btn-outline-light rounded-0 px-4 py-2 mt-2">Learn More</a>
-        </div>
-    </section>
-
-    <!-- Clips and Insights -->
-    <section class="videos-section">
-        <div class="container">
-            <h2 class="mb-5 border-bottom pb-3">Watch Latest Videos</h2>
-            <p class="text-muted mb-4">Explore science and research insights through our curated video collection</p>
-            
-            <div class="videos-horizontal-banner" id="videosBanner">
-                <!-- Video tiles will be generated by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    <!-- VIDEO MODAL / LIGHTBOX -->
-    <div class="video-modal" id="videoModal">
-        <div class="video-modal-content">
-            <button class="video-modal-close" id="videoModalClose" onclick="closeVideoModal()">×</button>
-            
-            <!-- Navigation Controls -->
-            <button class="video-flip-btn video-flip-prev" id="flipPrev" onclick="previousVideo()">
-                <i class="bi bi-chevron-up"></i>
-            </button>
-            
-            <!-- Video Container -->
-            <div class="video-player-wrapper">
-                <iframe 
-                    id="videoPlayer" 
-                    class="video-player"
-                    width="100%" 
-                    height="100%" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            
-            <!-- Bottom Info -->
-            <div class="video-info-bottom">
-                <span class="video-counter">
-                    <span id="currentVideoNumber">1</span> / <span id="totalVideosCount">0</span>
-                </span>
-            </div>
-            
-            <!-- Navigation Controls -->
-            <button class="video-flip-btn video-flip-next" id="flipNext" onclick="nextVideo()">
-                <i class="bi bi-chevron-down"></i>
-            </button>
-        </div>
+  <section class="page-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Federal Health</p>
+      <h1>Transforming health systems with connected data, epidemiology, and machine learning.</h1>
+      <p>R2ML delivers rigorous, policy-relevant analytics that help agencies, health systems, and research organizations improve care, surveillance, and operational outcomes.</p>
+      <div class="d-flex gap-2 mt-4 flex-wrap">
+        <a class="btn btn-primary-theme" href="consultation_request.html">Request a Consultation</a>
+        <a class="btn btn-primary-theme" href="research.html">Explore Research</a>
+      </div>
     </div>
+  </section>
 
-    <!-- DATASETS BANNER SECTION -->
-    <section class="datasets-section">
-        <div class="container">
-            <h2 class="mb-5 border-bottom pb-3">Explore Open Datasets</h2>
-            <p class="text-muted mb-4">Browse curated datasets from OpenML for your research and machine learning projects</p>
-            
-            <div class="datasets-horizontal-banner" id="datasetsBanner">
-                <!-- Dataset tiles will be generated by JavaScript -->
-            </div>
-            
-            <div class="text-center mt-4">
-                <a href="https://www.openml.org/search?type=data&sort=runs&status=active" target="_blank" class="btn btn-outline-primary rounded-0 px-4 py-2">
-                    Explore All on OpenML <i class="bi bi-arrow-up-right ms-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- MAIN CONTENT GRID -->
-    <div class="container my-5">
-        <div class="row">
-            
-            <!-- LEFT COLUMN: LATEST INSIGHTS (Scrollable) -->
-            <div class="col-lg-8 pe-lg-5" id="news">
-                <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-2">
-                    <h2 class="m-0">Latest Insights</h2>
-                    <span class="text-muted small">Curated from SmartBrief</span>
-                </div>
-
-                <!-- SCROLLABLE CONTAINER START -->
-                <div class="news-scroll-container">
-
-                    <!-- R2ML Highlight -->
-                    <div class="news-item bg-light p-3 border-start border-4 border-primary">
-                        <div class="news-meta text-primary">R2ML Spotlight</div>
-                        <a href="https://cognitive2.vercel.app" target="_blank">
-                            <h3 class="news-title">Cognitive Health Surveillance Pathway</h3>
-                        </a>
-                        <p>
-                            Our internal pilot demonstrates the importance of tracking patient's cognitive performance in the Military Health System, from enlisment to separation.
-                        </p>
-                    </div>
-
-                    <!-- SmartBrief Article 1 -->
-                    <div class="news-item">
-                        <div class="news-meta">Tech Trends</div>
-                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAVcNWbfR" target="_blank">
-                            <h3 class="news-title"> Survey shows AI gains ground as clinical support tool</h3>
-                        </a>
-                        <p>Athenahealth's recent survey, which polled 501 physicians and practice administrators across the US, reveals that physicians are increasingly using AI as a clinical support tool, not just for administrative tasks. AI helps quickly look up clinical information (60%), bring lab and imaging results into a single view (55%), and surface recent clinical evidence during patient visits (56%), enhancing decision-making during patient care. However, challenges like data interoperability and the learning curve for AI tools persist.</p>
-                    </div>
-
-                    <!-- SmartBrief Article 2 -->
-                    <div class="news-item">
-                        <div class="news-meta">Military Health System</div>
-                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAVipYPZl" target="_blank">
-                            <h3 class="news-title"> University of Idaho secures DOD funding for PTSD research</h3>
-                        </a>
-                        <p>The University of Idaho has been awarded $1.3 million in grants from the DOD to advance machine learning research for diagnosing PTSD in military personnel. Led by Psychology Professor Colin Xu, the research aims to enhance early detection of PTSD risks and symptoms, thereby improving support for service members and their families. The funding will also support studies on the impact of deployment on families' stress levels, with collaboration from institutions like Walter Reed National Military Medical Center and Northwestern University.</p>
-                    </div>
-
-                    <!-- SmartBrief Article 3 -->
-                    <div class="news-item">
-                        <div class="news-meta">Veterans Health Administration</div>
-                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAVldcpfY" target="_blank">
-                            <h3 class="news-title"> Vietnam Veterans' advocacy reshaped PTSD treatment</h3>
-                        </a>
-                        <p>Vietnam Veterans played a pivotal role in establishing modern PTSD treatments by advocating for recognition of their combat trauma, which was initially dismissed by the psychiatric community. Their efforts led to the inclusion of PTSD in the DSM-III in 1980, shifting the perception of trauma from a personal weakness to a response to external events. This change paved the way for specialized VA programs and evidence-based treatments, benefiting today's Veterans.</p>
-                    </div>
-
-                    <!-- SmartBrief Article 4 -->
-                    <div class="news-item">
-                        <div class="news-meta">Veterans Health Administration</div>
-                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAVnRhiOz" target="_blank">
-                            <h3 class="news-title"> Virtual care may reduce ED use for low-acuity conditions </h3>
-                        </a>
-                        <p>Low-acuity emergency department utilization declined by 12.4% after the Department of Veterans Affairs expanded access to care via telephone and video in March 2020, researchers reported in JAMA Network Open. The implementation of virtual care was not directly associated with lower ED use across all low-acuity conditions, but ED use declined for major depression, gastroenteritis, conjunctivitis, low-back pain, knee pain and cellulitis.</p>
-                    </div>
-
-                    <!-- SmartBrief Article 5 -->
-                    <div class="news-item">
-                        <div class="news-meta">Veterans Health Administration</div>
-                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAVqFnwUo" target="_blank">
-                            <h3 class="news-title">VA, community efforts combat Veteran suicide risks</h3>
-                        </a>
-                        <p>Suicide among US Veterans and service members remains a critical issue, with Veterans dying by suicide at a higher rate than the general population. The VA and other organizations offer crisis support through the Veterans Crisis Line and Military OneSource, emphasizing the need for these services to act as gateways to long-term care. The VA's strategy includes community partnerships and reducing access to lethal means, while community-based programs like Stop Soldier Suicide provide confidential support.</p>
-                    </div>
-
-                    <!-- SmartBrief Article 6 -->
-                    <div class="news-item">
-                        <div class="news-meta">Cybersecurity</div>
-                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAVyVOGUb" target="_blank">
-                            <h3 class="news-title">Telehealth prescribing flexibility extended for another year</h3>
-                        </a>
-                        <p>The Drug Enforcement Administration has extended remote prescribing flexibilities through the end of 2026, allowing controlled substances to be prescribed via telehealth without in-person exams. The flexibility was first enacted in March 2020 and has been extended four times. "I believe our collective focus must now shift toward establishing a permanent, proactive framework that ensures uninterrupted access to care," said Deepti Pandita, chief medical information officer at the University of California Irvine Health system</p>
-                    </div>
-
-                    <!-- SmartBrief Article 7 -->
-                    <div class="news-item">
-                        <div class="news-meta">National Health Care</div>
-                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAWipjoek" target="_blank">
-                            <h3 class="news-title">Attempted suicide may be a risk after head injury</h3>
-                        </a>
-                        <p>A large study in the UK found elevated suicide risks among people who had sustained a head injury, suggesting that suicide screening should be a standard component of concussion or traumatic brain injury care. Researchers analyzed two decades worth of records from 1.8 million adults in the UK and found a 21% higher risk for attempted suicide, but not death by suicide, among those who had a head injury, particularly in the first year after the injury. The study was published in the journal Neurology.</p>
-                    </div>
-
-                    <!-- SmartBrief Article 8 -->
-                    <div class="news-item">
-                        <div class="news-meta">AI Innovation</div>
-                        <a href="https://www.bloomberg.com/news/articles/2023-09-08/meta-developing-new-ai-model-to-rival-openai-s-gpt-4?utm_source=brief" target="_blank">
-                            <h3 class="news-title">Meta developing new AI model to rival GPT-4</h3>
-                        </a>
-                        <p>Meta is reportedly working on a new artificial intelligence system intended to be as powerful as OpenAI's most advanced model, aiming to help companies build text-generation tools.</p>
-                    </div>
-
-                    <!-- SmartBrief Article 9 -->
-                    <div class="news-item">
-                        <div class="news-meta">Health and Medical Research </div>
-                        <a href="https://r.smartbrief.com/resp/uFayCrsecyolAWnRrGTy" target="_blank">
-                            <h3 class="news-title"> Veterans with cardiometabolic diseases at risk during heatwaves</h3>
-                        </a>
-                        <p>A study published in JAMA Network Open shows the increased mortality risk among Veterans with cardiometabolic diseases during extreme heat events. Conducted by researchers at the Veterans Affairs Health Systems Research Center, the study found that Veterans living in high-deprivation areas or experiencing homelessness are particularly vulnerable. The study suggests that these findings could inform the development of heat-response plans, including cooling centers and anticipatory alerts, to mitigate risks during heatwaves..</p>
-                    </div>
-                </div> 
-                <!-- SCROLLABLE CONTAINER END -->
-
-            </div>
-
-            <!-- RIGHT COLUMN: SIDEBAR (RAND Placeholder Elements) -->
-            <div class="col-lg-4">
-                
-                <!-- Research Divisions -->
-                <div class="sidebar-box">
-                    <h4 class="sidebar-title">Research Areas</h4>
-                    <p class="small text-muted mb-3">R2ML conducts research on a broad front for health systems.</p>
-                    <nav class="nav flex-column">
-                        <a href="services.html#ds" class="service-link">Health Data Science</a>
-                        <a href="services.html#ha" class="service-link">Epidemiology & Surveillance</a>
-                        <a href="services.html#wd" class="service-link">Behavioral Economics</a>
-                        <a href="services.html#api" class="service-link">Natural Language Processing</a>
-                    </nav>
-                </div>
-
-                <!-- Featured Commentary Placeholder -->
-                <div class="mb-5">
-                    <h4 class="sidebar-title border-bottom pb-2 mb-3">Featured Commentary</h4>
-                    <div class="mb-3">
-                        <a href="#" class="fw-bold text-dark d-block">When Government Steps Back, Preparedness Must Step Up</a>
-                        <span class="small text-muted">Dec 23, 2025</span>
-                    </div>
-                    <div class="mb-3">
-                        <a href="#" class="fw-bold text-dark d-block">Why U.S. STEM Excellence Is Often Accidental</a>
-                        <span class="small text-muted">Dec 19, 2025</span>
-                    </div>
-                </div>
-
-                <!-- Contact Box -->
-                <div class="sidebar-box bg-light border-0">
-                    <h4 class="sidebar-title">Stay Informed</h4>
-                    <p class="small">Get updates from R2ML delivered straight to your inbox.</p>
-                    <a href="mailto:info@r2ml.org" class="btn btn-dark w-100 rounded-0">Email Subscribe</a>
-                </div>
-
-            </div>
-        </div>
+  <section class="section-block">
+    <div class="container">
+      <p class="section-title">Our Impact</p>
+      <h2>Evidence-backed outcomes across military and civilian health contexts.</h2>
+      <div class="row g-4 mt-1">
+        <div class="col-lg-4"><div class="panel h-100 d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="mb-0">Featured Research</h3>
+            <span class="d-flex gap-1">
+              <button id="resPrev" class="slider-nav-btn" aria-label="Previous research">&#8249;</button>
+              <button id="resNext" class="slider-nav-btn" aria-label="Next research">&#8250;</button>
+            </span>
+          </div>
+          <p id="resCat" class="small muted mb-2"></p>
+          <p id="resTitle" class="fw-semibold mb-3 flex-grow-1"></p>
+          <div class="d-flex justify-content-between align-items-center">
+            <a id="resLink" class="card-link" target="_blank" href="research.html">View Publication &#8594;</a>
+            <span id="resCount" class="small muted"></span>
+          </div>
+        </div></div>
+        <div class="col-lg-4"><div class="panel"><h3>Operational Analytics</h3><p>Decision support through dashboarding, monitoring, and reproducible methods.</p><a class="card-link" href="services.html">View Service Capabilities</a></div></div>
+        <div class="col-lg-4"><div class="panel"><h3>Tooling for Practice</h3><p>Interactive tools for terminology mapping and test selection workflows.</p><a class="card-link" href="crosswalk/tool_crosswalk.html">Open Terminology Crosswalk</a></div></div>
+      </div>
     </div>
+  </section>
 
-    <!-- PARTNERS & CLIENTS SECTION -->
-    <section class="partners-section">
-        <div class="container">
-            <h2 class="mb-5 border-bottom pb-3">Partners & Clients</h2>
-            <p class="text-muted mb-4 text-center">R2ML has partnered with leading organizations in government, health systems, and research</p>
-            
-            <div class="partners-carousel">
-                <button class="partners-nav-btn" id="partnersNavPrev" onclick="previousPartnerSlide()">
-                    <i class="bi bi-chevron-left"></i>
-                </button>
-
-                <div class="partners-wrapper">
-                    <div class="partners-track" id="partnersTrack">
-                      <div class="partner-logo-item">
-                            <img src="images/clients/RTI.png" alt="RTI International">
-                        </div>
-                                                <div class="partner-logo-item">
-                            <img src="images/clients/MHS.jpg" alt="Military Health System">
-                        </div>
-                                                <div class="partner-logo-item">
-                            <img src="images/clients/dvbic.png" alt="Defense and Veterans Brain Injury Center">
-                        </div>
-                        <div class="partner-logo-item">
-                            <img src="images/clients/GDIT.png" alt="General Dynamics Information Technology">
-                        </div>
-
-                        <div class="partner-logo-item">
-                            <img src="images/clients/bah.png" alt="Booz Allen Hamilton">
-                        </div>
-                        <div class="partner-logo-item">
-                            <img src="images/clients/GovCIO.png" alt="GovCIO">
-                        </div>
-                        <div class="partner-logo-item">
-                            <img src="images/clients/Altarum.jpg" alt="Altarum Institute">
-                        </div>
-
-                        <div class="partner-logo-item">
-                            <img src="images/clients/RTI.png" alt="RTI International">
-                        </div>
-                    </div>
-                </div>
-
-                <button class="partners-nav-btn" id="partnersNavNext" onclick="nextPartnerSlide()">
-                    <i class="bi bi-chevron-right"></i>
-                </button>
+  <section class="section-block">
+    <div class="container">
+      <p class="section-title">Resources</p>
+      <h2>Videos, datasets, and insight streams for continuous learning.</h2>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="panel">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="mb-0">Watch Latest Videos</h3>
+              <span class="d-flex gap-1 align-items-center">
+                <button id="videoPrev" class="slider-nav-btn" aria-label="Previous video">&#8249;</button>
+                <span id="videoCount" class="small muted mx-1"></span>
+                <button id="videoNext" class="slider-nav-btn" aria-label="Next video">&#8250;</button>
+              </span>
             </div>
+            <iframe id="videoFrame" class="video-panel-frame" src="" title="R2ML video" allowfullscreen></iframe>
+            <p id="videoTitle" class="mt-2 mb-0 small fw-semibold"></p>
+          </div>
         </div>
-    </section>
-
-    <!-- CONSULTATION CTA SECTION -->
-    <section style="background: linear-gradient(135deg, #004d70 0%, #003a52 100%); padding: 4rem 0; margin: 3rem 0;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h2 style="color: white; font-family: 'Merriweather', serif; margin-bottom: 0.5rem;">Ready to Transform Your Research?</h2>
-                    <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin: 0;">Connect with our team to discuss how R2ML can help you tackle your biggest data science and research challenges.</p>
+        <div class="col-lg-6">
+          <div class="panel">
+            <h3>Explore Open Datasets</h3>
+            <p class="muted mb-3">Curated datasets for machine learning and health analytics research, with direct links to OpenML.</p>
+            <div class="dataset-grid">
+              <div class="dataset-card">
+                <div class="d-flex justify-content-between align-items-start">
+                  <a class="dataset-name fw-semibold" target="_blank" href="https://www.openml.org/d/37">Pima Indians Diabetes</a>
+                  <span class="dataset-tag">Health</span>
                 </div>
-                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                    <a href="consultation_request.html" class="btn btn-light rounded-0 px-5 py-3" style="font-weight: 700; font-size: 1.05rem;">Request a Consultation</a>
+                <p class="dataset-desc">768 patients, 8 clinical features predicting type 2 diabetes onset. Standard binary classification benchmark.</p>
+              </div>
+              <div class="dataset-card">
+                <div class="d-flex justify-content-between align-items-start">
+                  <a class="dataset-name fw-semibold" target="_blank" href="https://www.openml.org/d/1590">Adult Income</a>
+                  <span class="dataset-tag">Demographics</span>
                 </div>
+                <p class="dataset-desc">48,842 census records with demographics and occupation predicting annual income above $50K.</p>
+              </div>
+              <div class="dataset-card">
+                <div class="d-flex justify-content-between align-items-start">
+                  <a class="dataset-name fw-semibold" target="_blank" href="https://www.openml.org/d/13">Breast Cancer Wisconsin</a>
+                  <span class="dataset-tag">Health</span>
+                </div>
+                <p class="dataset-desc">569 tumor biopsies with 30 morphological features for malignant vs. benign classification.</p>
+              </div>
+              <div class="dataset-card">
+                <div class="d-flex justify-content-between align-items-start">
+                  <a class="dataset-name fw-semibold" target="_blank" href="https://www.openml.org/d/554">MNIST Digits</a>
+                  <span class="dataset-tag">Image</span>
+                </div>
+                <p class="dataset-desc">70,000 handwritten digit images (0–9). The standard benchmark for image classification and deep learning.</p>
+              </div>
+              <div class="dataset-card">
+                <div class="d-flex justify-content-between align-items-start">
+                  <a class="dataset-name fw-semibold" target="_blank" href="https://www.openml.org/d/1461">Bank Marketing</a>
+                  <span class="dataset-tag">Policy</span>
+                </div>
+                <p class="dataset-desc">45,211 phone campaign records predicting term deposit subscriptions. Useful for outcome modeling.</p>
+              </div>
+              <div class="dataset-card">
+                <div class="d-flex justify-content-between align-items-start">
+                  <a class="dataset-name fw-semibold" target="_blank" href="https://www.openml.org/d/61">Iris</a>
+                  <span class="dataset-tag">Classification</span>
+                </div>
+                <p class="dataset-desc">150 iris flower measurements across 3 species. Classic multiclass benchmark for model comparison.</p>
+              </div>
             </div>
+            <a class="btn btn-secondary-theme mt-3" target="_blank" href="https://www.openml.org/search?type=data&sort=runs&status=active">Browse All OpenML Datasets</a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5>R2ML</h5>
-                    <p>
-                        Objective Analysis. Effective Solutions.
-                    </p>
-                    <p class="small text-muted">
-                        R2ML is a research organization that develops solutions to public health challenges to help make communities healthier and more prosperous.
-                    </p>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h5>Topics</h5>
-                    <ul class="list-unstyled small">
-                        <li><a href="#">Health Care Costs</a></li>
-                        <li><a href="#">Artificial Intelligence</a></li>
-                        <li><a href="#">Mental Health</a></li>
-                        <li><a href="#">Social Equity</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2 mb-4">
-                    <h5>About</h5>
-                    <ul class="list-unstyled small">
-                        <li><a href="about.html">Leadership</a></li>
-                        <li><a href="services.html">Capabilities</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="mailto:info@r2ml.org">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Subscribe</h5>
-                    <p class="small">Get the latest R2ML research and timely insights from our experts.</p>
-                    <a href="mailto:info@r2ml.org" class="btn btn-outline-light btn-sm rounded-0">Email Subscribe</a>
-                </div>
-            </div>
-            <div class="row mt-5 pt-4 border-top border-secondary">
-                <div class="col-12 text-center small text-muted">
-                    &copy; 2025 R2ML.org. All Rights Reserved. | Jersey City, NJ
-                </div>
-            </div>
+  <section class="section-block" id="News">
+    <div class="container">
+      <p class="section-title">News + Accolades</p>
+      <h2>Latest Insights</h2>
+      <p class="muted mb-4">Curated from SmartBrief, Bloomberg, and R2ML internal research.</p>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-xl-4 d-flex">
+          <div class="insight-card spotlight w-100">
+            <div class="insight-tag">R2ML Spotlight</div>
+            <a class="insight-title" href="https://cognitive2.vercel.app" target="_blank">Cognitive Health Surveillance Pathway</a>
+            <p class="insight-excerpt">Our internal pilot demonstrates the importance of tracking patient's cognitive performance in the Military Health System, from enlistment to separation.</p>
+          </div>
         </div>
-    </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="col-md-6 col-xl-4 d-flex">
+          <div class="insight-card w-100">
+            <div class="insight-tag">Tech Trends</div>
+            <a class="insight-title" href="https://r.smartbrief.com/resp/uFayCrsecyolAVcNWbfR" target="_blank">Survey shows AI gains ground as clinical support tool</a>
+            <p class="insight-excerpt">Athenahealth's survey of 501 physicians reveals AI is increasingly used as a clinical support tool — helping look up clinical information (60%), consolidate lab results (55%), and surface recent evidence during visits (56%).</p>
+          </div>
+        </div>
 
-    <!-- Carousel Script -->
-    <script>
-        let currentSlideIndex = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
+        <div class="col-md-6 col-xl-4 d-flex">
+          <div class="insight-card w-100">
+            <div class="insight-tag">Military Health System</div>
+            <a class="insight-title" href="https://r.smartbrief.com/resp/uFayCrsecyolAVipYPZl" target="_blank">University of Idaho secures DOD funding for PTSD research</a>
+            <p class="insight-excerpt">The University of Idaho received $1.3M in DOD grants to advance machine learning for diagnosing PTSD in military personnel. Research aims to improve early detection, with collaboration from Walter Reed and Northwestern University.</p>
+          </div>
+        </div>
 
-        function showSlide(n) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            if (n >= totalSlides) {
-                currentSlideIndex = 0;
-            }
-            if (n < 0) {
-                currentSlideIndex = totalSlides - 1;
-            }
-            slides[currentSlideIndex].classList.add('active');
-            document.getElementById('currentSlide').textContent = currentSlideIndex + 1;
-            
-            // Disable/enable nav buttons based on position
-            document.getElementById('prevBtn').disabled = currentSlideIndex === 0;
-            document.getElementById('nextBtn').disabled = currentSlideIndex === totalSlides - 1;
-        }
+        <div class="col-md-6 col-xl-4 d-flex">
+          <div class="insight-card w-100">
+            <div class="insight-tag">Veterans Health Administration</div>
+            <a class="insight-title" href="https://r.smartbrief.com/resp/uFayCrsecyolAVldcpfY" target="_blank">Vietnam Veterans' advocacy reshaped PTSD treatment</a>
+            <p class="insight-excerpt">Vietnam Veterans drove recognition of combat trauma, leading to PTSD's inclusion in the DSM-III in 1980 and shifting perception from personal weakness to a response to external events — paving the way for VA specialized programs.</p>
+          </div>
+        </div>
 
-        function nextSlide() {
-            currentSlideIndex++;
-            showSlide(currentSlideIndex);
-        }
+        <div class="col-md-6 col-xl-4 d-flex">
+          <div class="insight-card w-100">
+            <div class="insight-tag">Veterans Health Administration</div>
+            <a class="insight-title" href="https://r.smartbrief.com/resp/uFayCrsecyolAVnRhiOz" target="_blank">Virtual care may reduce ED use for low-acuity conditions</a>
+            <p class="insight-excerpt">VA expansion of telephone and video care in March 2020 was associated with a 12.4% decline in low-acuity ED utilization, with reductions seen for depression, gastroenteritis, low-back pain, and cellulitis, per JAMA Network Open.</p>
+          </div>
+        </div>
 
-        function previousSlide() {
-            currentSlideIndex--;
-            showSlide(currentSlideIndex);
-        }
+        <div class="col-md-6 col-xl-4 d-flex">
+          <div class="insight-card w-100">
+            <div class="insight-tag">Veterans Health Administration</div>
+            <a class="insight-title" href="https://r.smartbrief.com/resp/uFayCrsecyolAVqFnwUo" target="_blank">VA, community efforts combat Veteran suicide risks</a>
+            <p class="insight-excerpt">Veterans die by suicide at higher rates than the general population. The VA and community organizations are expanding crisis support and reducing access to lethal means, while programs like Stop Soldier Suicide provide confidential outreach.</p>
+          </div>
+        </div>
 
-        // Initialize carousel
-        showSlide(currentSlideIndex);
+        <div class="col-md-6 col-xl-4 d-flex">
+          <div class="insight-card w-100">
+            <div class="insight-tag">Cybersecurity &amp; Telehealth</div>
+            <a class="insight-title" href="https://r.smartbrief.com/resp/uFayCrsecyolAVyVOGUb" target="_blank">Telehealth prescribing flexibility extended for another year</a>
+            <p class="insight-excerpt">The DEA extended remote prescribing flexibilities through end of 2026, allowing controlled substances to be prescribed via telehealth without in-person exams — a policy first enacted in March 2020 and now extended four times.</p>
+          </div>
+        </div>
 
-        // Partners Carousel
-        let currentPartnerIndex = 0;
-        const partnerItems = document.querySelectorAll('.partner-logo-item');
-        const totalPartners = partnerItems.length;
-        const partnersTrack = document.getElementById('partnersTrack');
+        <div class="col-md-6 col-xl-4 d-flex">
+          <div class="insight-card w-100">
+            <div class="insight-tag">National Health Care</div>
+            <a class="insight-title" href="https://r.smartbrief.com/resp/uFayCrsecyolAWipjoek" target="_blank">Attempted suicide may be a risk after head injury</a>
+            <p class="insight-excerpt">A UK study of 1.8 million adults found a 21% higher risk of attempted suicide among those with a head injury, with risk elevated in the first year post-injury. Researchers recommend suicide screening as a standard component of TBI care.</p>
+          </div>
+        </div>
 
-        function showPartnerSlide(n) {
-            if (n >= totalPartners) {
-                currentPartnerIndex = 0;
-            }
-            if (n < 0) {
-                currentPartnerIndex = totalPartners - 1;
-            }
-            
-            // Calculate offset: show 4 items at a time, scroll by 1
-            const itemWidth = 150 + 32; // 150px width + 2rem gap (32px)
-            const offset = currentPartnerIndex * itemWidth;
-            partnersTrack.style.transform = `translateX(-${offset}px)`;
-            
-            // Update button states
-            document.getElementById('partnersNavPrev').disabled = currentPartnerIndex === 0;
-            document.getElementById('partnersNavNext').disabled = currentPartnerIndex >= totalPartners - 4;
-        }
+        <div class="col-md-6 col-xl-4 d-flex">
+          <div class="insight-card w-100">
+            <div class="insight-tag">Health &amp; Medical Research</div>
+            <a class="insight-title" href="https://r.smartbrief.com/resp/uFayCrsecyolAWnRrGTy" target="_blank">Veterans with cardiometabolic diseases at risk during heatwaves</a>
+            <p class="insight-excerpt">A JAMA Network Open study found increased mortality risk among Veterans with cardiometabolic diseases during extreme heat, especially those in high-deprivation areas or experiencing homelessness. Findings could inform heat-response planning.</p>
+          </div>
+        </div>
 
-        function nextPartnerSlide() {
-            currentPartnerIndex++;
-            showPartnerSlide(currentPartnerIndex);
-        }
+      </div>
+    </div>
+  </section>
 
-        function previousPartnerSlide() {
-            currentPartnerIndex--;
-            showPartnerSlide(currentPartnerIndex);
-        }
+  <section class="section-block">
+    <div class="container">
+      <div class="cta-band d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3">
+        <div>
+          <p class="section-title mb-2">Consulting</p>
+          <h2 class="mb-0">Ready to transform your research into measurable public health impact?</h2>
+        </div>
+        <a class="btn btn-primary-theme" href="consultation_request.html">Start Consultation</a>
+      </div>
+    </div>
+  </section>
 
-        // Initialize partners carousel
-        showPartnerSlide(currentPartnerIndex);
+  <footer id="contact">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h5>R2ML</h5>
+          <p class="small">Objective Analysis. Effective Solutions. We partner with teams tackling the hardest public health and health policy questions.</p>
+        </div>
+        <div class="col-lg-4">
+          <h5>Navigation</h5>
+          <ul class="list-unstyled small">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="factsheet.html">Factsheet</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Contact</h5>
+          <p class="small"><a href="mailto:yagimi@r2ml.org">yagimi@r2ml.org</a></p>
+          <p class="small"><a href="mailto:info@r2ml.org">info@r2ml.org</a></p>
+        </div>
+      </div>
+      <div class="pt-4 mt-4 border-top border-secondary small muted">© 2026 R2ML.org. All rights reserved.</div>
+    </div>
+  </footer>
 
-        // ===== VIDEOS SECTION =====
-        // Video data structure - Add your videos here
-        // Each video should have: id, title, thumbnail (image URL), videoUrl (YouTube embed URL)
-const scienceVideos = [
-    {
-        id: 1,
-        title: "AI and Biology",
-        thumbnail: "https://img.youtube.com/vi/9BLYMc4RSZ8/hqdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/9BLYMc4RSZ8"
-    },
-    {
-        id: 2,
-        title: "Medicine, Machines and Magic",
-        thumbnail: "https://img.youtube.com/vi/H5qeaOyyTug/hqdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/H5qeaOyyTug?si=exdlFAvdU3lZfgV_"
-    },
-    {
-        id: 3,
-        title: "From Clinician to Chief Health AI Officer",
-        thumbnail: "https://img.youtube.com/vi/tURfr3ZfgmQ/hqdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/tURfr3ZfgmQ?si=nRlgpUwpQoVKLz8X"
-    },
-      {
-        id: 4,
-        title: "Partners in Diagnosis: ChatGPT, a Mother’s Intuition",
-        thumbnail: "https://img.youtube.com/vi/2aAZIgVv_V8/hqdefault.jpg",
-        videoUrl: "https://www.youtube.com/embed/2aAZIgVv_V8?si=50qmxDdIVG7yaDye"
-    }
-];
-
-
-
-
-        let currentVideoIndex = 0;
-
-        // Initialize videos section
-        function initializeVideos() {
-            const videosBanner = document.getElementById('videosBanner');
-            videosBanner.innerHTML = '';
-
-            scienceVideos.forEach((video, index) => {
-                const videoTile = document.createElement('div');
-                videoTile.className = 'video-tile';
-                videoTile.onclick = () => openVideoModal(index);
-                videoTile.innerHTML = `
-                    <img src="${video.thumbnail}" alt="${video.title}" class="video-tile-thumbnail">
-                    <div class="video-tile-overlay">
-                        <div class="video-play-icon">▶</div>
-                    </div>
-                    <div class="video-tile-title">${video.title}</div>
-                `;
-                videosBanner.appendChild(videoTile);
-            });
-
-            // Update total count
-            document.getElementById('totalVideosCount').textContent = scienceVideos.length;
-        }
-
-        function openVideoModal(index) {
-            if (scienceVideos.length === 0) return;
-            
-            currentVideoIndex = index;
-            const modal = document.getElementById('videoModal');
-            modal.classList.add('active');
-            loadVideo(currentVideoIndex);
-            
-            // Prevent body scroll
-            document.body.style.overflow = 'hidden';
-            
-            // Add keyboard navigation
-            document.addEventListener('keydown', handleVideoKeyboard);
-        }
-
-        function closeVideoModal() {
-            const modal = document.getElementById('videoModal');
-            modal.classList.remove('active');
-            
-            // Restore body scroll
-            document.body.style.overflow = 'auto';
-            
-            // Remove keyboard listener
-            document.removeEventListener('keydown', handleVideoKeyboard);
-        }
-
-        function loadVideo(index) {
-            if (index < 0 || index >= scienceVideos.length) return;
-            
-            currentVideoIndex = index;
-            const video = scienceVideos[index];
-            
-            // Update iframe src
-            const videoPlayer = document.getElementById('videoPlayer');
-            videoPlayer.src = video.videoUrl;
-            
-            // Update counter
-            document.getElementById('currentVideoNumber').textContent = currentVideoIndex + 1;
-            
-            // Update button states
-            const prevBtn = document.getElementById('flipPrev');
-            const nextBtn = document.getElementById('flipNext');
-            prevBtn.disabled = currentVideoIndex === 0;
-            nextBtn.disabled = currentVideoIndex === scienceVideos.length - 1;
-        }
-
-        function nextVideo() {
-            if (currentVideoIndex < scienceVideos.length - 1) {
-                loadVideo(currentVideoIndex + 1);
-            }
-        }
-
-        function previousVideo() {
-            if (currentVideoIndex > 0) {
-                loadVideo(currentVideoIndex - 1);
-            }
-        }
-
-        function handleVideoKeyboard(e) {
-            if (e.key === 'ArrowDown' || e.key === 'j') {
-                nextVideo();
-            } else if (e.key === 'ArrowUp' || e.key === 'k') {
-                previousVideo();
-            } else if (e.key === 'Escape') {
-                closeVideoModal();
-            }
-        }
-
-        // Close modal when clicking outside
-        document.getElementById('videoModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeVideoModal();
-            }
-        });
-
-        // Initialize on page load
-        initializeVideos();
-
-        // ===== DATASETS SECTION =====
-        // Dataset data structure - Add your datasets here
-        // Each dataset should have: id, name, instances, features, openmlUrl
-        const openmlDatasets = [
-            {
-                id: 1,
-                name: "Iris Dataset",
-                instances: "150",
-                features: "4",
-                openmlUrl: "https://www.openml.org/d/61"
-            },
-            {
-                id: 2,
-                name: "Breast Cancer",
-                instances: "569",
-                features: "30",
-                openmlUrl: "https://www.openml.org/d/1597"
-            },
-            {
-                id: 3,
-                name: "Diabetes",
-                instances: "768",
-                features: "8",
-                openmlUrl: "https://www.openml.org/d/37"
-            },
-            {
-                id: 4,
-                name: "Adult Census Income",
-                instances: "48842",
-                features: "14",
-                openmlUrl: "https://www.openml.org/d/1590"
-            },
-            {
-                id: 5,
-                name: "Wine Classification",
-                instances: "178",
-                features: "13",
-                openmlUrl: "https://www.openml.org/d/40"
-            },
-            {
-                id: 6,
-                name: "MNIST Digits",
-                instances: "70000",
-                features: "784",
-                openmlUrl: "https://www.openml.org/d/554"
-            }
-        ];
-
-        // Initialize datasets section
-        function initializeDatasets() {
-            const datasetsBanner = document.getElementById('datasetsBanner');
-            datasetsBanner.innerHTML = '';
-
-            openmlDatasets.forEach((dataset) => {
-                const datasetTile = document.createElement('a');
-                datasetTile.className = 'dataset-tile';
-                datasetTile.href = dataset.openmlUrl;
-                datasetTile.target = '_blank';
-                datasetTile.rel = 'noopener noreferrer';
-                datasetTile.innerHTML = `
-                    <div class="dataset-tile-icon">📊</div>
-                    <div class="dataset-tile-name">${dataset.name}</div>
-                    <div class="dataset-tile-meta">
-                        <div>${dataset.instances} instances</div>
-                        <div>${dataset.features} features</div>
-                    </div>
-                `;
-                datasetsBanner.appendChild(datasetTile);
-            });
-        }
-
-        // Initialize datasets on page load
-        initializeDatasets();
-    </script>
+  <script src="js/index-widgets.js"></script>
+  <script src="js/opinion-section.js"></script>
+  <script src="js/partners-band.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
