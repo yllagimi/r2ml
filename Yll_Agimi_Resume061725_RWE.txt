@@ -1,0 +1,103 @@
+Yll Agimi, PhD, MSc, MPH
+New York, NY (or hybrid) | yll.agimi@gmail.com | https://www.linkedin.com/in/yllagimi| www.yllagimi.com | https://github.com/yllagimi/ 
+
+Accomplished Health Data Scientist with 15+ years of experience applying machine learning, clinical natural language processing (NLP), and predictive analytics to large-scale healthcare, epidemiology, and real-world evidence datasets. Proven record leading cross-functional teams in EHR analytics, claims data modeling, and time-series forecasting to inform clinical decision-making and health policy. Expertise spans SAS, SQL, R, Python, AWS, and modern ML frameworks (PyTorch, TensorFlow, Scikit-learn) with deep domain knowledge in ICD-9/10, HCPCS, HL7, and HIPAA compliance. Recognized for designing scalable AI-driven research solutions that improve patient outcomes, optimize operations, and drive measurable impact across government, military, and public health systems.
+
+Skills Highlights
+* Real-World Data (RWD) Analytics 
+* Epidemiologic Study Design
+* Causal Inference & Propensity Scoring
+* Claims, EHR/EMR Data, Patient registry Analysis (HCPCS, ICD, Snomed)
+* Patient-Reported Outcomes (PROs)
+* Behavioral Health Research
+* Statistical Modeling (time-series, cluster, multivariate, GLM, Survival, Mixed Models, count models)
+* Programming: SAS, R (Tidyr, Lubridate, Stringr, caret), SQL, Python (pytorch, pandas, scikit-learn, numpy),  Gen AI integration. 
+* Data Visualization: ggplot2, Plotly, Tableau
+* Regulatory & HTA Evidence Generation
+
+Professional Experience
+
+Senior Health Data Scientist | Presidential Innovation Fellow
+Military Health System | New York, NY | April, 2023 – May, 2025
+* Utilized Principal Component Analysis (PCA) and Hierarchical Cluster Analysis (HCA) to generate insights on patient segmentation and time-dependent treatment behaviors.
+* Led AI-driven research on provider decision-making and treatment adherence for 250K+ Traumatic Brain Injury (TBI) patients, uncovering behavioral clusters influencing care gaps. (Ref)
+* Directed a team of 10 engineers to build real-time executive health-services dashboard for nation’s 2nd largest health system, accelerating deployment by 50% and expanding scope to track military health system workforce. 
+* Pioneered NLP analysis of position descriptions classify MHS medical workforce, resulting in updates to the HR data system with new data fields. 
+* Collaborates with clinical and non-clinical scientists, medical directors, regulatory affairs, statistical programmers, data managers, and medical writers to design and analyze studies.
+* Developing statistical multistate modeling of behavioral health care across the entire MHS’s 51 hospitals, 424 clinics, in direct and network care.
+Senior Data Scientist
+General Dynamics Information Technology | Silver Spring, MD | April, 2019 – March, 2023
+* Utilized administrative, claim, workload, and EHR data on 11.2m Service members to population health studies.
+* Led study on TBI follow-up care, analyzing 41 comorbid conditions via clustering (Python/R); and identified unnecessary benzodiazepine prescriptions. (Ref)
+* Used time-series data to identify injury follow-up care patterns. Study led to the establishment of MHS-wide clinical operations metric for brain injured patients (Ref). 
+* Trained clinicians on data-driven decision-making, improving documentation of mental health symptoms in EHRs. 
+* Built Tableau dashboards and provided statistical analysis for clinical studies, training staff in best analytics practices. Published studies: 1, 2, 3.
+Senior Data Scientist
+GovCIO | Silver Spring, MD | October, 2014 – March, 2019
+* Used ML models for long-term disability risk in 5k injured patients, adapting civilian registry methods (SCTBIFR) to military patients. Found 65.6% of severe and 12% of mild cases predicted to develop disability. Found high-risk subgroups (e.g., 61.1% disability rate in L5 MTFs) (Ref)
+* Led retrospective cohort analysis of 46k deployed TBI cases. Identified critical gaps in combat injury management. Quantified morbidity/mortality trends: Concussion (0.1% mortality) vs. severe TBI (18% mortality). Found system inefficiencies: 54% return-to-duty rate for concussions vs. 6% for severe TBI, with 123,677+ lost duty days. Demonstrated over-triage patterns: 55% of hospitalizations were concussions, informing resource allocation. (Ref)
+* Supported the first TBI injury registry by integrating EHRs, claims, and survey data.
+* Led migration from SAS to Python/R, introducing automated testing and reducing processing time by 40%.
+* Conducted population-level TBI incidence study of all active-duty soldiers, analyzing over 1.9M person-years of surveillance data. Quantified 91% higher TBI incidence in deployed vs. non-deployed settings. Identified risk subgroups. Developed standardized incidence metrics using Mantel-Haenszel methods. Findings informed targeted prevention programs and resource allocation for high-risk military populations
+Lead Scientist
+Booz Allen Hamilton | McLean, VA | October, 2013 – October, 2014
+* Designed a mobile health app for NIH to collect teen driving data for the National Institutes of Health (NIH) 
+* Conducted program evaluation of the Marine Corps Behavioral Health Program.
+* Identified service delivery requirements, standards and defining quality, translating best-practice from the National Quality Forum, National Committee for Quality Assurance, Healthcare Effectiveness Data and Information Set (HEDIS).
+Senior Health Data Analyst
+Altarum Institute | Alexandria, VA | November, 2011 – October, 2013
+* Spearheaded EHR-based military health analytics for the MHS, standardizing 10+ data streams (ICD-9, AHRQ CCS) to assess TBI trends.
+* Built a centralized data warehouse, expanding data accessibility for 5+ researchers and reducing query time by 500%.
+* Served as lead biostatistics SME, securing Data Use Agreements (DUAs) for 6+ military health databases (MDR, TMDS, etc.).
+Health Science Researcher (Dual Appointment)
+University of Pittsburgh & AHRQ | September, 2009 – November, 2011
+* Used time-series ML to measure state-level policy impact analyzing dementia prevalence among 60K+ crash-hospitalized drivers using AHRQ State Inpatient Databases.
+* Identified 37-38% lower dementia odds among drivers aged 60-69 in states with in-person license renewal laws. 
+* Developed multivariable logistic regression models (negative binomial GEE models) to isolate policy effects, controlling for demographic/clinical confounders. Findings informed state DMV policy reforms and dementia screening guidelines. (Ref; Ref)
+* Directed a multi-site medication adherence study (low-income seniors), implementing AHFS drug coding and IRB-compliant data pipelines.
+Public Health Fellow
+U.S. Department of Transportation | December, 2007 – September, 2009
+* Pioneered TBI epidemiology research, linking helmet laws to 12% reduction in brain injury hospitalizations across 40 states.
+* Led national pediatric injury cost analysis using Kids' Inpatient Database (2006), evaluating 5,662+ youth motorcycle trauma cases across 38 states. Quantified 24% long-term disability risk for youth TBI patients, with 10x higher in-hospital mortality vs. non-TBI cases. Revealed 3.6x greater rehab needs for TBI patients, driving $142M+ in annual hospitalization costs (2006-adjusted)
+* Identified prevention gaps: 33% of crashes involved TBIs despite representing only 5% of youth injury hospitalizations.
+
+Education
+Ph.D. in Public Health | University of Pittsburgh | 2009 - 2012
+Dissertation:  Role Of State Licensing Policies & Physician Reporting Laws On Older Safety” (Negative Binomial- Generalized Estimating Equations, Poisson & Logit regression modeling injury hospitalizations, deaths & dementia among drivers). 
+
+M.Sc. in Epidemiology |University of Pittsburgh | 2009 - 2012
+Thesis:  “A matched case-control study on morbidity and mortality among hospitalized older adults with driving-related medical conditions”. (Conditional logistic regression for matched binary data)
+
+MPH, Behavioral Sciences | University of Pittsburgh | 2005 – 2006
+Thesis: “A theory-driven quantitative evaluation of a Cancer Control Coalition” 
+
+BA, Psychology (Research Track) | University of Prishtina, 2001– 2004 
+
+Select Publications
+* Agimi Y, Hai T, Gano A, et al. Clinical Trajectories of Comorbidity Associated With Military-Sustained Mild Traumatic Brain Injury: Pre- and Post-Injury. J Head Trauma Rehabil. Published online May 10, 2024. Link
+* Earyes L, Agimi Y, Stout K. Benzodiazepine Prescription Patterns After Mild Traumatic Brain Injury in U.S. Military Service Members. Mil Med. 2024;189(9-10):1931-1937. Link
+* Hai T, Agimi Y, Stout K. Clusters of conditions among US service members diagnosed with mild TBI from 2017 through 2019. Front Neurol. 2022 Nov 9; Link 
+* Hai T, Agimi Y, Stout K. Prevalence of Comorbidities in Active and Reserve Service Members Pre and Post Traumatic Brain Injury, 2017-2019. Mil Med. 2023 Jan 5;188(1-2):e270-e277. Link 
+* Agimi Y, Marion, D., Schwab, K., Stout, K., (2019) Estimates of Long-Term Disability Among U.S. Service Members with Traumatic Brain Injuries. Journal of Head Trauma & Rehabilitation. Link 
+* Le TD, Gurney JM, Singh KP, Nessen SC, Schneider ALC, Agimi Y, Bebarta VS, Herson PS, Stout KC, Cardin S, Crowder AT, Ling GSF, Stackle ME, Pusateri AE. Trends in Traumatic Brain Injury Among U.S. Service Members Deployed in Iraq and Afghanistan, 2002-2016. Am J Prev Med. 2023 Aug;65(2):230-238. doi: 10.1016/j.amepre.2023.01.043. Epub 2023 Mar 2. PMID: 36870787.
+* Agimi Y, Earyes L, Deressa T, Stout K. (2019) Estimating Repeat Traumatic Brain Injury in the U.S. Military, 2015-2017. Mil Med. 2022 Mar 28;187(3-4):e360-e367. Link 
+* Agimi Y, Regasa LE, Stout KC. Incidence of Traumatic Brain Injury in the U.S. Military, 2010-2014. Mil Med. 2018 Dec 4. doi: 10.1093/milmed/usy313
+* Lazarus R., Helmick K., Malik S., Gregory E., Agimi Y., Marion D., (2018). Continuum of the United States 
+* Agimi Y, Regasa LE, Ivins B, Malik S, Helmick K, Marion D. (2018). Role of Department of Defense Policies in Identifying Traumatic Brain Injuries Among Deployed US Service Members, 2001-2016. Am J Public Health. 2018 May; 108(5):683-688. PMID: 29565670
+* Agimi, Y., Albert, S., Documet, P., Youk, A., Steiner, C., (2017). Dementia and Motor Vehicle Crash Hospitalizations. Role of Physician Reporting Laws. Neurology. 2018 Feb 27;90(9):e808-e813. PMID: 29386271
+* Agimi, Y., Albert, S., Documet, P., Youk, A., Steiner, C., (2017). Mandatory Physician Reporting of At Risk Drivers: The Older Driver Example. The Gerontologist PMID: 28069887
+* Pater, K., Agimi, Y., Albert, S., (2014) Using a Pharmacy Student Model to Review Prescription Medication Use Among Older Adults Living in Low-Income Seniors Housing. Seniors Housing & Care Journal. 2014, Vol. 22 Issue 1, p30-42. 13p
+Awards
+* Coin of Distinction – Director, Research and Development (J-9) Defense Health Agency
+* Special Achievement Award - Centers of Excellence for Traumatic Brain Injury and Psychological Health, 
+* Certificate of Appreciation -  Defense and Veterans Brain Injury Center (DVBIC)
+* Nomination - US Department of Transportation for AHRQ’s Outstanding Achievement for Understanding and Improving Health Policy, 2010
+Personal Experience
+* TeleNovela: Led the design of a real-time messaging solution using machine learning (TensorFlow, Keras, OpenCV), winning Universidad Adolfo Ibanez Prototypes Challenge. (Ref)
+* Chronic Disease and Healthcare Cost Predictor: Developed a disability predictor tool using Behavioral Risk Factor Surveillance System data for disease risk modeling.
+* Voting Comparator C-1000: Created a tool to compare voting records of members of Congress.
+* QuickQuestion: Developed an app combining Microsoft Pulse and HQ Trivia to answer life's questions.
+
+4
+
+
